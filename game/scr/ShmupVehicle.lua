@@ -94,7 +94,7 @@ function ShmupVehicle:explode()
 		-- Optimally, would change body type to static and
 		-- remove all fixtures.
 		-- But those can't change in a collision callback.
-		levity:setObjectGid(self.object, destroyedgid,
+		levity.setObjectGid(self.object, destroyedgid,
 					true, nil, false)
 
 		for _, fixture in pairs(self.object.body:getFixtureList()) do
@@ -140,7 +140,7 @@ function ShmupVehicle:endContact(myfixture, otherfixture, contact)
 end
 
 function ShmupVehicle:remove()
-	levity:discardObject(self.object.id)
+	levity.discardObject(levity.map, self.object.id)
 --	if self.onRemove then
 --		self.onRemove()
 --	end

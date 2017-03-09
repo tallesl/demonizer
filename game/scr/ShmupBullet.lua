@@ -79,7 +79,7 @@ function ShmupBullet:beginContact(yourfixture, otherfixture, contact)
 	or otherfixture:getCategory() == ShmupCollision.Category_PlayerBomb
 	or otherfixture:getCategory() == ShmupCollision.Category_NPCTeam then
 		if not self.object.properties.persist then
-			levity:discardObject(self.object.id)
+			levity.discardObject(levity.map, self.object.id)
 		end
 	elseif otherfixture:getCategory() == ShmupCollision.Category_Camera then
 		self.oncamera = true
@@ -94,11 +94,11 @@ end
 
 function ShmupBullet:endMove(dt)
 	if not self.oncamera then
-		levity:discardObject(self.object.id)
+		levity.discardObject(levity.map, self.object.id)
 	elseif self.time then
 		self.time = self.time - dt
 		if self.time <= 0 then
-			levity:discardObject(self.object.id)
+			levity.discardObject(levity.map, self.object.id)
 		end
 	end
 end

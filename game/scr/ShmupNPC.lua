@@ -175,7 +175,7 @@ function ShmupNPC:knockout()
 	self.health = 0
 	self.unconscious = true
 	self.pathwalker = nil
-	levity:setObjectGid(self.object, self:getKOGid())
+	levity.setObjectGid(self.object, self:getKOGid())
 
 	self:setInCover(false)
 	for _, fixture in ipairs(self.object.body:getFixtureList()) do
@@ -315,7 +315,7 @@ function ShmupNPC:die()
 end
 
 function ShmupNPC:discard()
-	levity:discardObject(self.object.id)
+	levity.discardObject(levity.map, self.object.id)
 	if self.onDiscard then
 		self.onDiscard()
 	end

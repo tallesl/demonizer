@@ -78,7 +78,7 @@ local ShmupMap = class(function(self, id)
 				local istrigger = nil
 				for _, object in ipairs(layer.objects) do
 					if object.properties.triggertype then
-						levity:initObject(object, layer)
+						levity.initObject(object, layer)
 						istrigger = true
 					end
 				end
@@ -86,7 +86,7 @@ local ShmupMap = class(function(self, id)
 				if not istrigger
 				and layer.properties.static ~= true then
 					for _, object in ipairs(layer.objects) do
-						levity:initObject(object, layer)
+						levity.initObject(object, layer)
 					end
 				end
 			end

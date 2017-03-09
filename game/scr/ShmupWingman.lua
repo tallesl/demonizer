@@ -98,9 +98,9 @@ function ShmupWingman:kill()
 	end
 	self.numcaptives = 0
 
-	levity:discardObject(self.object.id)
+	levity.discardObject(levity.map, self.object.id)
 	if self.properties.conversionid then
-		levity:discardObject(self.properties.conversionid)
+		levity.discardObject(levity.map, self.properties.conversionid)
 	end
 
 	levity.bank:play(Sounds.Death)
@@ -200,13 +200,13 @@ end
 function ShmupWingman:updateConversion(dt)
 	self.converttimer = self.converttimer + dt
 	if self.converttimer >= ShmupWingman.ConvertTime then
-		levity:discardObject(self.properties.conversionid)
+		levity.discardObject(levity.map, self.properties.conversionid)
 		self.properties.conversionid = nil
 		self.properties.captorid = nil
 		self.converttimer = nil
 
 		local gid = levity:getTileGid("demonwomen", self.npctype, 0)
-		levity:setObjectGid(self.object, gid)
+		levity.setObjectGid(self.object, gid)
 		self:refreshFixtures()
 		self:setCaptureEnabled(ShmupPlayer.isActiveWingmanIndex(self.wingmanindex))
 	end
@@ -376,9 +376,9 @@ function ShmupWingman:endMove(dt)
 		if not ShmupPlayer.isActiveWingmanIndex(self.wingmanindex) then
 			levity.map.scripts:broadcast("wingmanReserved",
 						self.object.id, self.object.gid)
-			levity:discardObject(self.object.id)
+			levity.discardObject(levity.map, self.object.id)
 			if self.properties.conversionid then
-				levity:discardObject(self.properties.conversionid)
+				levity.discardObject(levity.map, self.properties.conversionid)
 			end
 		end
 	end
@@ -429,7 +429,7 @@ function ShmupWingman.create(gid, x, y, captorid, captiveid)
 
 	local conversionid = nil
 	if captorid then
-		conversionid = levity:newObjectId()
+		conversionid = levity.newObjectId(levity.map)
 
 		local conversion = {
 			id = conversionid,
@@ -442,7 +442,7 @@ function ShmupWingman.create(gid, x, y, captorid, captiveid)
 	end
 
 	local wingman = levity.map.objects[captiveid]
-			or { id = levity:newObjectId() }
+			or { id = levity.newObjectId(levity.map) }
 
 	wingman.gid = gid
 	wingman.x = x
