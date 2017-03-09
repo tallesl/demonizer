@@ -81,8 +81,8 @@ function ShmupVehicle:explode()
 
 	levity.bank:play(Sounds.KO)
 	levity.bank:play(Sounds.Boom2)
-	levity.machine:broadcast("vehicleDestroyed", self.object.id)
-	levity.machine:broadcast("pointsScored",
+	levity.map.scripts:broadcast("vehicleDestroyed", self.object.id)
+	levity.map.scripts:broadcast("pointsScored",
 				self.properties.killpoints or 1000)
 
 	local destroyedtile = self.properties.destroyedtile
@@ -164,7 +164,7 @@ function ShmupVehicle:beginMove(dt)
 
 	if not self.pathwalker then
 		local pathid = self.properties.pathid
-		self.pathwalker = levity.machine:call(pathid, "newWalker",
+		self.pathwalker = levity.map.scripts:call(pathid, "newWalker",
 						self.properties.pathtime)
 	end
 

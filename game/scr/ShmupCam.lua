@@ -22,7 +22,7 @@ local ShmupCam = class(function(self, id)
 	edgefixture:setCategory(ShmupCollision.Category_CameraEdge)
 	edgefixture:setMask(ShmupCollision.Category_Default)
 
-	self.camera = levity.camera
+	self.camera = levity.map.camera
 	local cx, cy = self.object.body:getWorldCenter()
 	self.camera:set(cx, cy, self.object.width, self.object.height)
 
@@ -42,7 +42,7 @@ function ShmupCam:beginContact_activategroup(myfixture, otherfixture, contact)
 		self.activatedgrouptriggerids[triggerobject.id] = triggerobject.id
 	else
 		for _, object in ipairs(triggerlayer.objects) do
-			levity.machine:call(object.id, "activate")
+			levity.map.scripts:call(object.id, "activate")
 		end
 	end
 
@@ -109,7 +109,7 @@ function ShmupCam:beginMove(dt)
 	if pathid and not self.pathwalker then
 		local path = levity.map.objects[pathid]
 		path.layer:addObject(path)
-		self.pathwalker = levity.machine:call(pathid, "newWalker",
+		self.pathwalker = levity.map.scripts:call(pathid, "newWalker",
 						self.properties.pathtime)
 		if self.pathwalker then
 			self.pathwalker:findStartPoint(body:getPosition())

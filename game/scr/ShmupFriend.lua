@@ -82,7 +82,7 @@ end
 function ShmupFriend:kill()
 	levity:discardObject(self.object.id)
 	levity.bank:play(Sounds.Death)
-	levity.machine:broadcast("friendKilled", self.object.id)
+	levity.map.scripts:broadcast("friendKilled", self.object.id)
 end
 
 function ShmupFriend:damage(damage)
@@ -186,12 +186,12 @@ function ShmupFriend:beginMove(dt)
 
 		if not self.pathwalker then
 			local pathid = self.properties.pathid
-			self.pathwalker = levity.machine:call(pathid,
+			self.pathwalker = levity.map.scripts:call(pathid,
 					"newWalker", self.properties.pathtime)
 			self.pathwalker:findStartPoint(body:getWorldCenter())
 		end
 
-		local fromccx, fromccy = levity.machine:call(
+		local fromccx, fromccy = levity.map.scripts:call(
 						levity.map.properties.cameraid,
 						"getVectorFromCenter",
 						body:getWorldCenter())
@@ -221,7 +221,7 @@ end
 function ShmupFriend:endMove(dt)
 	local cx, cy = self.object.body:getWorldCenter()
 	local playerid = levity.map.properties.playerid
-	local distsq = levity.machine:call(playerid, "getDistanceSq", cx, cy)
+	local distsq = levity.map.scripts:call(playerid, "getDistanceSq", cx, cy)
 
 	if distsq <= ShmupFriend.HealDistSq then
 		self:heal(dt*ShmupFriend.PlayerTouchHealRate)
@@ -251,7 +251,7 @@ function ShmupFriend:beginDraw()
 	if healthpercent < 1 then
 		local cx, cy = self.object.body:getWorldCenter()
 		local playerid = levity.map.properties.playerid
-		local distsq = levity.machine:call(playerid, "getDistanceSq",
+		local distsq = levity.map.scripts:call(playerid, "getDistanceSq",
 							cx, cy)
 
 		local wound = 0xff * healthpercent

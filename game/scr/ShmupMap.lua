@@ -103,12 +103,12 @@ ShmupMap.DefeatTime = 16
 
 function ShmupMap:endMove(dt)
 	local playerid = self.properties.playerid
-	self.rank = levity.machine:call(playerid, "rankFactor")
+	self.rank = levity.map.scripts:call(playerid, "rankFactor")
 
 	if self.resulttimer then
 		if self.resulttimer < self.resulttime - 1
 		and self.resulttimer + dt >= self.resulttime - 1 then
-			levity.machine:call("curtain", "beginFall")
+			levity.map.scripts:call("curtain", "beginFall")
 		end
 		self.resulttimer = self.resulttimer + dt
 		if self.resulttimer >= self.resulttime then

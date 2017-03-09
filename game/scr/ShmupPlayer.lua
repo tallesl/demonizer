@@ -197,13 +197,13 @@ end
 
 function ShmupPlayer:wingmanReserved(wingmanid, wingmangid)
 	self.numwingmen = self.numwingmen - 1
-	local wingmanindex = levity.machine:call(wingmanid, "getWingmanIndex")
+	local wingmanindex = levity.map.scripts:call(wingmanid, "getWingmanIndex")
 	table.remove(self.wingmenids, wingmanindex)
 end
 
 function ShmupPlayer:wingmanKilled(wingmanid)
 	self.numwingmen = self.numwingmen - 1
-	local wingmanindex = levity.machine:call(wingmanid, "getWingmanIndex")
+	local wingmanindex = levity.map.scripts:call(wingmanid, "getWingmanIndex")
 	table.remove(self.wingmenids, wingmanindex)
 end
 
@@ -290,16 +290,16 @@ function ShmupPlayer:joystickchanged(button, pressed)
 		self.inputvx = self.inputvx * focusspeedfactor
 		self.inputvy = self.inputvy * focusspeedfactor
 	elseif button == ShmupPlayer.Button_Bomb and pressed
-	and not self.killed and not levity.mappaused then
+	and not self.killed and not levity.map.paused then
 		local params = ShmupPlayer.BombParams
 
-		if levity.machine:call("hud", "hasBombs") then
+		if levity.map.scripts:call("hud", "hasBombs") then
 			params.x, params.y = self.object.body:getWorldCenter()
 			params.y = params.y - 128
 			ShmupBullet.create(params, self.object.layer)
 			levity.bank:play(Sounds.Bomb)
 			levity.bank:play(Sounds.Bomber)
-			levity.machine:broadcast("playerBombed")
+			levity.map.scripts:broadcast("playerBombed")
 		end
 	end
 end
@@ -357,9 +357,9 @@ function ShmupPlayer:keyreleased(key, u)
 end
 
 function ShmupPlayer:mousemoved(x, y, dx, dy)
-	if not levity.mappaused then
-		self.inputvx = self.inputvx + (dx / levity.camera.scale)
-		self.inputvy = self.inputvy + (dy / levity.camera.scale)
+	if not levity.map.paused then
+		self.inputvx = self.inputvx + (dx / levity.map.camera.scale)
+		self.inputvy = self.inputvy + (dy / levity.map.camera.scale)
 		self.didmousemove = true
 	end
 end
@@ -368,9 +368,9 @@ function ShmupPlayer:beginContact(myfixture, otherfixture, contact)
 	local category = otherfixture:getCategory()
 	if category == ShmupCollision.Category_NPCTeam then
 		local captiveid = otherfixture:getBody():getUserData().id
-		if not levity.machine:call(captiveid, "isFemale")
-		and levity.machine:call(captiveid, "canBeCaptured") then
-			local captivegid = levity.machine:call(captiveid, "getKOGid")
+		if not levity.map.scripts:call(captiveid, "isFemale")
+		and levity.map.scripts:call(captiveid, "canBeCaptured") then
+			local captivegid = levity.map.scripts:call(captiveid, "getKOGid")
 			local i = (self.numcaptives % ShmupPlayer.CaptivesReleasedOnKill) + 1
 			self.captivegids[i] = captivegid
 			self.numcaptives = self.numcaptives + 1
@@ -393,7 +393,7 @@ function ShmupPlayer:deathCoroutine(dt)
 	local bodyfixture = fixtures["body"]
 	bodyfixture:setMask(unpack(NonPlayMask))
 
-	levity.machine:broadcast("playerKilled")
+	levity.map.scripts:broadcast("playerKilled")
 
 	self:playSound(Sounds.Death)
 	self:playSound(Sounds.Scream)
@@ -417,10 +417,10 @@ function ShmupPlayer:deathCoroutine(dt)
 		self, dt = coroutine.yield()
 	end
 
-	if levity.machine:call("hud", "hasLives") then
+	if levity.map.scripts:call("hud", "hasLives") then
 		self.coroutine = coroutine.create(ShmupPlayer.spawnCoroutine)
 	else
-		levity.machine:broadcast("playerDefeated")
+		levity.map.scripts:broadcast("playerDefeated")
 		while true do
 			coroutine.yield()
 		end
@@ -479,7 +479,7 @@ function ShmupPlayer:spawnCoroutine(dt)
 
 	if self.killed then
 		self.killed = false
-		levity.machine:broadcast("playerRespawned")
+		levity.map.scripts:broadcast("playerRespawned")
 		self:playSound(Sounds.Respawn)
 		self.object.visible = true
 	end
@@ -575,7 +575,7 @@ function ShmupPlayer:endMove(dt)
 	end
 	if camera then
 		local cx, cy = self.object.body:getWorldCenter()
-		levity.machine:call(cameraid, "swayWithPlayer", cx)
+		levity.map.scripts:call(cameraid, "swayWithPlayer", cx)
 	end
 
 	if not self.hitbox then
@@ -599,9 +599,9 @@ function ShmupPlayer:beginDraw()
 		love.graphics.setColor(0xff, 0xff, 0xff, alpha)
 	end
 
-	--local scoreid = levity.machine:call("hud", "getScoreId")
+	--local scoreid = levity.map.scripts:call("hud", "getScoreId")
 	--if scoreid then
-	--	self.properties.text = levity.machine:call(scoreid,
+	--	self.properties.text = levity.map.scripts:call(scoreid,
 	--				"getMultiplier", self.object.id)
 	--else
 	--	self.properties.text = nil

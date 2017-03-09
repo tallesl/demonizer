@@ -57,13 +57,13 @@ local ShmupBullet = class(function(self, id)
 	properties.vely = nil
 
 	if properties.coroutine then
-		levity.machine:scriptAddEventFunc(self, id,
+		levity.map.scripts:scriptAddEventFunc(self, id,
 				"beginMove", beginMove)
 		self.coroutine = coroutine.create(properties.coroutine)
 	end
 
 	if properties.accelx and properties.accely then
-		levity.machine:scriptAddEventFunc(self, id,
+		levity.map.scripts:scriptAddEventFunc(self, id,
 				"beginMove", beginMove)
 	end
 
