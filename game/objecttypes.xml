@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
  <objecttype name="Trigger" color="#00ff00">
+  <property name="activateobjects" type="bool" default="true"/>
+  <property name="activateobjectslayer" type="string"/>
   <property name="collidable" type="bool" default="true"/>
-  <property name="objectsinitiallayer" type="string"/>
+  <property name="musicfade" type="bool" default="false"/>
+  <property name="musicfile" type="file" default=""/>
+  <property name="pausecamera" type="bool" default="false"/>
   <property name="sensor" type="bool" default="true"/>
-  <property name="triggertype" type="string"/>
+  <property name="soundfile" type="file" default=""/>
  </objecttype>
  <objecttype name="Camera" color="#0000ff">
   <property name="collidable" type="bool" default="true"/>

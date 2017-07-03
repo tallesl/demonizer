@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "1.0.1",
+  tiledversion = "1.0.2",
   orientation = "orthogonal",
   renderorder = "right-up",
   width = 18,
@@ -3657,8 +3657,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -3805,9 +3804,7 @@ return {
       offsetx = 0,
       offsety = 0,
       draworder = "topdown",
-      properties = {
-        ["activatemusic"] = "mus/03 - Mighty Gals 2.vgm"
-      },
+      properties = {},
       objects = {
         {
           id = 153,
@@ -3825,8 +3822,8 @@ return {
             { x = 288, y = 0 }
           },
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground",
+            ["musicfile"] = "mus/03 - Mighty Gals 2.vgm"
           }
         },
         {
@@ -3855,10 +3852,7 @@ return {
       offsetx = 0,
       offsety = 0,
       draworder = "topdown",
-      properties = {
-        ["activatesound"] = "snd/alarm4.wav",
-        ["fademusic"] = true
-      },
+      properties = {},
       objects = {
         {
           id = 152,
@@ -3876,8 +3870,9 @@ return {
             { x = 288, y = 0 }
           },
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground",
+            ["musicfade"] = true,
+            ["soundfile"] = "snd/alarm4.wav"
           }
         }
       }
@@ -3974,8 +3969,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -4648,8 +4642,7 @@ return {
             { x = 288, y = 0 }
           },
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -4820,8 +4813,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         }
       }
@@ -4848,8 +4840,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -5013,8 +5004,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -5293,8 +5283,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -5349,8 +5338,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -5577,8 +5565,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -5649,8 +5636,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         }
       }
@@ -5677,8 +5663,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -5719,8 +5704,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -5853,8 +5837,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         }
       }
@@ -5881,8 +5864,7 @@ return {
           rotation = 0,
           visible = false,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -6035,8 +6017,7 @@ return {
           rotation = 0,
           visible = false,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -6192,8 +6173,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -6723,8 +6703,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -6855,8 +6834,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -7036,8 +7014,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         }
       }
@@ -7260,8 +7237,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
@@ -7764,9 +7740,7 @@ return {
       offsetx = 0,
       offsety = 0,
       draworder = "topdown",
-      properties = {
-        ["activatesound"] = "snd/scream.wav"
-      },
+      properties = {},
       objects = {
         {
           id = 60,
@@ -8000,8 +7974,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["objectsinitiallayer"] = "ground",
-            ["triggertype"] = "activategroup"
+            ["activateobjectslayer"] = "ground",
+            ["soundfile"] = "snd/scream.wav"
           }
         },
         {

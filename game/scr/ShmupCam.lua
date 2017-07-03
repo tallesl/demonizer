@@ -46,34 +46,33 @@ function ShmupCam:_init(object)
 	self.activatedgrouptriggerids = {}
 end
 
-function ShmupCam:beginContact_activategroup(myfixture, otherfixture, contact)
+function ShmupCam:beginContact_Trigger(myfixture, otherfixture, contact)
 	local triggerobject = otherfixture:getUserData().object
 	local triggerlayer = triggerobject.layer
-	self.activatedgrouptriggerids[triggerobject.id] = triggerobject.id
+	local triggerproperties = triggerobject.properties
+	if triggerproperties.activateobjects then
+		self.activatedgrouptriggerids[triggerobject.id] = triggerobject.id
+	end
 
-	local music = triggerlayer.properties.activatemusic
-	if music then
+	local music = triggerproperties.musicfile or ""
+	if music ~= "" then
 		levity.bank:changeMusic(music, "emu")
-	elseif triggerlayer.properties.fademusic then
+	elseif triggerproperties.musicfade then
 		if levity.bank.currentmusic then
 			levity.bank.currentmusic:fade()
 		end
 	end
 
-	local sound = triggerlayer.properties.activatesound
-	if sound then
+	local sound = triggerproperties.soundfile or ""
+	if sound ~= "" then
 		levity.bank:load(sound, "static")
 		levity.bank:play(sound)
 	end
+
+	self:pausePath(triggerproperties.pausecamera)
 end
 
-function ShmupCam:beginContact_pausecamera(myfixture, otherfixture, contact)
-	local triggerobject = otherfixture:getUserData().object
-	levity:discardObject(triggerobject.id)
-	self:pausePath(true)
-end
-
-function ShmupCam:endContact_activategroup(myfixture, otherfixture, contact)
+function ShmupCam:endContact_Trigger(myfixture, otherfixture, contact)
 	local triggerobject = otherfixture:getBody():getUserData().object
 	local activatedobjectids = triggerobject.properties.activatedobjectids
 	for _, id in ipairs(activatedobjectids) do
@@ -88,16 +87,9 @@ end
 
 function ShmupCam:beginContact(myfixture, otherfixture, contact)
 	local otherdata = otherfixture:getUserData()
-	local otherproperties
-	local triggertype
-	if otherdata then
-		otherproperties = otherdata.properties
-		triggertype = otherproperties.triggertype
-	else
-		print(otherfixture:getBoundingBox())
-	end
-	if triggertype then
-		local f = self["beginContact_"..triggertype]
+	local othertype = otherdata.object.type
+	if othertype then
+		local f = self["beginContact_"..othertype]
 		if f then
 			f(self, myfixture, otherfixture, contact)
 		end
@@ -106,14 +98,9 @@ end
 
 function ShmupCam:endContact(myfixture, otherfixture, contact)
 	local otherdata = otherfixture:getUserData()
-	local otherproperties
-	local triggertype
-	if otherdata then
-		otherproperties = otherdata.properties
-		triggertype = otherproperties.triggertype
-	end
-	if triggertype then
-		local f = self["endContact_"..triggertype]
+	local othertype = otherdata.object.type
+	if othertype then
+		local f = self["endContact_"..othertype]
 		if f then
 			f(self, myfixture, otherfixture, contact)
 		end
@@ -144,7 +131,7 @@ function ShmupCam:endMove(dt)
 	for k, triggerid in pairs(self.activatedgrouptriggerids) do
 		local trigger = levity.map.objects[triggerid]
 
-		local initiallayer = trigger.properties.objectsinitiallayer
+		local initiallayer = trigger.properties.activateobjectslayer
 		if initiallayer then
 			initiallayer = levity.map.layers[initiallayer]
 		end
