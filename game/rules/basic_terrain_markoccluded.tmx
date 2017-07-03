@@ -181,6 +181,11 @@
  </layer>
  <layer name="input_grass" width="1" height="1">
   <data encoding="csv">
+167
+</data>
+ </layer>
+ <layer name="input_grass" width="1" height="1">
+  <data encoding="csv">
 293
 </data>
  </layer>
