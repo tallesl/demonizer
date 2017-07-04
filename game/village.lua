@@ -5,7 +5,7 @@ return {
   orientation = "orthogonal",
   renderorder = "right-up",
   width = 18,
-  height = 120,
+  height = 140,
   tilewidth = 16,
   tileheight = 16,
   nextobjectid = 4,
@@ -1385,7 +1385,7 @@ return {
       x = 0,
       y = 0,
       width = 18,
-      height = 120,
+      height = 140,
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1393,7 +1393,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJyF1lGOq0AMRNHe/y7YBf0fsa43TxqkmxOT+UAk0HTb5XKVX2ut8+faP9fxez9/f/+/v3K/fp9feX/93u/fO2vv+5U9u9+0V7/b+b+z9o6z33vuwbk7ud3XHcvO2c3hXtPcu/7IWXt95um5YnGu9/jO9Z5j6+K51/C7uJ7Z585h51m/f633uN278Vzs2Vq1TsVvr3dMW8NisbOncTU/uVbs+m7iXffb6xPTxrKzborH3Pq8POy1h/PtLbE7+H3n0RxPznvisvn2f2tg/H1XXjeP1mmv9xi712t91sq6PPXcvfY1rO93xbGxqhfVOftEjfFM+6Q5tC6bPctzeVvsJ272+VTbcq04eJbnTj3cPvfs5tj+U+uKt/qt5jfO4t0aib1Ybu7VrJO1J7/V0fKhsRdrdbeYWEu50X7vbz1y6h05NnnetT7r4HmTNsmJfi9Wk550j6kuU4zWufEYq/001fnirn+d3OW4vfCXd9Tn9UT72+/kZ3FrTxUPZ4XWop4xeW73frF3azXNDU+8Uk/NybmgcT7phGd3D/mv/xWz4qFmOcdMc191fNLw+tcUq++KizOgPldcuq9xiWfzm/xCnk66POnkXp986PoX6+1ltUtNLz+cdSY+6Msnz/WC9r3vrX850zzkjHs1FrmtXhmX+qRWTH5Vb2h+rdekA9Ujva7xyZ/m3Jz0n+Y1cWOaa8pvMVa7NmvMX0ycleTLk/7Zs5M2q696a+OXY62vPd8aqzfTPnJw0sj6V3l7sb/+Os0HfXeuv+M71idfysH6iN449Yh4d92kO+qwOOjBzjT609THzn3l0VMN9fE+s5fVJ2eSaeaYamP/OG9V9ybvN5fq7lM9ral901gaf2spxp0HrIV4Nvapx1v34moMzjRqn36gTlrbY7ir1b0Xn4tz5KxzkbVuvO2p9rrcsLbWTc5Os0l72Rx6GUtrLG72shoxzRVyTA+bdFDfKI88uzx7sZ/ri/c1fFv+Tb4gB9XyiZuTJtn/9eeJ/+XjNw1/0sJp5qieqtXOFHprMShn1c7ycfJb/ab1qv7IHbVafMWmOKrljavX5vfJd+q+//VAZ8n2ZPVWDRaHg72cG7xfD+uO4Uy98ng4d/KSk+d6rBo98cP4ploWl9bbWaG1nmryLa9ip9+3ht/mo28cs4bl78l+/db+dlay5vbwhFNr0HnJXtmsVb9aqwnv1qLYq0NPl1qk3+uDzaX6KoaTJxXHqU56THWieU9apVb4XI81l4tv7MHNmdM8097Sx5uD3z35q7XRn8tpY568WA7ae92rerB5pz5MviqnJ+zae3L5SXuNzTObY/dRU/Qv5x55ph8+eVp1TX7pC62rGm4e1Wb7qbw6WNuYpp6Z5rXJQ+W/M4ZzjPWePEy/MLepT9ScxtIes//15c367tGYiss0o+nR9nJz3vy/eDfprbPC+fC+Oe41c0D83dfa2KP6TvHXu5x5uv4frCAU7w=="
+      data = "eJyF1lGOpEAMg2Huf4u+Bby3ONfuStPSP9+Y2QdENxRViePYeR/Hcf69rr/X6+t+fv3+d3/nfn89v/P+/rp/fl9Z+7nf2bP7rb363ZX/V9Z+4uz3nvvi3Cu5fa5PLFfObg6fNc2961856zp+5um5YnEe3+M7j+85ti6ee4/fxfXMPp8crjzr9+/je9zu3Xhu9mytWqfidx3fMW0Ni8WVPY2r+cm1Ytd3i3fd7zp+YtpYrqxb8Zhbn5eHva5xvr0ldi9+f/JojifnPXHZfPu/NTD+viuvm0frdB3fY+xe7+NnrazLU8991r7H+n5XHBurelGds0/UGM+0T5pD63KxZ3kub4v94mafr9qWa8XBszx39XD73LObY/tPrSve6rea3ziLd2sk9mJ5ca9mnaw9+a2Olg+NvViru8XEWsqN9nt/65Grd+TY8rz7+FkHz1vaJCf6vVgtPekeqy4rRuvceIzVflp1vrnrXyd3OW4v/M876vN6ov3td/KzuLWnioezQmtRz1ie273f7N1arbnhiVfqqTk5FzTOJ53w7O4h//W/YlY81CznmDX3VceXhte/Vqy+Ky7OgPpccem+xiWezW/5hTxdurx08jp+8qHr36y3l9UuNb38cNZZfNCXT57rBe1731v/cqZ5yBn3aixyW70yLvVJrVh+VW9ofq3X0oHqkV7X+ORPc25O+k/zWtxYc035LcZq18Ua8xcTZyX58qR/9uzSZvVVb238cqz1tedbY/Vm7SMHl0bWv8rbm/311zUf9N15/D++1/GTL+VgfURvXD0i3l23dEcdFgc92JlGf1p97NxXHj3VUB/vM3tZfXImWTPHqo3947xV3Vveby7V3ad6WlP7prE0/tZSjDsPWAvxbOyrx1v34moMzjRqn36gTlrb17ir1b0Xn5tz5KxzkbVuvO2p9rrcsLbWTc6u2aS9bA69jKU1Fjd7WY1Yc4Uc08OWDuob5ZFnl2dv9nN98b7Ht+Xf8gU5qJYvbi5Nsv/rz4v/5eNvGv6khWvmqJ6q1c4UemsxKGfVzvJx+a1+03pVf+SOWi2+YlMc1fLG1evi98l36r7/9UBnyfZk9VYNFocXezk3eL8f1r3GmXrl6+Hc5SUnz/VYNXrxw/hWLYtL6+2s0FqvmvyWV7HT71vD3+aj3zhmDcvfk/36rf3trGTN7eGFU2vQecleuVirfrVWC+/WotirQ0+XWqTf64PNpfoqhsuTiuOqkx5TnWjeS6vUCp/rseZy8409eHHmmmfaW/p4c/C7J3+1NvpzOW3My4vloL3XvaoHF+/Uh+Wrcnph196Ty0/aa2ye2Ry7j5qifzn3yDP98MnTqmvyS19oXdVw86g220/l1Yu1jWn1zJrXlofKf2cM5xjrvTxMvzC31SdqTmNpj9n/+vLF+u7RmIrLmtH0aHu5OV/8v3m39NZZ4Xx43xyvY3NA/N3X2tij+k7x17ucebp+nSWH6gmrJ8t3tagcaZ/ai9VJcbjGvbioTb9p8G96JkfWszf7OMOYR7mw5hA5WR1cvPJa8449dvJ/9Ya8cL5p3u3v1lKv7Nrlb2quZxRb6+F84X7tK2tWvJ9mFbnsvLD0ufu1du3V3ouR3zcvPUgft7+6f/fUL5589MVv81yeuTRGbG7WLg1WY5xT9AD5c421T72hrxZncy5/Vs2cQ5xBzKXaq9/33R+ywhpA"
     },
     {
       type = "tilelayer",
@@ -1401,7 +1401,7 @@ return {
       x = 0,
       y = 0,
       width = 18,
-      height = 120,
+      height = 140,
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1409,7 +1409,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztVstOwzAQ9IHnDRXlxqPcKNBbUsqtlHIL4domf9ivZEedVSzzylo9gLQjjdxY3fGud712CPvDrfAu024afZfC8wydkXCW6Jxl6sTrF8KnDJ0iWb8IeXGl+zEKeXGl68ffyMGDcCK8DLt8YG7MuUnoc5TuB/y5oN2VcCN8F3Zhlw/4/yZshLXwmv+9SXRehM/CE3LFEXNL4YJzK84dRv9fmnfD8RcwJlF71t5xTzvUEmoLNYaas57VR2FFbkNfq7OfjL4AzkFNez0Dx8FWmzhzOENz4ZrEb2vfgC9t2MWzpQbis8aU7g106gx/0AM0Rw31kCv0Akve1Z9N5EvHb0tPLGjTkGuO0LLEBh2NCf4g5y1HxDb93vSTjuZc/dIYoTU0bwXXn3NsOELrQPg6UAe9+Chav4p8s56vIrLVfGHPrHfYiL6oFnyzxBTr6LmCH6hraz2j9+D+6qijNWg5X6rR0l7rGj3DEhPOFvZFY2n5O6dnaDyad3zjbo/v/9+AfGssqteGvh8N9UtrUGuvpmZF3yz1sxCeUkP7me6XtZ7LxB9ooA6tb5CS9qCe1Zx3XUkfNF9dpg72W99U6o/1vkiB2LBXOe/nGMhVtQcdxOfvRYfD4XA4HA6Hw+FwOBwOh8PxH/ABE0dCgw=="
+      data = "eJztWMFu2zAMVYBl625FCt+W1b0123pz0u7mZNnN9a6J84f9yuktfDCrOoolO8MwiMCDZEeiSfGRUmTMeHJv8SVy3oN6LixuIvTMLFaOnutIPfr7mcX3CD2Z8/3MxPnlrsfMxPnlfl8/IwbfLBYWc3OMB97l8m5h2hi56wF7Psm8zxZ7i18WB3OMB+x/tqgtKotbGXvn6Plhsba4EmylxbuNRSnvtvJuqsZvglcjyb8guQDcC60dX2UeuARugWPgXGiuPlosBS+m5erKN6lDkAeVzGcOfDBh3ETOIYeeLHYC9EPrBmxpzNGfF9EB/0J9ctcGeqoIe1ADGKNa9CFWqAUhcac9e2XLQZ5DamImc2rBTlroCvENeugT7EHMG2nh28PpqW/0MOa0iz5CV9+4ZfL9J2lraaHrncXPnnpQi9+r7y+VbaH5lam5jBfWLHQPm4kt1AXbQnzSephXsAO8DuUzag/2r4PoIQdD8os6GplPXqNmhPiE3MK60JdG+jE1g/4w7njG3q73/3OCeNMX6mtMW4/62kUOknuV6FyKbSH8KS0+ig7WM65XKJ8Lxx7oAA9DzyCFzAeYqzHnukJsYLwOkXr0etOe0P1C68J6k89DzmeliasXXYIzY2i9SJIkSZL/Ufj/KTft/3/29bmc9wO5wkK160k3NpPXdRt7VXliLPB8AvXk7R1I5Rnv06P3+8cBelYj2XM9kj3ar2KAHveOyKdnfwJNh187z3je5fBu50o96/26NK/vhdifSsu7Ks3RuenmM3/LTct9tj4+uzyM5bObF2PEayweDrFnLB5eIk/P2ePj842jx8dn3lNOTctt9l0+k7/u3abmM3lKjqLv8jkXzNUYzvPx2V3nWD6PFa9L5MW5OjYWf/ra87fyvS+f/9zReMavTVtrNfBe85l3+MRW9acmnTfSeWNYnqbzRjpvXIqH6byRJEmSJEmSJBlDfgOQhhFi"
     },
     {
       type = "tilelayer",
@@ -1417,7 +1417,7 @@ return {
       x = 0,
       y = 0,
       width = 18,
-      height = 120,
+      height = 140,
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1425,7 +1425,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJzt0cENgkAURdEZS6JHsAKRCgQrAKkAtQKFDsAeeBvDX5HwZec9yd1M8v5mQgD2lRyW1t7+QRpDyNQx/rbP1VkVjjsnsy9Vpa6OOxezb9RNtY47tdnf1UM9HXc6s3+rXg2OOy+zH9WkPs7/+u4BAAAAAAAAAAAAYKsZWvQeOA=="
+      data = "eJzt0csRgkAQRdEZQyJHMAI+EYhEoBABnwhUMgBz8G0se8WidSX3VN3NVL3eTAjAbyWHT1tve5DGEDJ1jN/tC1WqynEnN/tanVXjuHMy+6tqVee4czH7QY1qctzpzf6uHmp23LmZ/aJW9XT+13sPAAAAAAAAAAAAAACA//ACX+oeOA=="
     },
     {
       type = "tilelayer",
@@ -1433,7 +1433,7 @@ return {
       x = 0,
       y = 0,
       width = 18,
-      height = 120,
+      height = 140,
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1441,7 +1441,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztlttKw0AQhpPGGw/4AB5fxkcQ8QFEfKAiweNN0YrHG0FEQS+siCjohYp4oSBUEa0KQlUK/iEzMF3SErO5CGE++NhtMjtsd2eX+K7j/MIjuA2P4Qw5C+fgPFyAi6SMbcBpuAJ7Cs3vVsk1uA434CbcImVsL8Yuo91NIc+OMZ/KP/JUWsznCu01vIF7cB9W4RP5DA/godsca86nKuLP4Dmsw2/yB17AS7c51pxPXcQ/wk4864L36D+4Yb+7EL6TsTyfU8rD44LYLzzrQ9sPP9D/dMP+AL2TsUGeEzy7ozw8LoiVFPDbM57J2CDPLXK8wkH0hyJsUI1yGxUzDF9cR1Eyge/hXvSSjy96YY4yXLLIU6IcNfhukeeNcuSJUfyfcdL3ku/ZBMZMkWWLPeM1HukIW9s9yxJcz8Faj6VQz8FaT6ZQz3lZ46KoYT+F9WWTIte3Znm+JDbnS2K790XLdWZKluvMpH0/255TxvacMnk5p0o+MO/bqHtNfl+0Ok/mfRt1r8nvi1bnybxvo86K+X2h58mOdvsbpz6Ydvsbpz6YdjUQpz4URVEURVEURVEURckmf2tsv1o="
+      data = "eJztlctKw0AUhpPGjRd8AK8v41pciLgSFyI+UJHgdVM04nUjiCjowoqIgi6qiAsFoYp4BaEqBf8hJ3ASaqpNF6H8H3zMdHLmMJ05mbi2ZX3DA7gJD+GUOA1n4Cycg/Oiji3DSbgE2zLhZ8viClyFa3Adbog6th1zF9Fu1yHPVmQ9+X/kyf+yngLaC3gJd+AuLMJ78QHuwX07HBtdT1HFn8BTWIKf4hc8g+d2ODa6npKKv4PNGGuBN+jf2n6/NeM/07HBeo4lTzDPxH5grANtJ3xD/932+13yTMeaPEcYu5Y8wTwTq8ngtxMZ07EmzxVyPMFu9HsqWJYaDdpKMb3w0bYISQWug3vRqX1+1vFzeHAhQZ6c5HiBrwnyPEuORmIQ/2dYdJ3az2wMcyZEL8GZBXvc1+S3Sc8sTQT1bPZ6qA71bPZ6vA71nLY9rrUOs6qG3QR1mFNzvQR7pPe30e4NA+uZkL/Rr76z1RyIqd0R9Z2t5mhMnujdFCffJUIIIYQQQgghhBBCCCGERPkBabitUA=="
     },
     {
       type = "tilelayer",
@@ -1449,7 +1449,7 @@ return {
       x = 0,
       y = 0,
       width = 18,
-      height = 120,
+      height = 140,
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1457,7 +1457,71 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztlu9JA0EQxZfTWIGxAk09ihYQ0QI0WkCMlqBWYFKB+llJClC0gPinAKMW4Du4hWFYj7sZYf3wfvC4DzM7HLMzjw2BEELycFmEsA3tFO3PbuLMFnQO3UJ70L6hTh9ndqFraAAdQceGOgc4c1jVGEGn0JmhzhBnTqoaubnDP9xDy0shdKCLwnZnD8h9hNZRYwO6Md7ZHLkv0GulgfHOPpC7gD4rjZx39hfIeV5Bj6b4zpzz3EOdJ3yfnfNc9voNenfOc9nrL+g7Q49lf+McW5D9jXNsQfY3yrJfsr9R1v3SWPerRHqHZ7+kd3iQ3uFBeodnTyWePZV49lSSc09JXlI+qf2oSU70yStoDE0SftQmR/qtJSflt9rXmuSk/Fb7WpOc/4x+90mfq4tponevIqcLrQmfq4v9Vie+H3uJOqmYRr8fpV/WxTT6/Sj9si5GCCGEEEIIIYQQ0pYfrsuhtQ=="
+      data = "eJztlFtOAkEQRTsjuBJlPRBdAAYXoAMLQHQJykqETx9R+NboAni4AHkswEMynXQmTpBqEki8JzmZn67KpPpWOyeEELuhmzh3gqfJ5rVVamp4i31s4LmhT52aM7zHFJvYMvS5oOYy69HBa7wx9GlTc5X12DVP/MMzlg6cK+NdYruzN86+4xE9jrFnvLMRZ8c4yUyNd/bN2RnOMzuRd7YNwjwfMqMXvq+Rea7Q54PvZ2SeV7Oe4ldknlezXuAycsaWHIbz9fWWHIbz9fWWHIbz9VpyGM7Xuw+Eb0dMnsO3IybP+bfDmuf827GNPIv/zQP5edwgQwPODn8573flrxTtUn5X1lm0S/ldWad2SQghhBBCCCGEEEIIIYQQ+84PLGtw1w=="
+    },
+    {
+      type = "tilelayer",
+      name = "storehouse2nd",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 140,
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJztzrEJACEQRUHBGi3BOizZFuQ4TIxcNBFm4IX+NSUAAIC3tPx3Y+Nk63tXlqJb835divyr570AAAAAAACIGbZBEo0="
+    },
+    {
+      type = "tilelayer",
+      name = "storehouseroof",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 140,
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJzt0TEKgDAQRcGQ+x9QvICiB1C0MU0giERiSmfgd8trNgQAAIC6IYYwxv7GnLZ0tHJjTzs+tspG1tp6arS2pkrj3lorN9tLo2ydnT8EAAAAAAD4mwuTnx9X"
+    },
+    {
+      type = "tilelayer",
+      name = "model houses",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 140,
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJzt0sEJwkAQBdCFWJolBLGAIBYUxAJEUl2SEtxLYMDNMgW8B//y+beZUgAAAIAz81DKO+Q1/G/G2t1Dbo3Np3ZLyLexmWr3DHk0NmvttpC9s7lezjfk9e6b+Y9D776Z/zj0fiDzHwAAAAAA5P0AoGkmhw=="
+    },
+    {
+      type = "tilelayer",
+      name = "model rooftops",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 140,
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJztzt1NAkEUQOHJAFYAVADWI5ECNFgAIAWgUoJaAVKB8IyBAiBQAIgF4E8BnsfNBjdZnoyeLznJ7NybyYYgSZIkSfqvzmIIDbqnB3qkc2rGfDsXnC9pSE80ohZdHbnzTGOaHLnT5tyhbqJr6uXc6XO+odtEdzTIufObTfnPFyoWQijRCc34nsfsWdqCuyWV2alQlVZ8r2P27Kd3auzU6fTAO4dmaRvutvSaaEdvMXuWtufunT4SfdJXzJ5JkiRJkiRJkv6Gb1ACUQ8="
     },
     {
       type = "objectgroup",
@@ -1475,7 +1539,7 @@ return {
           type = "Camera",
           shape = "rectangle",
           x = 24,
-          y = 1600,
+          y = 1920,
           width = 240,
           height = 320,
           rotation = 0,
@@ -1497,7 +1561,7 @@ return {
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 0 },
+            { x = 0, y = 320 },
             { x = 0, y = -1600 }
           },
           properties = {
@@ -1535,7 +1599,7 @@ return {
           type = "",
           shape = "rectangle",
           x = 144,
-          y = 1952,
+          y = 2272,
           width = 64,
           height = 64,
           rotation = 0,
