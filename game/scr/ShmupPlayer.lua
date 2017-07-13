@@ -18,8 +18,8 @@ local NonPlayMask = {
 	ShmupCollision.Category_PlayerTeam,
 	ShmupCollision.Category_PlayerShot,
 	ShmupCollision.Category_PlayerBomb,
-	ShmupCollision.Category_NPCTeam,
-	ShmupCollision.Category_NPCShot
+	ShmupCollision.Category_EnemyTeam,
+	ShmupCollision.Category_EnemyShot
 }
 
 local ShmupPlayer = class()
@@ -287,7 +287,7 @@ end
 
 function ShmupPlayer:beginContact(myfixture, otherfixture, contact)
 	local category = otherfixture:getCategory()
-	if category == ShmupCollision.Category_NPCShot then
+	if category == ShmupCollision.Category_EnemyShot then
 		if not self.killed and self.shieldtimer == 0 then
 			self.coroutine = coroutine.create(
 				ShmupPlayer.deathCoroutine)
@@ -297,8 +297,8 @@ end
 
 function ShmupPlayer:preSolve(myfixture, otherfixture, contact)
 	local category = otherfixture:getCategory()
-	if category == ShmupCollision.Category_NPCTeam
-	or category == ShmupCollision.Category_NPCInCover then
+	if category == ShmupCollision.Category_EnemyTeam
+	or category == ShmupCollision.Category_EnemyInCover then
 		contact:setEnabled(false)
 	end
 end

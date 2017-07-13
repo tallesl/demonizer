@@ -7,10 +7,10 @@ local ShmupCollision = {
 	Category_PlayerTeam = 4,
 	Category_PlayerShot = 5,
 	Category_PlayerBomb = 6,
-	Category_NPCTeam = 7,
-	Category_NPCShot = 8,
-	Category_NPCInCover = 9,
-	Category_NPCCover = 10,
+	Category_EnemyTeam = 7,
+	Category_EnemyShot = 8,
+	Category_EnemyInCover = 9,
+	Category_EnemyCover = 10,
 }
 
 local function printx(x)

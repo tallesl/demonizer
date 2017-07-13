@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "1.0.0",
+  tiledversion = "1.0.2",
   orientation = "orthogonal",
   renderorder = "right-up",
   width = 30,
@@ -210,16 +210,11 @@ return {
         height = 72
       },
       properties = {
-        ["column_angle0"] = 0,
-        ["column_angle135"] = 3,
-        ["column_angle180"] = 4,
-        ["column_angle225"] = 5,
-        ["column_angle270"] = 6,
-        ["column_angle315"] = 7,
-        ["column_angle45"] = 1,
-        ["column_angle90"] = 2,
+        ["colstype"] = "direction",
         ["commonanimation"] = 0,
         ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 8,
         ["row_empty"] = 2,
         ["row_windup"] = 0
       },
@@ -228,6 +223,9 @@ return {
       tiles = {
         {
           id = 0,
+          properties = {
+            ["faceangle"] = 0
+          },
           objectGroup = {
             type = "objectgroup",
             name = "",
@@ -273,6 +271,48 @@ return {
               duration = 33
             }
           }
+        },
+        {
+          id = 1,
+          properties = {
+            ["faceangle"] = 45
+          }
+        },
+        {
+          id = 2,
+          properties = {
+            ["faceangle"] = 90
+          }
+        },
+        {
+          id = 3,
+          properties = {
+            ["faceangle"] = 135
+          }
+        },
+        {
+          id = 4,
+          properties = {
+            ["faceangle"] = 180
+          }
+        },
+        {
+          id = 5,
+          properties = {
+            ["faceangle"] = 225
+          }
+        },
+        {
+          id = 6,
+          properties = {
+            ["faceangle"] = 270
+          }
+        },
+        {
+          id = 7,
+          properties = {
+            ["faceangle"] = 315
+          }
         }
       }
     },
@@ -297,16 +337,17 @@ return {
         height = 32
       },
       properties = {
-        ["commoncollision"] = 0
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
       },
       terrains = {},
       tilecount = 15,
       tiles = {
         {
           id = 0,
-          properties = {
-            ["name"] = "up"
-          },
           objectGroup = {
             type = "objectgroup",
             name = "",
@@ -354,99 +395,9 @@ return {
           }
         },
         {
-          id = 3,
-          properties = {
-            ["name"] = "right"
-          },
-          animation = {
-            {
-              tileid = 3,
-              duration = 125
-            },
-            {
-              tileid = 4,
-              duration = 125
-            },
-            {
-              tileid = 5,
-              duration = 125
-            },
-            {
-              tileid = 4,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 6,
-          properties = {
-            ["name"] = "down"
-          },
-          animation = {
-            {
-              tileid = 6,
-              duration = 125
-            },
-            {
-              tileid = 7,
-              duration = 125
-            },
-            {
-              tileid = 8,
-              duration = 125
-            },
-            {
-              tileid = 7,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 9,
-          properties = {
-            ["name"] = "left"
-          },
-          animation = {
-            {
-              tileid = 9,
-              duration = 125
-            },
-            {
-              tileid = 10,
-              duration = 125
-            },
-            {
-              tileid = 11,
-              duration = 125
-            },
-            {
-              tileid = 10,
-              duration = 125
-            }
-          }
-        },
-        {
           id = 12,
           properties = {
             ["name"] = "ko"
-          },
-          animation = {
-            {
-              tileid = 12,
-              duration = 125
-            },
-            {
-              tileid = 13,
-              duration = 125
-            },
-            {
-              tileid = 14,
-              duration = 125
-            },
-            {
-              tileid = 13,
-              duration = 125
-            }
           }
         }
       }

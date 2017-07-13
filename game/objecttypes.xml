@@ -17,13 +17,13 @@
   <property name="script" type="string" default="ShmupCam"/>
   <property name="sensor" type="bool" default="true"/>
  </objecttype>
- <objecttype name="NPCCover" color="#a0a0a4">
-  <property name="category" type="string" default="NPCCover"/>
+ <objecttype name="EnemyCover" color="#a0a0a4">
+  <property name="category" type="string" default="EnemyCover"/>
   <property name="collidable" type="bool" default="true"/>
   <property name="sensor" type="bool" default="true"/>
  </objecttype>
  <objecttype name="BulletPike" color="#00aaff">
-  <property name="category" type="string" default="NPCShot"/>
+  <property name="category" type="string" default="EnemyShot"/>
   <property name="sound" type="file" default="snd/pike.wav"/>
   <property name="speed" type="float" default="150"/>
   <property name="tileid" type="string" default="pike"/>
@@ -48,7 +48,7 @@
   <property name="strafearc" type="float" default="0"/>
  </objecttype>
  <objecttype name="BulletArrow" color="#00aaff">
-  <property name="category" type="string" default="NPCShot"/>
+  <property name="category" type="string" default="EnemyShot"/>
   <property name="sound" type="file" default="snd/bow.wav"/>
   <property name="speed" type="float" default="240"/>
   <property name="tileid" type="string" default="arrow"/>
@@ -111,14 +111,14 @@
   <property name="strafearc" type="float" default="0"/>
  </objecttype>
  <objecttype name="BulletCatapult" color="#00aaff">
-  <property name="category" type="string" default="NPCShot"/>
+  <property name="category" type="string" default="EnemyShot"/>
   <property name="sound" type="file" default="snd/catapult.wav"/>
   <property name="speed" type="float" default="150"/>
   <property name="tileid" type="string" default="catapult"/>
   <property name="tileset" type="string" default="humanshots"/>
  </objecttype>
  <objecttype name="BulletSword" color="#00aaff">
-  <property name="category" type="string" default="NPCShot"/>
+  <property name="category" type="string" default="EnemyShot"/>
   <property name="lifetime" type="float" default="0.25"/>
   <property name="sound" type="file" default="snd/sword.wav"/>
   <property name="speed" type="float" default="240"/>
@@ -145,7 +145,7 @@
  <objecttype name="BulletFireArrow" color="#00aaff">
   <property name="accelx" type="float" default="0"/>
   <property name="accely" type="float" default="480"/>
-  <property name="category" type="string" default="NPCShot"/>
+  <property name="category" type="string" default="EnemyShot"/>
   <property name="sound" type="file" default="snd/powershot.wav"/>
   <property name="speed" type="float" default="240"/>
   <property name="tileid" type="string" default="firearrow"/>

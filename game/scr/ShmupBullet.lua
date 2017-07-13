@@ -38,7 +38,7 @@ function ShmupBullet:_init(object)
 					ShmupCollision.Category_PlayerTeam,
 					ShmupCollision.Category_PlayerShot,
 					ShmupCollision.Category_PlayerBomb,
-					ShmupCollision.Category_NPCShot)
+					ShmupCollision.Category_EnemyShot)
 		elseif category == ShmupCollision.Category_PlayerBomb then
 			fixture:setMask(ShmupCollision.Category_CameraEdge,
 					ShmupCollision.Category_PlayerTeam,
@@ -47,9 +47,9 @@ function ShmupBullet:_init(object)
 		else
 			fixture:setMask(ShmupCollision.Category_CameraEdge,
 					ShmupCollision.Category_PlayerShot,
-					ShmupCollision.Category_NPCTeam,
-					ShmupCollision.Category_NPCInCover,
-					ShmupCollision.Category_NPCShot)
+					ShmupCollision.Category_EnemyTeam,
+					ShmupCollision.Category_EnemyInCover,
+					ShmupCollision.Category_EnemyShot)
 		end
 	end
 
@@ -95,7 +95,7 @@ ShmupBullet.MaxTime = 10
 function ShmupBullet:beginContact(yourfixture, otherfixture, contact)
 	if otherfixture:getCategory() == ShmupCollision.Category_PlayerTeam
 	or otherfixture:getCategory() == ShmupCollision.Category_PlayerBomb
-	or otherfixture:getCategory() == ShmupCollision.Category_NPCTeam then
+	or otherfixture:getCategory() == ShmupCollision.Category_EnemyTeam then
 		if not self.object.properties.persist then
 			levity:discardObject(self.object.id)
 		end

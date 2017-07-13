@@ -95,14 +95,14 @@ end
 function ShmupWingman:setVulnerable(vulnerable)
 	for _, fixture in pairs(self.object.body:getFixtureList()) do
 		ShmupCollision.setFixtureMask(fixture,
-			ShmupCollision.Category_NPCShot, vulnerable)
+			ShmupCollision.Category_EnemyShot, vulnerable)
 	end
 end
 
 function ShmupWingman:setCaptureEnabled(enabled)
 	for _, fixture in pairs(self.object.body:getFixtureList()) do
 		ShmupCollision.setFixtureMask(fixture,
-			ShmupCollision.Category_NPCTeam, enabled)
+			ShmupCollision.Category_EnemyTeam, enabled)
 	end
 end
 
@@ -150,7 +150,7 @@ function ShmupWingman:beginContact(myfixture, otherfixture, contact)
 	local otherproperties = otherdata.properties
 	local category = otherfixture:getCategory()
 
-	if category == ShmupCollision.Category_NPCShot then
+	if category == ShmupCollision.Category_EnemyShot then
 		if self.health >= 1 then
 			local damage = otherproperties.damage or 1
 			self.health = self.health - damage

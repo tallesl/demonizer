@@ -7,7 +7,7 @@
  <image source="trees_tall.png" width="144" height="80"/>
  <tile id="1">
   <objectgroup draworder="index">
-   <object id="2" type="NPCCover" x="-16" y="40" width="32" height="32">
+   <object id="2" type="EnemyCover" x="-16" y="40" width="32" height="32">
     <ellipse/>
    </object>
    <object id="3" x="-10" y="28" width="20" height="20">

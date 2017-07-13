@@ -17,8 +17,8 @@ function ShmupFriend:_init(object)
 		--ShmupCollision.Category_PlayerTeam,
 		ShmupCollision.Category_PlayerShot,
 		ShmupCollision.Category_PlayerBomb,
-		ShmupCollision.Category_NPCTeam,
-		ShmupCollision.Category_NPCInCover
+		ShmupCollision.Category_EnemyTeam,
+		ShmupCollision.Category_EnemyInCover
 	})
 
 	self.ready = false
@@ -106,7 +106,7 @@ function ShmupFriend:beginContact(myfixture, otherfixture, contact)
 	local otherproperties = otherdata.properties
 	local category = otherfixture:getCategory()
 
-	if category == ShmupCollision.Category_NPCShot then
+	if category == ShmupCollision.Category_EnemyShot then
 		self:damage(otherproperties.damage or 1)
 	elseif category == ShmupCollision.Category_Camera then
 		self.oncamera = true

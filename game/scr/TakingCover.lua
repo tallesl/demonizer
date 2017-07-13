@@ -1,6 +1,5 @@
 local levity = require "levity"
 local ShmupCollision = require "ShmupCollision"
---TODO "NPC" --> "Enemy"
 
 local TakingCover = class()
 function TakingCover:_init(object)
@@ -15,14 +14,14 @@ end
 
 function TakingCover:beginContact(myfixture, otherfixture, contact)
 	local category = otherfixture:getCategory()
-	if category == ShmupCollision.Category_NPCCover then
+	if category == ShmupCollision.Category_EnemyCover then
 		self.deltacover = self.deltacover + 1
 	end
 end
 
 function TakingCover:endContact(myfixture, otherfixture, contact)
 	local category = otherfixture:getCategory()
-	if category == ShmupCollision.Category_NPCCover then
+	if category == ShmupCollision.Category_EnemyCover then
 		self.deltacover = self.deltacover - 1
 	end
 end
@@ -32,9 +31,9 @@ function TakingCover:endMove(dt)
 		local cover = self.numcover + self.deltacover
 		local category
 		if cover > 0 then
-			category = ShmupCollision.Category_NPCInCover
+			category = ShmupCollision.Category_EnemyInCover
 		else
-			category = ShmupCollision.Category_NPCTeam
+			category = ShmupCollision.Category_EnemyTeam
 		end
 		local fixtures = self.object.body:getFixtureList()
 		for _, fixture in ipairs(fixtures) do

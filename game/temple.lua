@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "1.0.1",
+  tiledversion = "1.0.2",
   orientation = "orthogonal",
   renderorder = "right-up",
   width = 18,
@@ -290,6 +290,11 @@ return {
         {
           name = "Weeds",
           tile = 326,
+          properties = {}
+        },
+        {
+          name = "Soil",
+          tile = 329,
           properties = {}
         }
       },
@@ -1192,12 +1197,28 @@ return {
           terrain = { -1, 10, 10, 10 }
         },
         {
+          id = 293,
+          terrain = { 11, 11, 11, 0 }
+        },
+        {
+          id = 294,
+          terrain = { 11, 11, 0, 11 }
+        },
+        {
           id = 300,
           terrain = { 10, 10, 10, -1 }
         },
         {
           id = 301,
           terrain = { 10, 10, -1, 10 }
+        },
+        {
+          id = 305,
+          terrain = { 11, 0, 11, 11 }
+        },
+        {
+          id = 306,
+          terrain = { 0, 11, 11, 11 }
         },
         {
           id = 313,
@@ -1212,6 +1233,18 @@ return {
           terrain = { -1, -1, 10, -1 }
         },
         {
+          id = 316,
+          terrain = { 0, 0, 0, 11 }
+        },
+        {
+          id = 317,
+          terrain = { 0, 0, 11, 11 }
+        },
+        {
+          id = 318,
+          terrain = { 0, 0, 11, 0 }
+        },
+        {
           id = 325,
           terrain = { -1, 10, -1, 10 }
         },
@@ -1224,6 +1257,18 @@ return {
           terrain = { 10, -1, 10, -1 }
         },
         {
+          id = 328,
+          terrain = { 0, 11, 0, 11 }
+        },
+        {
+          id = 329,
+          terrain = { 11, 11, 11, 11 }
+        },
+        {
+          id = 330,
+          terrain = { 11, 0, 11, 0 }
+        },
+        {
           id = 337,
           terrain = { -1, 10, -1, -1 }
         },
@@ -1234,6 +1279,18 @@ return {
         {
           id = 339,
           terrain = { 10, -1, -1, -1 }
+        },
+        {
+          id = 340,
+          terrain = { 0, 11, 0, 0 }
+        },
+        {
+          id = 341,
+          terrain = { 11, 11, 0, 0 }
+        },
+        {
+          id = 342,
+          terrain = { 11, 0, 0, 0 }
         },
         {
           id = 372,

@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "0.18.2",
+  tiledversion = "1.0.2",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 48,
@@ -30,6 +30,11 @@ return {
         x = 0,
         y = 0
       },
+      grid = {
+        orientation = "orthogonal",
+        width = 5,
+        height = 5
+      },
       properties = {},
       terrains = {},
       tilecount = 100,
@@ -49,6 +54,11 @@ return {
       tileoffset = {
         x = -64,
         y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 128,
+        height = 32
       },
       properties = {},
       terrains = {},

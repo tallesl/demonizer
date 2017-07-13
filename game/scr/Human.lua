@@ -20,7 +20,6 @@ local Mover = require "Mover"
 local ShmupCollision = require "ShmupCollision"
 local ShmupBullet = require "ShmupBullet"
 local ShmupWingman = require "ShmupWingman"
---TODO "NPC" --> "Enemy"
 
 local Human = class()
 function Human:_init(object)
@@ -40,7 +39,7 @@ function Human:_init(object)
 
 	for _, fixture in ipairs(self.body:getFixtureList()) do
 		fixture:setSensor(true)
-		fixture:setCategory(ShmupCollision.Category_NPCTeam)
+		fixture:setCategory(ShmupCollision.Category_EnemyTeam)
 		fixture:setMask(unpack(mask))
 	end
 
@@ -91,15 +90,15 @@ Human.ReleaseLaunchVelY = -250
 
 Human.CombatantMask = {
 	ShmupCollision.Category_CameraEdge,
-	ShmupCollision.Category_NPCShot
+	ShmupCollision.Category_EnemyShot
 }
 
 Human.NonCombatantMask = {
 	ShmupCollision.Category_CameraEdge,
 	ShmupCollision.Category_PlayerShot,
-	ShmupCollision.Category_NPCTeam,
-	ShmupCollision.Category_NPCShot,
-	ShmupCollision.Category_NPCCover
+	ShmupCollision.Category_EnemyTeam,
+	ShmupCollision.Category_EnemyShot,
+	ShmupCollision.Category_EnemyCover
 }
 
 local Sounds = {

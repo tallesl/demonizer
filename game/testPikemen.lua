@@ -1,7 +1,7 @@
 return {
   version = "1.1",
   luaversion = "5.1",
-  tiledversion = "1.0.0",
+  tiledversion = "1.0.2",
   orientation = "orthogonal",
   renderorder = "right-up",
   width = 30,
@@ -230,7 +230,7 @@ return {
               {
                 id = 1,
                 name = "",
-                type = "NPCCover",
+                type = "EnemyCover",
                 shape = "ellipse",
                 x = -20,
                 y = 24,
@@ -352,16 +352,17 @@ return {
         height = 32
       },
       properties = {
-        ["commoncollision"] = 0
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
       },
       terrains = {},
       tilecount = 15,
       tiles = {
         {
           id = 0,
-          properties = {
-            ["name"] = "up"
-          },
           objectGroup = {
             type = "objectgroup",
             name = "",
@@ -409,63 +410,11 @@ return {
           }
         },
         {
-          id = 3,
+          id = 10,
           properties = {
-            ["name"] = "right"
+            ["name"] = "wingman"
           },
           animation = {
-            {
-              tileid = 3,
-              duration = 125
-            },
-            {
-              tileid = 4,
-              duration = 125
-            },
-            {
-              tileid = 5,
-              duration = 125
-            },
-            {
-              tileid = 4,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 6,
-          properties = {
-            ["name"] = "down"
-          },
-          animation = {
-            {
-              tileid = 6,
-              duration = 125
-            },
-            {
-              tileid = 7,
-              duration = 125
-            },
-            {
-              tileid = 8,
-              duration = 125
-            },
-            {
-              tileid = 7,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 9,
-          properties = {
-            ["name"] = "left"
-          },
-          animation = {
-            {
-              tileid = 9,
-              duration = 125
-            },
             {
               tileid = 10,
               duration = 125
@@ -475,8 +424,24 @@ return {
               duration = 125
             },
             {
-              tileid = 10,
+              tileid = 9,
               duration = 125
+            }
+          }
+        },
+        {
+          id = 11,
+          properties = {
+            ["name"] = "convert"
+          },
+          animation = {
+            {
+              tileid = 11,
+              duration = 66
+            },
+            {
+              tileid = 9,
+              duration = 66
             }
           }
         },
@@ -484,24 +449,6 @@ return {
           id = 12,
           properties = {
             ["name"] = "ko"
-          },
-          animation = {
-            {
-              tileid = 12,
-              duration = 125
-            },
-            {
-              tileid = 13,
-              duration = 125
-            },
-            {
-              tileid = 14,
-              duration = 125
-            },
-            {
-              tileid = 13,
-              duration = 125
-            }
           }
         }
       }
@@ -527,16 +474,17 @@ return {
         height = 32
       },
       properties = {
-        ["commoncollision"] = 0
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
       },
       terrains = {},
       tilecount = 15,
       tiles = {
         {
           id = 0,
-          properties = {
-            ["name"] = "up"
-          },
           objectGroup = {
             type = "objectgroup",
             name = "",
@@ -584,99 +532,9 @@ return {
           }
         },
         {
-          id = 3,
-          properties = {
-            ["name"] = "right"
-          },
-          animation = {
-            {
-              tileid = 3,
-              duration = 125
-            },
-            {
-              tileid = 4,
-              duration = 125
-            },
-            {
-              tileid = 5,
-              duration = 125
-            },
-            {
-              tileid = 4,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 6,
-          properties = {
-            ["name"] = "down"
-          },
-          animation = {
-            {
-              tileid = 6,
-              duration = 125
-            },
-            {
-              tileid = 7,
-              duration = 125
-            },
-            {
-              tileid = 8,
-              duration = 125
-            },
-            {
-              tileid = 7,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 9,
-          properties = {
-            ["name"] = "left"
-          },
-          animation = {
-            {
-              tileid = 9,
-              duration = 125
-            },
-            {
-              tileid = 10,
-              duration = 125
-            },
-            {
-              tileid = 11,
-              duration = 125
-            },
-            {
-              tileid = 10,
-              duration = 125
-            }
-          }
-        },
-        {
           id = 12,
           properties = {
             ["name"] = "ko"
-          },
-          animation = {
-            {
-              tileid = 12,
-              duration = 125
-            },
-            {
-              tileid = 13,
-              duration = 125
-            },
-            {
-              tileid = 14,
-              duration = 125
-            },
-            {
-              tileid = 13,
-              duration = 125
-            }
           }
         }
       }

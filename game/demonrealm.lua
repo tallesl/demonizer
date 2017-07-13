@@ -1368,7 +1368,7 @@ return {
               {
                 id = 1,
                 name = "",
-                type = "NPCCover",
+                type = "EnemyCover",
                 shape = "ellipse",
                 x = -20,
                 y = 24,
@@ -1424,7 +1424,7 @@ return {
               {
                 id = 2,
                 name = "",
-                type = "NPCCover",
+                type = "EnemyCover",
                 shape = "ellipse",
                 x = -16,
                 y = 40,

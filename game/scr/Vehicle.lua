@@ -5,7 +5,6 @@ local levity = require "levity"
 local Mover = require "Mover"
 local ShmupCollision = require "ShmupCollision"
 local ShmupBullet = require "ShmupBullet"
---TODO "NPC" --> "Enemy"
 
 local Vehicle = class()
 function Vehicle:_init(object)
@@ -19,7 +18,7 @@ function Vehicle:_init(object)
 
 	for _, fixture in ipairs(self.body:getFixtureList()) do
 		fixture:setSensor(true)
-		fixture:setCategory(ShmupCollision.Category_NPCTeam)
+		fixture:setCategory(ShmupCollision.Category_EnemyTeam)
 		fixture:setMask(unpack(mask))
 	end
 
@@ -58,7 +57,7 @@ Vehicle.DefeatSparkParams = {
 Vehicle.CombatantMask = {
 	ShmupCollision.Category_CameraEdge,
 	ShmupCollision.Category_PlayerTeam,
-	ShmupCollision.Category_NPCShot
+	ShmupCollision.Category_EnemyShot
 }
 
 local Sounds = {
