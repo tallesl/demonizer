@@ -3,7 +3,7 @@ return {
   luaversion = "5.1",
   tiledversion = "1.0.2",
   orientation = "orthogonal",
-  renderorder = "right-up",
+  renderorder = "right-down",
   width = 18,
   height = 140,
   tilewidth = 16,
@@ -1376,6 +1376,56 @@ return {
       terrains = {},
       tilecount = 256,
       tiles = {}
+    },
+    {
+      name = "fence_alt",
+      firstgid = 1102,
+      filename = "img/fence_alt.tsx",
+      tilewidth = 32,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/fence_alt.png",
+      imagewidth = 96,
+      imageheight = 192,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 32
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 18,
+      tiles = {}
+    },
+    {
+      name = "crops",
+      firstgid = 1120,
+      filename = "img/crops.tsx",
+      tilewidth = 16,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/crops.png",
+      imagewidth = 112,
+      imageheight = 160,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 32
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 35,
+      tiles = {}
     }
   },
   layers = {
@@ -1409,7 +1459,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztWMFu2zAMVYBl625FCt+W1b0123pz0u7mZNnN9a6J84f9yuktfDCrOoolO8MwiMCDZEeiSfGRUmTMeHJv8SVy3oN6LixuIvTMLFaOnutIPfr7mcX3CD2Z8/3MxPnlrsfMxPnlfl8/IwbfLBYWc3OMB97l8m5h2hi56wF7Psm8zxZ7i18WB3OMB+x/tqgtKotbGXvn6Plhsba4EmylxbuNRSnvtvJuqsZvglcjyb8guQDcC60dX2UeuARugWPgXGiuPlosBS+m5erKN6lDkAeVzGcOfDBh3ETOIYeeLHYC9EPrBmxpzNGfF9EB/0J9ctcGeqoIe1ADGKNa9CFWqAUhcac9e2XLQZ5DamImc2rBTlroCvENeugT7EHMG2nh28PpqW/0MOa0iz5CV9+4ZfL9J2lraaHrncXPnnpQi9+r7y+VbaH5lam5jBfWLHQPm4kt1AXbQnzSephXsAO8DuUzag/2r4PoIQdD8os6GplPXqNmhPiE3MK60JdG+jE1g/4w7njG3q73/3OCeNMX6mtMW4/62kUOknuV6FyKbSH8KS0+ig7WM65XKJ8Lxx7oAA9DzyCFzAeYqzHnukJsYLwOkXr0etOe0P1C68J6k89DzmeliasXXYIzY2i9SJIkSZL/Ufj/KTft/3/29bmc9wO5wkK160k3NpPXdRt7VXliLPB8AvXk7R1I5Rnv06P3+8cBelYj2XM9kj3ar2KAHveOyKdnfwJNh187z3je5fBu50o96/26NK/vhdifSsu7Ks3RuenmM3/LTct9tj4+uzyM5bObF2PEayweDrFnLB5eIk/P2ePj842jx8dn3lNOTctt9l0+k7/u3abmM3lKjqLv8jkXzNUYzvPx2V3nWD6PFa9L5MW5OjYWf/ra87fyvS+f/9zReMavTVtrNfBe85l3+MRW9acmnTfSeWNYnqbzRjpvXIqH6byRJEmSJEmSJBlDfgOQhhFi"
+      data = "eJztmUtz2jAUhZWZ0scukwy70tJdaZsdJHRH0nSHzRbMP+RXVre53/hEAQcZp9N2rJk7soV0dB9HktENobvyOcqXluOu5H0a5bIFzkWU6wTnvCWOzj+M8r0FzjCZfxja2ZX64yK0syudX98tBt+iTKKMwkM8rG3sbZNQxyj1h+nz3sd9iLKJsoqyDQ/xMP2LKGWUZZSP3vdTgvMjym2Uty73XlvbXZSFt91720D632V7oy9/Qxm7GPdy946vPs64ZNwyjhnnctfqTZSZyy7UXL1uGrSn2DpY+njWwJuQx01bc7aG5lHWLvacu2+YLlV4sGfnGGZfrk2pbwxn2UIf2wOIUel4FivbC3Lijj4b0WXr7zl74tDHlC5rrw0rxzbDwSbTx2JeeW22XR0e+gSHmKMXNhrWsXEb+vxzr0uvDetVlJ9H4the/Frmn4luuetrKGOJl/ks9wy7cF3AMt1ybFIc1pXpYbzO5bPtPXZ+bR0HDuasLzAqHw+vbc/IscnWlvkFWyp/brNnYA9xt3c72/X8f65YvLEFvCrU+9GxesFBuLd0zJnrlsOfRZR3jsF+hr9y+TxN9DEM42HuN8jUx5uwVtt8101dB+K1bYmj/kaf3PNCsczf8PmU77NFaLdf7Cv2zZi7X/SlL33py/9Y+P80DvX/f571u5z7gbHIROrbs/1yd/Z437azanGgr0lxQMqzp3cgy4b+TTh63t+cgHPdkT7nHemjdk1PwEnviJpwNgek2mPXuqE/dznc7byVdz2vF+HxvRDPA6+5q1KOjsJ+PvPbONTcp27ic8rDtnxO10UX8eqKh6fo0xUPX2KdPqdPE58vE5wmPnNPOQg1t3lO+Qx/07tN5TM8haP2nPJ57DKSPoxr4nPq57Z87ipeL7EuntvHuuLPsfr8qfV+LJ9/39E09L8N9V6rYu3KZ+7wkXt5HoT+e6P/3jhtnfbfG/33xkvxsP/e6Mu/VvRMZD9h/9HzcyJt7EMjeSaXxp243QGTG5t7G/mxlfddyTj7fe1tO+9XCqbmyMhPIeQIilDfy5M72DouORLyR9x1V95GToh+5EE2jkd+L9UZLHIM5IV23gcbwMY3c+mn9hWhznWoDeR3VqHOEVY+n85NXpRcq+byNtIPnQppV79oDhr/YdMu1PmzIpkLfOKt8SdvQv4Wv+ILtZccaCXP5KhWgr2VsXChFKxSavKj/I6sBJO+cJFcqtqPPfTBD+DD2SrUeSz00TjAJ9YCXKTWNUBOjnnhDT4h7uhCnos4qG+YE76R0yrldzjKOuCdPjOZA/8opzXPym/qE37H7/hPuYftO5lDuaicXSf1TrBXMic1ujMXa5AYE2f1e5EI643+zIfdcEHXIP7ZCqbGBy7D0V9eD4Z8"
     },
     {
       type = "tilelayer",
@@ -1522,6 +1572,42 @@ return {
       encoding = "base64",
       compression = "zlib",
       data = "eJztzt1NAkEUQOHJAFYAVADWI5ECNFgAIAWgUoJaAVKB8IyBAiBQAIgF4E8BnsfNBjdZnoyeLznJ7NybyYYgSZIkSfqvzmIIDbqnB3qkc2rGfDsXnC9pSE80ohZdHbnzTGOaHLnT5tyhbqJr6uXc6XO+odtEdzTIufObTfnPFyoWQijRCc34nsfsWdqCuyWV2alQlVZ8r2P27Kd3auzU6fTAO4dmaRvutvSaaEdvMXuWtufunT4SfdJXzJ5JkiRJkiRJkv6Gb1ACUQ8="
+    },
+    {
+      type = "tilelayer",
+      name = "crops",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 140,
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = -16,
+      properties = {
+        ["note"] = "Temp Y offset to compensate for tile rendering bug"
+      },
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJztzLsJA0EUBMEzJl6JQ+hzKHklMLvmM0QVtNvHAQAAAABznumtfNPzmfmwd6W38knPZ+bD3iu9lXd6PjMf9m7prZzp+cx82Hukt3JPz2fmAwD8nx/GQqm9"
+    },
+    {
+      type = "tilelayer",
+      name = "fence",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 140,
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = -16,
+      properties = {
+        ["note"] = "Temp Y offset to compensate for tile rendering bug"
+      },
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJztyqEBACAMwLAJ/uMC4P8vMJsDg0IkpqYRAAAAAAAAAAC86O3ckZ3ZdfmqAPxpAwr6Axk="
     },
     {
       type = "objectgroup",
