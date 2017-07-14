@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "org.love2d.android"
+        versionCode 22
+        versionName "0.10.2"
+        minSdkVersion 10
+        targetSdkVersion 18
+    }
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.1'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile project(':love')
+}
