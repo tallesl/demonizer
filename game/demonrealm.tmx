@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-up" width="18" height="100" tilewidth="16" tileheight="16" nextobjectid="333">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-up" width="18" height="100" tilewidth="16" tileheight="16" nextobjectid="337">
  <properties>
   <property name="cameraid" type="int" value="1"/>
   <property name="music" type="file" value="mus/05 - Twilight Express.vgm"/>
@@ -33,6 +33,7 @@
  <tileset firstgid="677" source="img/human/enemy/swordsman-f.tsx"/>
  <tileset firstgid="692" source="img/human/enemy/swordsman-m.tsx"/>
  <tileset firstgid="707" source="img/human/enemy/archer-f.tsx"/>
+ <tileset firstgid="722" source="img/rocks_wide.tsx"/>
  <layer name="dirt" width="18" height="100">
   <data encoding="base64" compression="zlib">
    eJyll1GOwzAIRH3/c+QW6b/lW20rZaSXVxwnXSRrt04MGAaYtFbL9l7jvV7v1Y+/27GeyufsfvyNnl8k/ox/6Ig/A/p+lX6s/R86tuP8OP72H3TkPh16ouuJbztW4pPfyaGl8je+fN7fCv/G5A7WFR2MDXNn37fCRrVHe7v2gs9gLOdnuOMd43P0dpxlbqq77njnhd/xZWjvhcU7dOxV/ufZwIqfrIkO/bl3dFbnYmeTfb7TpZc5jX7Gp+P3aOf8VH0pNjacdfwYjy67ezvXo3P2amc89UIvsb8Xdhwv/k+8b+2c89HO2GQ8nV/6xNqzzr6wQQzFf+KhF8u4d7x9B2JrtPNdqrpnrFOLtGFstSIfxJtnAH1l3iKjfeM1PlXCmNBOFeeqL0bo6yj2XX8zcYzpz1Wfb3qX+WAvq+pvdh9i0j3RM8P+Njxjr7Ye1y910hfXS85F2GNYE8aO5+dMzIn4rnlOsOjz5jHEEPsk88E+wfhxL++39h2z6o7Mo+uH+nfZiT+MrfuO50jFdcx7OH/Ig/zcZ1mPxpQX+4Lz5P4UMUZjJ9L1zM8j7P1V33CMrnoLfXXdu2df9RXXB/kX91Z1QYyxZ1Y8YlVfxFju6Fm26t3EdFVzxNlMFzFvvkNe45mZ+5kXeA4nb+Z9FTeqarfq956/1Ty2LzMxvzAvJme9Es4M1jZr2H3bYrxXeVnhIr6wzqreY85SySyu5jqOoe9kDuDZSMzSL88zxsXY8flXYbPi0NWccj917++FDu6NVmPctV7FmvEmpqrvgpmwJ/B93qGa7ZW4x7C33K2N6GHvdU2s/IiwF7X2Xat3hecizNOdO/nbyvpXeaKeWf2suCqFWLU/xNAdPZzhse0+sBLPxCt+cSWOs+fanbyzFvyNZC46O8+6sT/+diSGGE/3Kvcpzk3Gz3zRvNh2zbFYN4yfbZoLm2tu2jffZb67bHAmWZd5sPtWL+zyO8V5cG9nbhgH5oJ5IObpo2eJMWCblmrmeMY7dpFd//t7ifEhnqreZD3kK+a4fHYl/HZxTbE+VmLuRKxyrYTYNTdnLa3Es9xc7Onc8d1Yw3dlxm9muJuJub754V1hvTLed2cp/XGfepJz6nGvMne4I8Q08/TkTq2d8+P++lSPZ+lT7hM9zBfz9kT8rcW++NQfzkbebyZ/8sCBSA==
@@ -138,6 +139,11 @@
     <property name="pathid" type="int" value="118"/>
    </properties>
   </object>
+  <object id="96" name="tree" gid="436" x="148" y="1104" width="64" height="64"/>
+  <object id="46" name="tree" gid="436" x="112" y="528" width="64" height="64"/>
+  <object id="192" name="tree" gid="436" x="144" y="544" width="64" height="64"/>
+  <object id="93" name="tree" gid="436" x="176" y="528" width="64" height="64"/>
+  <object id="333" name="rock" type="DestructibleCover" gid="722" x="144" y="1032" width="64" height="48"/>
  </objectgroup>
  <objectgroup name="boss_paths">
   <properties>
@@ -400,10 +406,7 @@
   <object id="45" name="tree" gid="436" x="-8" y="544" width="64" height="64"/>
   <object id="95" name="tree" gid="436" x="280" y="488" width="64" height="64"/>
   <object id="94" name="tree" gid="436" x="32" y="464" width="64" height="64"/>
-  <object id="93" name="tree" gid="436" x="176" y="528" width="64" height="64"/>
   <object id="49" name="tree" gid="436" x="256" y="448" width="64" height="64"/>
-  <object id="46" name="tree" gid="436" x="112" y="528" width="64" height="64"/>
-  <object id="192" name="tree" gid="436" x="144" y="544" width="64" height="64"/>
   <object id="283" name="tree" gid="436" x="8" y="496" width="64" height="64"/>
   <object id="284" name="tree" gid="436" x="288" y="432" width="64" height="64"/>
   <object id="285" name="tree" gid="436" x="8" y="440" width="64" height="64"/>
@@ -415,6 +418,8 @@
   <object id="306" gid="421" x="152" y="424" width="32" height="32"/>
   <object id="305" gid="421" x="136" y="432" width="32" height="32"/>
   <object id="307" gid="430" x="144" y="408" width="32" height="32"/>
+  <object id="335" type="DestructibleCover" gid="723" x="120" y="536" width="64" height="48"/>
+  <object id="336" type="DestructibleCover" gid="722" x="168" y="536" width="64" height="48"/>
  </objectgroup>
  <objectgroup name="swordsmen4">
   <object id="129" type="Trigger" x="0" y="560" width="288" height="16">
@@ -636,10 +641,8 @@
  </objectgroup>
  <objectgroup name="deco2">
   <object id="47" name="tree" gid="436" x="48" y="1120" width="64" height="64"/>
-  <object id="143" name="tree" gid="436" x="144" y="1040" width="64" height="64"/>
   <object id="145" name="tree" gid="436" x="224" y="1024" width="64" height="64"/>
   <object id="144" name="tree" gid="436" x="64" y="1008" width="64" height="64"/>
-  <object id="96" name="tree" gid="436" x="148" y="1104" width="64" height="64"/>
   <object id="48" name="tree" gid="436" x="256" y="1120" width="64" height="64"/>
   <object id="185" gid="436" x="288" y="1152" width="64" height="64"/>
   <object id="186" gid="436" x="0" y="1152" width="64" height="64"/>
@@ -661,7 +664,7 @@
   <object id="237" gid="436" x="240" y="1152" width="64" height="64"/>
   <object id="238" name="tree" gid="436" x="288" y="992" width="64" height="64"/>
   <object id="239" name="tree" gid="436" x="0" y="976" width="64" height="64"/>
-  <object id="240" gid="433" x="144" y="1072" width="32" height="32"/>
+  <object id="240" gid="433" x="136" y="1056" width="32" height="32"/>
   <object id="241" gid="433" x="24" y="1160" width="32" height="32"/>
   <object id="253" gid="421" x="40" y="1144" width="32" height="32"/>
   <object id="254" gid="427" x="56" y="1048" width="32" height="32"/>
@@ -678,6 +681,8 @@
   <object id="272" name="fire" gid="441" x="288" y="1104" width="64" height="64"/>
   <object id="271" name="fire" gid="441" x="8" y="1152" width="64" height="64"/>
   <object id="270" name="fire" gid="441" x="16" y="1072" width="64" height="64"/>
+  <object id="334" name="rock" type="DestructibleCover" gid="723" x="152" y="1096" width="64" height="48"/>
+  <object id="143" name="tree" gid="436" x="144" y="1040" width="64" height="64"/>
  </objectgroup>
  <objectgroup name="pikemen3">
   <object id="25" name="pathfront" x="144" y="1056">

@@ -14,11 +14,24 @@ function Vehicle:_init(object)
 	self.properties = object.properties
 
 	self.health = levity.scripts:newScript(self.id, "Health", self.object)
-	local mask = Vehicle.CombatantMask
+
+	local category
+	if self.properties.cover then
+		category = Vehicle.CoverCategory
+	else
+		category = Vehicle.NonCoverCategory
+	end
+
+	local mask
+	if self.properties.combatant then
+		mask = Vehicle.CombatantMask
+	else
+		mask = Vehicle.NonCombatantMask
+	end
 
 	for _, fixture in ipairs(self.body:getFixtureList()) do
 		fixture:setSensor(true)
-		fixture:setCategory(ShmupCollision.Category_EnemyTeam)
+		fixture:setCategory(unpack(category))
 		fixture:setMask(unpack(mask))
 	end
 
@@ -54,9 +67,25 @@ Vehicle.DefeatSparkParams = {
 	lifetime = "animation"
 }
 
+Vehicle.CoverCategory = {
+	ShmupCollision.Category_EnemyTeam,
+	ShmupCollision.Category_EnemyCover
+}
+
+Vehicle.NonCoverCategory = {
+	ShmupCollision.Category_EnemyTeam
+}
+
 Vehicle.CombatantMask = {
 	ShmupCollision.Category_CameraEdge,
 	ShmupCollision.Category_PlayerTeam,
+	ShmupCollision.Category_EnemyShot
+}
+
+Vehicle.NonCombatantMask = {
+	ShmupCollision.Category_CameraEdge,
+	ShmupCollision.Category_PlayerTeam,
+	ShmupCollision.Category_PlayerShot,
 	ShmupCollision.Category_EnemyShot
 }
 
@@ -71,7 +100,7 @@ function Vehicle:isOnCamera()
 end
 
 function Vehicle:canBeLockTarget()
-	return self.object.visible and self.health
+	return self.properties.combatant and self.object.visible and self.health
 end
 
 function Vehicle:endMove(dt)
@@ -140,6 +169,8 @@ end
 
 function Vehicle:defeat()
 	local destroyedtile = self.properties.destroyedtile
+		or self.object.tile.properties.destroyedtile
+
 	if destroyedtile then
 		local destroyedgid = levity.map:getTileGid(
 			self.object.tile.tileset, destroyedtile)

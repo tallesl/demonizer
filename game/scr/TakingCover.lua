@@ -13,15 +13,19 @@ function TakingCover:hasCover()
 end
 
 function TakingCover:beginContact(myfixture, otherfixture, contact)
-	local category = otherfixture:getCategory()
-	if category == ShmupCollision.Category_EnemyCover then
+	local cat1, cat2 = otherfixture:getCategory()
+	if cat1 == ShmupCollision.Category_EnemyCover
+	or cat2 == ShmupCollision.Category_EnemyCover
+	then
 		self.deltacover = self.deltacover + 1
 	end
 end
 
 function TakingCover:endContact(myfixture, otherfixture, contact)
-	local category = otherfixture:getCategory()
-	if category == ShmupCollision.Category_EnemyCover then
+	local cat1, cat2 = otherfixture:getCategory()
+	if cat1 == ShmupCollision.Category_EnemyCover
+	or cat2 == ShmupCollision.Category_EnemyCover
+	then
 		self.deltacover = self.deltacover - 1
 	end
 end

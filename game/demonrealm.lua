@@ -8,7 +8,7 @@ return {
   height = 100,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 333,
+  nextobjectid = 337,
   properties = {
     ["cameraid"] = 1,
     ["music"] = "mus/05 - Twilight Express.vgm",
@@ -1437,7 +1437,7 @@ return {
               {
                 id = 3,
                 name = "",
-                type = "",
+                type = "EnemyCover",
                 shape = "ellipse",
                 x = -10,
                 y = 28,
@@ -3352,6 +3352,83 @@ return {
           }
         }
       }
+    },
+    {
+      name = "rocks_wide",
+      firstgid = 722,
+      filename = "img/rocks_wide.tsx",
+      tilewidth = 64,
+      tileheight = 48,
+      spacing = 0,
+      margin = 0,
+      image = "img/rocks_wide.png",
+      imagewidth = 128,
+      imageheight = 192,
+      tileoffset = {
+        x = -32,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 64,
+        height = 48
+      },
+      properties = {
+        ["commoncollision"] = 0
+      },
+      terrains = {},
+      tilecount = 8,
+      tiles = {
+        {
+          id = 0,
+          properties = {
+            ["destroyedtile"] = 2
+          },
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "EnemyCover",
+                shape = "rectangle",
+                x = -20,
+                y = 24,
+                width = 40,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 1,
+          properties = {
+            ["destroyedtile"] = 3
+          }
+        },
+        {
+          id = 4,
+          properties = {
+            ["destroyedtile"] = 6
+          }
+        },
+        {
+          id = 5,
+          properties = {
+            ["destroyedtile"] = 7
+          }
+        }
+      }
     }
   },
   layers = {
@@ -3708,6 +3785,76 @@ return {
           properties = {
             ["pathid"] = 118
           }
+        },
+        {
+          id = 96,
+          name = "tree",
+          type = "",
+          shape = "rectangle",
+          x = 148,
+          y = 1104,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 436,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "tree",
+          type = "",
+          shape = "rectangle",
+          x = 112,
+          y = 528,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 436,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 192,
+          name = "tree",
+          type = "",
+          shape = "rectangle",
+          x = 144,
+          y = 544,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 436,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 93,
+          name = "tree",
+          type = "",
+          shape = "rectangle",
+          x = 176,
+          y = 528,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 436,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 333,
+          name = "rock",
+          type = "DestructibleCover",
+          shape = "rectangle",
+          x = 144,
+          y = 1032,
+          width = 64,
+          height = 48,
+          rotation = 0,
+          gid = 722,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -5050,54 +5197,12 @@ return {
           properties = {}
         },
         {
-          id = 93,
-          name = "tree",
-          type = "",
-          shape = "rectangle",
-          x = 176,
-          y = 528,
-          width = 64,
-          height = 64,
-          rotation = 0,
-          gid = 436,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 49,
           name = "tree",
           type = "",
           shape = "rectangle",
           x = 256,
           y = 448,
-          width = 64,
-          height = 64,
-          rotation = 0,
-          gid = 436,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 46,
-          name = "tree",
-          type = "",
-          shape = "rectangle",
-          x = 112,
-          y = 528,
-          width = 64,
-          height = 64,
-          rotation = 0,
-          gid = 436,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 192,
-          name = "tree",
-          type = "",
-          shape = "rectangle",
-          x = 144,
-          y = 544,
           width = 64,
           height = 64,
           rotation = 0,
@@ -5256,6 +5361,34 @@ return {
           height = 32,
           rotation = 0,
           gid = 430,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 335,
+          name = "",
+          type = "DestructibleCover",
+          shape = "rectangle",
+          x = 120,
+          y = 536,
+          width = 64,
+          height = 48,
+          rotation = 0,
+          gid = 723,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 336,
+          name = "",
+          type = "DestructibleCover",
+          shape = "rectangle",
+          x = 168,
+          y = 536,
+          width = 64,
+          height = 48,
+          rotation = 0,
+          gid = 722,
           visible = true,
           properties = {}
         }
@@ -6064,20 +6197,6 @@ return {
           properties = {}
         },
         {
-          id = 143,
-          name = "tree",
-          type = "",
-          shape = "rectangle",
-          x = 144,
-          y = 1040,
-          width = 64,
-          height = 64,
-          rotation = 0,
-          gid = 436,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 145,
           name = "tree",
           type = "",
@@ -6098,20 +6217,6 @@ return {
           shape = "rectangle",
           x = 64,
           y = 1008,
-          width = 64,
-          height = 64,
-          rotation = 0,
-          gid = 436,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 96,
-          name = "tree",
-          type = "",
-          shape = "rectangle",
-          x = 148,
-          y = 1104,
           width = 64,
           height = 64,
           rotation = 0,
@@ -6363,8 +6468,8 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 144,
-          y = 1072,
+          x = 136,
+          y = 1056,
           width = 32,
           height = 32,
           rotation = 0,
@@ -6593,6 +6698,34 @@ return {
           height = 64,
           rotation = 0,
           gid = 441,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 334,
+          name = "rock",
+          type = "DestructibleCover",
+          shape = "rectangle",
+          x = 152,
+          y = 1096,
+          width = 64,
+          height = 48,
+          rotation = 0,
+          gid = 723,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 143,
+          name = "tree",
+          type = "",
+          shape = "rectangle",
+          x = 144,
+          y = 1040,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 436,
           visible = true,
           properties = {}
         }

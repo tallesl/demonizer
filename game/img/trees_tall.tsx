@@ -10,7 +10,7 @@
    <object id="2" type="EnemyCover" x="-16" y="40" width="32" height="32">
     <ellipse/>
    </object>
-   <object id="3" x="-10" y="28" width="20" height="20">
+   <object id="3" type="EnemyCover" x="-10" y="28" width="20" height="20">
     <ellipse/>
    </object>
   </objectgroup>
