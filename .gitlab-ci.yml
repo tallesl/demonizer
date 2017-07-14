@@ -74,11 +74,14 @@ build-android:
                 LOVE_ANDROID_ASSET_PATH: "love-android-sdl2/app/src/main/assets"
                 LOVE_ANDROID_DEBUG_APK: "love-android-sdl2/app/build/outputs/apk/app-debug.apk"
                 LOVE_ANDROID_RELEASE_APK: "love-android-sdl2/app/build/outputs/apk/app-release.apk"
+                LOVE_ANDROID_NATIVE_SRC_PATH: "love-android-sdl2/love/src/jni"
+                LIBGME_URL: "https://bitbucket.org/mpyne/game-music-emu.git"
                 GAME_APK: "${PROJECT}-android.apk"
         script:
                 - apt-get install -y -qq wget xz-utils make file
                 - ./make-game.sh
-                - git clone $LOVE_ANDROID_URL
+                - git clone --depth=1 $LOVE_ANDROID_URL
+                - git clone --depth=1 $LIBGME_URL ${LOVE_ANDROID_NATIVE_SRC_PATH}/gme/gme
                 - cp -r love-android/* love-android-sdl2
                 - mkdir -p $LOVE_ANDROID_ASSET_PATH
                 - cp $GAME_ASSET $LOVE_ANDROID_ASSET_PATH

@@ -1,4 +1,4 @@
-LOCAL_PATH := $(call my-dir)/game-music-emu
+LOCAL_PATH := $(call my-dir)/gme
 
 include $(CLEAR_VARS)
 
