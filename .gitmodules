@@ -6,10 +6,6 @@
 	path = game/levity
 	url = https://bitbucket.org/IoriBranford/levity.git
 	branch = master
-[submodule "game-music-emu"]
-	path = love-android/love/src/jni/game-music-emu-0.6.1/game-music-emu
-	url = https://bitbucket.org/mpyne/game-music-emu.git
-	branch = master
 [submodule "wiki"]
 	path = docs/wiki
 	url = https://github.com/IoriBranford/demonizer.wiki.git
