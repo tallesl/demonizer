@@ -3,6 +3,7 @@
  <properties>
   <property name="cameraid" type="int" value="1"/>
   <property name="music" type="file" value="mus/05 - Twilight Express.vgm"/>
+  <property name="nextmap" type="file" value="village.lua"/>
   <property name="overlaymap" type="file" value="gameplay.lua"/>
   <property name="playerid" type="int" value="3"/>
  </properties>
