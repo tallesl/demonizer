@@ -8,7 +8,7 @@ return {
   height = 140,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 4,
+  nextobjectid = 34,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -1426,6 +1426,391 @@ return {
       terrains = {},
       tilecount = 35,
       tiles = {}
+    },
+    {
+      name = "catapult",
+      firstgid = 1155,
+      filename = "img/catapult.tsx",
+      tilewidth = 72,
+      tileheight = 72,
+      spacing = 0,
+      margin = 0,
+      image = "img/catapult.png",
+      imagewidth = 576,
+      imageheight = 216,
+      tileoffset = {
+        x = -36,
+        y = 36
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 72,
+        height = 72
+      },
+      properties = {
+        ["colstype"] = "direction",
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 8,
+        ["row_empty"] = 2,
+        ["row_windup"] = 0
+      },
+      terrains = {},
+      tilecount = 24,
+      tiles = {
+        {
+          id = 0,
+          properties = {
+            ["faceangle"] = 0
+          },
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -18,
+                y = 54,
+                width = 36,
+                height = 36,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 16,
+              duration = 467
+            },
+            {
+              tileid = 0,
+              duration = 250
+            },
+            {
+              tileid = 8,
+              duration = 250
+            },
+            {
+              tileid = 0,
+              duration = 33
+            }
+          }
+        },
+        {
+          id = 1,
+          properties = {
+            ["faceangle"] = 45
+          }
+        },
+        {
+          id = 2,
+          properties = {
+            ["faceangle"] = 90
+          }
+        },
+        {
+          id = 3,
+          properties = {
+            ["faceangle"] = 135
+          }
+        },
+        {
+          id = 4,
+          properties = {
+            ["faceangle"] = 180
+          }
+        },
+        {
+          id = 5,
+          properties = {
+            ["faceangle"] = 225
+          }
+        },
+        {
+          id = 6,
+          properties = {
+            ["faceangle"] = 270
+          }
+        },
+        {
+          id = 7,
+          properties = {
+            ["faceangle"] = 315
+          }
+        }
+      }
+    },
+    {
+      name = "archer-m",
+      firstgid = 1179,
+      filename = "img/human/enemy/archer-m.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/enemy/archer-m.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
+    },
+    {
+      name = "catapultoperator-m",
+      firstgid = 1194,
+      filename = "img/human/enemy/catapultoperator-m.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/enemy/catapultoperator-m.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
+    },
+    {
+      name = "militia-m",
+      firstgid = 1209,
+      filename = "img/human/enemy/militia-m.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/enemy/militia-m.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
     }
   },
   layers = {
@@ -1443,7 +1828,23 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJyF1lGOpEAMg2Huf4u+Bby3ONfuStPSP9+Y2QdENxRViePYeR/Hcf69rr/X6+t+fv3+d3/nfn89v/P+/rp/fl9Z+7nf2bP7rb363ZX/V9Z+4uz3nvvi3Cu5fa5PLFfObg6fNc2961856zp+5um5YnEe3+M7j+85ti6ee4/fxfXMPp8crjzr9+/je9zu3Xhu9mytWqfidx3fMW0Ni8WVPY2r+cm1Ytd3i3fd7zp+YtpYrqxb8Zhbn5eHva5xvr0ldi9+f/JojifnPXHZfPu/NTD+viuvm0frdB3fY+xe7+NnrazLU8991r7H+n5XHBurelGds0/UGM+0T5pD63KxZ3kub4v94mafr9qWa8XBszx39XD73LObY/tPrSve6rea3ziLd2sk9mJ5ca9mnaw9+a2Olg+NvViru8XEWsqN9nt/65Grd+TY8rz7+FkHz1vaJCf6vVgtPekeqy4rRuvceIzVflp1vrnrXyd3OW4v/M876vN6ov3td/KzuLWnioezQmtRz1ie273f7N1arbnhiVfqqTk5FzTOJ53w7O4h//W/YlY81CznmDX3VceXhte/Vqy+Ky7OgPpccem+xiWezW/5hTxdurx08jp+8qHr36y3l9UuNb38cNZZfNCXT57rBe1731v/cqZ5yBn3aixyW70yLvVJrVh+VW9ofq3X0oHqkV7X+ORPc25O+k/zWtxYc035LcZq18Ua8xcTZyX58qR/9uzSZvVVb238cqz1tedbY/Vm7SMHl0bWv8rbm/311zUf9N15/D++1/GTL+VgfURvXD0i3l23dEcdFgc92JlGf1p97NxXHj3VUB/vM3tZfXImWTPHqo3947xV3Vveby7V3ad6WlP7prE0/tZSjDsPWAvxbOyrx1v34moMzjRqn36gTlrb17ir1b0Xn5tz5KxzkbVuvO2p9rrcsLbWTc6u2aS9bA69jKU1Fjd7WY1Yc4Uc08OWDuob5ZFnl2dv9nN98b7Ht+Xf8gU5qJYvbi5Nsv/rz4v/5eNvGv6khWvmqJ6q1c4UemsxKGfVzvJx+a1+03pVf+SOWi2+YlMc1fLG1evi98l36r7/9UBnyfZk9VYNFocXezk3eL8f1r3GmXrl6+Hc5SUnz/VYNXrxw/hWLYtL6+2s0FqvmvyWV7HT71vD3+aj3zhmDcvfk/36rf3trGTN7eGFU2vQecleuVirfrVWC+/WotirQ0+XWqTf64PNpfoqhsuTiuOqkx5TnWjeS6vUCp/rseZy8409eHHmmmfaW/p4c/C7J3+1NvpzOW3My4vloL3XvaoHF+/Uh+Wrcnph196Ty0/aa2ye2Ry7j5qifzn3yDP98MnTqmvyS19oXdVw86g220/l1Yu1jWn1zJrXlofKf2cM5xjrvTxMvzC31SdqTmNpj9n/+vLF+u7RmIrLmtH0aHu5OV/8v3m39NZZ4Xx43xyvY3NA/N3X2tij+k7x17ucebp+nSWH6gmrJ8t3tagcaZ/ai9VJcbjGvbioTb9p8G96JkfWszf7OMOYR7mw5hA5WR1cvPJa8449dvJ/9Ya8cL5p3u3v1lKv7Nrlb2quZxRb6+F84X7tK2tWvJ9mFbnsvLD0ufu1du3V3ouR3zcvPUgft7+6f/fUL5589MVv81yeuTRGbG7WLg1WY5xT9AD5c421T72hrxZncy5/Vs2cQ5xBzKXaq9/33R+ywhpA"
+      data = "eJytmFuu7CAMBNn/LrKL8B+xrnuuNJYqNYYQGEtR5kGM8aPdzlVKOf+u+ncdn/v5+fz/fuHePr83/N8+9/hcsTbuDTqpL9PF5yq+V6wNO/m89z20b8XZ4gpbKvbmGWINz871B/aq5fuc3te+OMvdvrPcz8i4eN+WfKZfT+iJM1T8xuevcrfbumlPk07GKvagZL8xhvRF6Igz0C6ez7lG3/G/LO+or5Zvn9KWinWZPRfWXfqdecirJvu7tph73Ju5wHxgPju+zmWfl98ZA9vP/5jXPAfjVMvdRuq6ynesHJdezcXaS+spxBHH0ngR+jMxxnhP10mmh/vTb5Hnzts4t4U20BdZrsSVifGauMR64n49PY5102f7e6SHeGIMZS/KfBPivOM5qSP2GOmhPe499PXIHtYR1xOXWBsjce1Qj+thpMP9McMmxi8T54zxhDpGvnYfYoxoD2219OLcdHf/srDnsEaNscbuzDfuia5v+izTQb+xpugPc4VMXE/EPccndGdiXGm6ZvE0hOdyDhh7erhRyj0u7n/0GXtoJuQxGe9jv+3FjD7mOex/57nFfY5+oV7blelxz2fsnae02+cyV3Y+MJcurS+y39iVcX3Xcuhxj2NczT3I18z76X/3L88n5kLs3cwP15F7K3u/+6+x5cB3Y8Wl592XeD7GK8MB4pF7He1z/vDMPBPPTRuOkueGuZV5mn1s7Kpa4/PbJxkPznCVtZNxkAybja/urbTfOcb4uuYZY8bo7OhxDmYYyf7FvG3ST5uo90x0G2969h3lO1+Yg54xjAOukWxWcDwynsH/e7hofKSfmE89H7u2RjFkb3VOuZaNT+YkGefIYuP6Md8i7mW9n2cZCeP5tHYkjEOvl8+IfbJjzyx/H4kxa1VYM7t+nuVyI2HOPtnD/Ku6aItx59DdtWyMME44hvF9JObjq+I+uSru3atCbNjVQ3+uCvF0ty6eZtFZe2bjZaw29rq/eTZk7pMH8Kr6bL43i3HkXTt+Zq/YyR9yoB097Gs7cf9lvRO7VoW8Y7dOmWNPe3p2MSciJ+DsRK7kuYV5an7J9eZLT+ci91kV869dPbv851f9wvPOjj2/8DOxcief3cdH4rklm7tY95x5ydk9LxP/PA8SszkHPfnO74NWxXP9qnjm2tHzCxwz71sVc9BV8fuhVfHcNxJyLnNi5nk2u/n9EPkH5y3u4VrjeuqgTfQL+Tv5/al1rhO/C/J7NvYR2tS016G17kc8Q9M+fi+V6eV/5Fd+p8TfTz1Pv2Rz+VOue+5fFdq/yzdYY6tiH+/oMYd5K87J1V5IvsP8W7GHMWftvRHWG7HjTdzoW78fe2MP36f5PWfgwKw9nslWMN+4yH7+xp7Q5fqi/lkd5tXm2E+5lGGMfTMzu9Av9Lfn0if88rvJrDZmcIT4ns0l5J5PwrOY+/b6/T+Y044R"
+    },
+    {
+      type = "tilelayer",
+      name = "dirtdeco",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 140,
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJzdWlmyxCAIzP1Pl9zofVlDdbE0gi/M9E8yRhCRTZ3r+uAW78+l4w6+e7jh9wNPlgfSIV/kqX3fAcppjc/M6zbeF523Fh6tbLuTvK35PVevPuUaauNiW3U8T3/YxxqLkUebx5qr1HvkW157pAvUrddPwqLBtff6RrJpvCJ6r/9ODEK6iAfahbXG2XF3wNAvO+uIeafiZoaGtecTMmg8KnHJ8yPGr5k+7PioX5kzdsDUDpE8mj6ysjGxKRO/PT5V7PoFzoWVO2MfGj2OrdFVfCKT5yxY8+zw/4jP0o9Vz2AdwKJSc7OIcjPCsweNt3xmxrDaMSawNYrHN+rHyr9rfzgn1h8yeakrn1q8tXevtvS+V+XIxBPPltncq+0zIh+xclvW9iL6HVRqXYsXW3tb/bxaAGm0vrI+zsylQ79M7ojaNBk6/ceSI5sfNL4dOJkDK+ja21X8tls3b+g6yhVWe7Z2yYzhoaqjzv3ENLy9V1rolOPEmcgkG+iw5664MUkvC1PzzxuI9iRRP+/uYgI6z1HfPEvV0CnTNPxXrvDueyJevxJHftGGvnltWPvz6CWiMwBtX6ydxUU5YPdO0YImo3xq51O7588WX8kbYe2nrbvq6v57GiacJUzOgZ1z7LSbyplZB07ZTfVuYtLZy+7eko1JJ8bOIPP/DZSj444xgz/Z2w2m"
     },
     {
       type = "tilelayer",
@@ -1459,7 +1860,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztmUtz2jAUhZWZ0scukwy70tJdaZsdJHRH0nSHzRbMP+RXVre53/hEAQcZp9N2rJk7soV0dB9HktENobvyOcqXluOu5H0a5bIFzkWU6wTnvCWOzj+M8r0FzjCZfxja2ZX64yK0syudX98tBt+iTKKMwkM8rG3sbZNQxyj1h+nz3sd9iLKJsoqyDQ/xMP2LKGWUZZSP3vdTgvMjym2Uty73XlvbXZSFt91720D632V7oy9/Qxm7GPdy946vPs64ZNwyjhnnctfqTZSZyy7UXL1uGrSn2DpY+njWwJuQx01bc7aG5lHWLvacu2+YLlV4sGfnGGZfrk2pbwxn2UIf2wOIUel4FivbC3Lijj4b0WXr7zl74tDHlC5rrw0rxzbDwSbTx2JeeW22XR0e+gSHmKMXNhrWsXEb+vxzr0uvDetVlJ9H4the/Frmn4luuetrKGOJl/ks9wy7cF3AMt1ybFIc1pXpYbzO5bPtPXZ+bR0HDuasLzAqHw+vbc/IscnWlvkFWyp/brNnYA9xt3c72/X8f65YvLEFvCrU+9GxesFBuLd0zJnrlsOfRZR3jsF+hr9y+TxN9DEM42HuN8jUx5uwVtt8101dB+K1bYmj/kaf3PNCsczf8PmU77NFaLdf7Cv2zZi7X/SlL33py/9Y+P80DvX/f571u5z7gbHIROrbs/1yd/Z437azanGgr0lxQMqzp3cgy4b+TTh63t+cgHPdkT7nHemjdk1PwEnviJpwNgek2mPXuqE/dznc7byVdz2vF+HxvRDPA6+5q1KOjsJ+PvPbONTcp27ic8rDtnxO10UX8eqKh6fo0xUPX2KdPqdPE58vE5wmPnNPOQg1t3lO+Qx/07tN5TM8haP2nPJ57DKSPoxr4nPq57Z87ipeL7EuntvHuuLPsfr8qfV+LJ9/39E09L8N9V6rYu3KZ+7wkXt5HoT+e6P/3jhtnfbfG/33xkvxsP/e6Mu/VvRMZD9h/9HzcyJt7EMjeSaXxp243QGTG5t7G/mxlfddyTj7fe1tO+9XCqbmyMhPIeQIilDfy5M72DouORLyR9x1V95GToh+5EE2jkd+L9UZLHIM5IV23gcbwMY3c+mn9hWhznWoDeR3VqHOEVY+n85NXpRcq+byNtIPnQppV79oDhr/YdMu1PmzIpkLfOKt8SdvQv4Wv+ILtZccaCXP5KhWgr2VsXChFKxSavKj/I6sBJO+cJFcqtqPPfTBD+DD2SrUeSz00TjAJ9YCXKTWNUBOjnnhDT4h7uhCnos4qG+YE76R0yrldzjKOuCdPjOZA/8opzXPym/qE37H7/hPuYftO5lDuaicXSf1TrBXMic1ujMXa5AYE2f1e5EI643+zIfdcEHXIP7ZCqbGBy7D0V9eD4Z8"
+      data = "eJztWsFS2zAQXWYaCjcGxrcGzK205RYIvRlKb05yTew/zFdWr9k32ghHthzDdDrWzI5tIa12pbeSsg+R4cpXJ9969rs33zMnVz30XDp5DPRc9NRjx8+c/OyhJwvGz6SfX+F8XEo/v8Lx7TfW4IeTOydT2a0H6nKtuxO/RuF8wJ4v2u/aycbJykktu/WA/QsnSyelkxttexvo+eXk2cmZyqs+UffipNC6V62bmPYvybMxln+h5CrAXure8V37AUvAFjAGzKXG6tzJg8pWPFYfY50aCuKg1P6Mgc+Shk3EHGLoyclaBe+p+wZsqWTnz1Z1wL9Un8K5gZ6yhz3YA7hGS9WHtcJekLLutGdjbKn1O2VPzLTPUmWtT+hK8Q166BPswZpX+oRv94e7vtHDNadd9BG6uq5bpuM/6XOpT+j65OR3Rz3Yi0/N+A/GttT4ykxfrhfmLPUMu1RbqAu2pfhk9TCuYAdwnYpn7D04v2rVQwymxBd1VNqfuMaekeITYgvzQl8qfe+zZ9Afrju+cbbb87+tYL3pC/VV4vejrnYRg8ReqTof1LYU/BROzlUH9zPOVyqeZ4E90AEcpt5BZtofwljtc6+bqQ1cr7qnHjvftCf1vLC6MN/E8zH3s0L67RdNBXfG1P1iLGMZy1j+x8LfT7n43/98t/dy5gdyI3fm+XzSLC8n+/s2zqriQFvI4oAsT97mQMpI+5gee97Pj9DzOJA9FwPZY/2aHaEnzBHF9GwOSNXg1zrSnrkc5nbOzLc9rwvZzwvxfaJP5qosRqfSjGf+LRePfT5jeA5x2BfPYVwMsV5D4fAYe4bC4XvEaZs9MTxfBXpieGaeciIe23wP8Uz8hrlNi2filBjFe4jnXGVq2rBfDM/hPPfF81Dr9R5x0baPDYWfrvZ8VLx3xfPfHE2k/bP4vdYK6i2emcOnvJr3iYz3jfG+cVycjveN8b7xXjgc7xtj+ajCczCUXPbz7OQ4UW/vflP9Zq6fnBF5PtSFcWE5RXIOG9Pe8iHkxUI+1XIElnOoxfNOpY6xCNpZPeQIavPcis/1Uxdz/eSwUBeegwvxnBvng3NCPrdWf7ZaH+aTmfu288N8eqnj8v8XOAbqmrga5uO3pj1tWxuf6V8pzRzETP/G9SBHSY6H3MHqwNywFOob/aBtxAzriYcYJzLXdnauyessTF0t8bz/XMfl/KzF44A+Uk+Mg4Bv5+L5CuJoqTZaO9u4DHLC5KuIIdpFXLTxupnsc6Yr8TFiv9s4OuKIcU3fyF2ST23jngrZzRF5avJNjJNKuvOo0HVq/FupDbSxK1+E+9Ct+D2HOCa325XrISfMPYa8HGOsKwdPTpi67L5I3Yf+V8He7a7FzzPW6g8vHmGT"
     },
     {
       type = "tilelayer",
@@ -1475,7 +1876,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJzt0csRgkAQRdEZQyJHMAI+EYhEoBABnwhUMgBz8G0se8WidSX3VN3NVL3eTAjAbyWHT1tve5DGEDJ1jN/tC1WqynEnN/tanVXjuHMy+6tqVee4czH7QY1qctzpzf6uHmp23LmZ/aJW9XT+13sPAAAAAAAAAAAAAACA//ACX+oeOA=="
+      data = "eJztmf1NwzAQxVMPlCYdAKiQ6GSFCfiYgI8J+JgA6ASUblDYgWcpFtbVuO6dkSp4P+mpbpR78d05+cNuGkLqMnHfyl37D8xHTXMKnY1s8RfQJXSl8DmP4m+gW+hO4XMdxT9Aj9CTwuc+in+BXqGFwuc5il9C79BK4fOGmDHWZQutMf6APpX9CvFWWpcea+nh0Sl9fGw/xGo9JGODT6iHxeM3sNYmlY82x75yn/at1h5rjjXeqxrzCOxLjVvDtyL2CFi9ZH2tfp2r1/u/SK31TAghhBBCCCGEEEIIIaQe/bC3fVxwlnSA/4du8zztqGD/1z9nOtx3gt/ZMJb76rl99jYRI8e7+MWE3OT8diXEps4ctp3XxHNIxfpcSs58cvOfRtdLzkV+uke7559aK7m8c8haWPpmQdZIWxufj7YWqTnN3OY7q6VGbeUcNHWSPS/59mi9tyF71Sl7F9f2CyDzMmw="
     },
     {
       type = "tilelayer",
@@ -1590,6 +1991,569 @@ return {
       encoding = "base64",
       compression = "zlib",
       data = "eJztzLsJA0EUBMEzJl6JQ+hzKHklMLvmM0QVtNvHAQAAAABznumtfNPzmfmwd6W38knPZ+bD3iu9lXd6PjMf9m7prZzp+cx82Hukt3JPz2fmAwD8nx/GQqm9"
+    },
+    {
+      type = "objectgroup",
+      name = "militia2",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 16,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = 296,
+          y = 1656,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "militia2_path",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 17,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = -8,
+          y = 1656,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "militia2_path",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 23,
+          name = "trigger",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 0,
+          y = 1632,
+          width = 288,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 28,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = -32,
+          y = 1656,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "militia2_path",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 29,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = 320,
+          y = 1656,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "militia2_path",
+            ["pathmode"] = "relative"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "militia2_path",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {
+        ["script"] = "PathGraph"
+      },
+      objects = {
+        {
+          id = 24,
+          name = "pathleft",
+          type = "",
+          shape = "polyline",
+          x = -8,
+          y = 1664,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 104, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 25,
+          name = "pathright",
+          type = "",
+          shape = "polyline",
+          x = 296,
+          y = 1664,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -104, y = 0 }
+          },
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "militia1",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 18,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = 120,
+          y = 1712,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "militia1_path"
+          }
+        },
+        {
+          id = 20,
+          name = "trigger",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 0,
+          y = 1712,
+          width = 288,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 27,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = 144,
+          y = 1680,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "militia1_path"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "militia1_path",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {
+        ["script"] = "PathGraph"
+      },
+      objects = {
+        {
+          id = 32,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 112,
+          y = 1680,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 64, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 112,
+          y = 1712,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 64, y = 0 }
+          },
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "militia3",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 19,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = 144,
+          y = 1600,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "militia1_path",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 26,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = 144,
+          y = 1568,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "militia1_path",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 22,
+          name = "pathright",
+          type = "",
+          shape = "polyline",
+          x = 144,
+          y = 1600,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 32 }
+          },
+          properties = {}
+        },
+        {
+          id = 33,
+          name = "trigger",
+          type = "Trigger",
+          shape = "rectangle",
+          x = -16,
+          y = 1552,
+          width = 8,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "archerscatapults1b",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 6,
+          name = "catapult",
+          type = "Catapult",
+          shape = "rectangle",
+          x = 144,
+          y = 1776,
+          width = 72,
+          height = 72,
+          rotation = 0,
+          gid = 1157,
+          visible = true,
+          properties = {
+            ["pathid"] = 12
+          }
+        },
+        {
+          id = 12,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 144,
+          y = 1776,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 64 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
+        },
+        {
+          id = 13,
+          name = "operator",
+          type = "CatapultOperator",
+          shape = "rectangle",
+          x = 144,
+          y = 1744,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1197,
+          visible = true,
+          properties = {
+            ["rideid"] = 6
+          }
+        },
+        {
+          id = 15,
+          name = "trigger",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 0,
+          y = 1808,
+          width = 288,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "archerscatapults1a",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 4,
+          name = "catapult",
+          type = "Catapult",
+          shape = "rectangle",
+          x = 72,
+          y = 1856,
+          width = 72,
+          height = 72,
+          rotation = 0,
+          gid = 1157,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 5,
+          name = "catapult",
+          type = "Catapult",
+          shape = "rectangle",
+          x = 216,
+          y = 1856,
+          width = 72,
+          height = 72,
+          rotation = 0,
+          gid = 1157,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 7,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = -8,
+          y = 1896,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathid"] = "fencepath"
+          }
+        },
+        {
+          id = 8,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 296,
+          y = 1896,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathid"] = "fencepath"
+          }
+        },
+        {
+          id = 10,
+          name = "operator",
+          type = "CatapultOperator",
+          shape = "rectangle",
+          x = 216,
+          y = 1824,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1197,
+          visible = true,
+          properties = {
+            ["rideid"] = 5
+          }
+        },
+        {
+          id = 11,
+          name = "operator",
+          type = "CatapultOperator",
+          shape = "rectangle",
+          x = 72,
+          y = 1824,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1197,
+          visible = true,
+          properties = {
+            ["rideid"] = 4
+          }
+        },
+        {
+          id = 14,
+          name = "trigger",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 0,
+          y = 1808,
+          width = 288,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "fencepath",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {
+        ["script"] = "PathGraph"
+      },
+      objects = {
+        {
+          id = 30,
+          name = "pathleft",
+          type = "",
+          shape = "polyline",
+          x = -8,
+          y = 1896,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 120, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "pathright",
+          type = "",
+          shape = "polyline",
+          x = 296,
+          y = 1896,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -120, y = 0 }
+          },
+          properties = {}
+        }
+      }
     },
     {
       type = "tilelayer",

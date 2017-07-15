@@ -47,6 +47,24 @@
   <property name="script" type="string" default="Human"/>
   <property name="strafearc" type="float" default="0"/>
  </objecttype>
+ <objecttype name="Militia" color="#ff0000">
+  <property name="convertible" type="bool" default="false"/>
+  <property name="firearc" type="float" default="45"/>
+  <property name="firebullet" type="string" default="BulletPike"/>
+  <property name="firetargetid" type="string" default="player"/>
+  <property name="firetime" type="float" default="1"/>
+  <property name="health" type="int" default="8"/>
+  <property name="kolaunch" type="bool" default="false"/>
+  <property name="pathfinder" type="string" default="linear2way"/>
+  <property name="pathid" type="string" default="0"/>
+  <property name="pathmode" type="string" default="absolute"/>
+  <property name="pathspeed" type="string" default="90"/>
+  <property name="ridedestroyedko" type="bool" default="true"/>
+  <property name="rideid" type="int" default="0"/>
+  <property name="score" type="int" default="250"/>
+  <property name="script" type="string" default="Human"/>
+  <property name="strafearc" type="float" default="135"/>
+ </objecttype>
  <objecttype name="BulletArrow" color="#00aaff">
   <property name="category" type="string" default="EnemyShot"/>
   <property name="sound" type="file" default="snd/bow.wav"/>
@@ -63,7 +81,7 @@
   <property name="health" type="int" default="8"/>
   <property name="kolaunch" type="bool" default="false"/>
   <property name="pathfinder" type="string" default="linear2way"/>
-  <property name="pathid" type="int" default="0"/>
+  <property name="pathid" type="string" default="0"/>
   <property name="pathmode" type="string" default="absolute"/>
   <property name="pathspeed" type="string" default="120"/>
   <property name="ridedestroyedko" type="bool" default="true"/>

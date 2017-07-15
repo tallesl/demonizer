@@ -18,6 +18,7 @@ function Mover:start()
 	end
 
 	local pathid = self.properties.pathid
+	pathid = tonumber(pathid) or pathid
 	local pathobj = levity.map.objects[pathid]
 
 	if self.properties.pathmode == "relative" then
