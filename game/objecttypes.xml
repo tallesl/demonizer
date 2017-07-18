@@ -12,7 +12,7 @@
  </objecttype>
  <objecttype name="Camera" color="#0000ff">
   <property name="collidable" type="bool" default="true"/>
-  <property name="pathfinder" type="string" default="linear1way"/>
+  <property name="pathfinder" type="string" default="linearUp"/>
   <property name="pathmode" type="string" default="relative"/>
   <property name="script" type="string" default="ShmupCam"/>
   <property name="sensor" type="bool" default="true"/>
@@ -38,7 +38,7 @@
   <property name="health" type="int" default="8"/>
   <property name="kolaunch" type="bool" default="false"/>
   <property name="pathfinder" type="string" default="linear1way"/>
-  <property name="pathid" type="int" default="0"/>
+  <property name="pathid" type="string" default="0"/>
   <property name="pathmode" type="string" default="absolute"/>
   <property name="pathspeed" type="string" default="90"/>
   <property name="ridedestroyedko" type="bool" default="true"/>

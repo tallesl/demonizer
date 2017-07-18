@@ -13,7 +13,8 @@
   <terrain name="Medium Grass" tile="254"/>
   <terrain name="Tall Grass" tile="258"/>
   <terrain name="Weeds" tile="326"/>
-  <terrain name="Soil" tile="329"/>
+  <terrain name="Soil Horizontal" tile="329"/>
+  <terrain name="Soil Vertical" tile="332"/>
  </terraintypes>
  <tile id="0" terrain="0,0,0,"/>
  <tile id="1" terrain="0,0,,"/>
@@ -241,28 +242,41 @@
  <tile id="289" terrain=",10,10,10"/>
  <tile id="293" terrain="11,11,11,0"/>
  <tile id="294" terrain="11,11,0,11"/>
+ <tile id="296" terrain="12,12,12,0"/>
+ <tile id="297" terrain="12,12,0,12"/>
  <tile id="300" terrain="10,10,10,"/>
  <tile id="301" terrain="10,10,,10"/>
  <tile id="305" terrain="11,0,11,11"/>
  <tile id="306" terrain="0,11,11,11"/>
+ <tile id="308" terrain="12,0,12,12"/>
+ <tile id="309" terrain="0,12,12,12"/>
  <tile id="313" terrain=",,,10"/>
  <tile id="314" terrain=",,10,10"/>
  <tile id="315" terrain=",,10,"/>
  <tile id="316" terrain="0,0,0,11"/>
  <tile id="317" terrain="0,0,11,11"/>
  <tile id="318" terrain="0,0,11,0"/>
+ <tile id="319" terrain="0,0,0,12"/>
+ <tile id="320" terrain="0,0,12,12"/>
+ <tile id="321" terrain="0,0,12,0"/>
  <tile id="325" terrain=",10,,10"/>
  <tile id="326" terrain="10,10,10,10"/>
  <tile id="327" terrain="10,,10,"/>
  <tile id="328" terrain="0,11,0,11"/>
  <tile id="329" terrain="11,11,11,11"/>
  <tile id="330" terrain="11,0,11,0"/>
+ <tile id="331" terrain="0,12,0,12"/>
+ <tile id="332" terrain="12,12,12,12"/>
+ <tile id="333" terrain="12,0,12,0"/>
  <tile id="337" terrain=",10,,"/>
  <tile id="338" terrain="10,10,,"/>
  <tile id="339" terrain="10,,,"/>
  <tile id="340" terrain="0,11,0,0"/>
  <tile id="341" terrain="11,11,0,0"/>
  <tile id="342" terrain="11,0,0,0"/>
+ <tile id="343" terrain="0,12,0,0"/>
+ <tile id="344" terrain="12,12,0,0"/>
+ <tile id="345" terrain="12,0,0,0"/>
  <tile id="372" terrain="10,10,10,10"/>
  <tile id="373" terrain="10,10,10,10"/>
 </tileset>
