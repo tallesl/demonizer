@@ -8,7 +8,7 @@ return {
   height = 160,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 33,
+  nextobjectid = 47,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -1954,9 +1954,294 @@ return {
           }
         }
       }
+    },
+    {
+      name = "pikeman-f",
+      firstgid = 1239,
+      filename = "img/human/enemy/pikeman-f.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/enemy/pikeman-f.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 10,
+          properties = {
+            ["name"] = "wingman"
+          },
+          animation = {
+            {
+              tileid = 10,
+              duration = 125
+            },
+            {
+              tileid = 11,
+              duration = 125
+            },
+            {
+              tileid = 9,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 11,
+          properties = {
+            ["name"] = "convert"
+          },
+          animation = {
+            {
+              tileid = 11,
+              duration = 66
+            },
+            {
+              tileid = 9,
+              duration = 66
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
+    },
+    {
+      name = "catapultoperator-f",
+      firstgid = 1254,
+      filename = "img/human/enemy/catapultoperator-f.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/enemy/catapultoperator-f.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 10,
+          properties = {
+            ["name"] = "wingman"
+          },
+          animation = {
+            {
+              tileid = 10,
+              duration = 125
+            },
+            {
+              tileid = 11,
+              duration = 125
+            },
+            {
+              tileid = 9,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 11,
+          properties = {
+            ["name"] = "convert"
+          },
+          animation = {
+            {
+              tileid = 11,
+              duration = 66
+            },
+            {
+              tileid = 9,
+              duration = 66
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
     }
   },
   layers = {
+    {
+      type = "objectgroup",
+      name = "unused",
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 15,
+          name = "trigger",
+          type = "Trigger",
+          shape = "rectangle",
+          x = -104,
+          y = 2096,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 33,
+          name = "pikewoman",
+          type = "Pikeman",
+          shape = "rectangle",
+          x = 136,
+          y = 1264,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1242,
+          visible = true,
+          properties = {
+            ["convertible"] = true
+          }
+        }
+      }
+    },
     {
       type = "tilelayer",
       name = "dirt",
@@ -2150,7 +2435,7 @@ return {
           name = "militia",
           type = "Militia",
           shape = "rectangle",
-          x = 32,
+          x = 8,
           y = 1984,
           width = 24,
           height = 32,
@@ -2167,7 +2452,7 @@ return {
           name = "militia",
           type = "Militia",
           shape = "rectangle",
-          x = 256,
+          x = 280,
           y = 1984,
           width = 24,
           height = 32,
@@ -2184,7 +2469,7 @@ return {
           name = "pikeman",
           type = "Pikeman",
           shape = "rectangle",
-          x = 128,
+          x = 136,
           y = 1896,
           width = 24,
           height = 32,
@@ -2200,7 +2485,7 @@ return {
           name = "pikeman",
           type = "Pikeman",
           shape = "rectangle",
-          x = 160,
+          x = 152,
           y = 1896,
           width = 24,
           height = 32,
@@ -2216,7 +2501,7 @@ return {
           name = "pikeman",
           type = "Pikeman",
           shape = "rectangle",
-          x = 128,
+          x = 136,
           y = 1928,
           width = 24,
           height = 32,
@@ -2232,7 +2517,7 @@ return {
           name = "pikeman",
           type = "Pikeman",
           shape = "rectangle",
-          x = 160,
+          x = 152,
           y = 1928,
           width = 24,
           height = 32,
@@ -2248,7 +2533,7 @@ return {
           name = "pikeman",
           type = "Pikeman",
           shape = "rectangle",
-          x = 128,
+          x = 136,
           y = 1960,
           width = 24,
           height = 32,
@@ -2264,7 +2549,7 @@ return {
           name = "pikeman",
           type = "Pikeman",
           shape = "rectangle",
-          x = 160,
+          x = 152,
           y = 1960,
           width = 24,
           height = 32,
@@ -2273,40 +2558,6 @@ return {
           visible = true,
           properties = {
             ["pathid"] = "30"
-          }
-        },
-        {
-          id = 26,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 8,
-          y = 1984,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "32",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 27,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 280,
-          y = 1984,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "31",
-            ["pathmode"] = "relative"
           }
         },
         {
@@ -2327,7 +2578,7 @@ return {
           name = "leftpikemenpath",
           type = "",
           shape = "polyline",
-          x = 128,
+          x = 136,
           y = 1960,
           width = 0,
           height = 0,
@@ -2348,7 +2599,7 @@ return {
           name = "rightpikemenpath",
           type = "",
           shape = "polyline",
-          x = 160,
+          x = 152,
           y = 1960,
           width = 0,
           height = 0,
@@ -2369,15 +2620,15 @@ return {
           name = "rightmilitiapath",
           type = "",
           shape = "polyline",
-          x = 256,
+          x = 280,
           y = 1984,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 0 },
-            { x = -80, y = 0 }
+            { x = -24, y = 0 },
+            { x = -96, y = 0 }
           },
           properties = {
             ["script"] = "PathGraph"
@@ -2388,25 +2639,59 @@ return {
           name = "leftmilitiapath",
           type = "",
           shape = "polyline",
-          x = 32,
+          x = 8,
           y = 1984,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 0 },
-            { x = 80, y = 0 }
+            { x = 24, y = 0 },
+            { x = 96, y = 0 }
           },
           properties = {
             ["script"] = "PathGraph"
+          }
+        },
+        {
+          id = 43,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = 32,
+          y = 1984,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "32",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 44,
+          name = "militia",
+          type = "Militia",
+          shape = "rectangle",
+          x = 256,
+          y = 1984,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1212,
+          visible = true,
+          properties = {
+            ["pathid"] = "31",
+            ["pathmode"] = "relative"
           }
         }
       }
     },
     {
       type = "objectgroup",
-      name = "archerscatapults1b",
+      name = "pikemencatapult1",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -2415,20 +2700,155 @@ return {
       properties = {},
       objects = {
         {
-          id = 6,
-          name = "catapult",
-          type = "Catapult",
-          shape = "rectangle",
-          x = 144,
-          y = 2096,
-          width = 72,
-          height = 72,
+          id = 34,
+          name = "rightpikemenpath",
+          type = "",
+          shape = "polyline",
+          x = 168,
+          y = 2056,
+          width = 0,
+          height = 0,
           rotation = 0,
-          gid = 1157,
+          visible = true,
+          polyline = {
+            { x = 8, y = 56 },
+            { x = 80, y = 56 },
+            { x = 80, y = 144 },
+            { x = 168, y = 144 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
+        },
+        {
+          id = 35,
+          name = "pikeman",
+          type = "Pikeman",
+          shape = "rectangle",
+          x = 176,
+          y = 2112,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1227,
           visible = true,
           properties = {
-            ["pathid"] = 12
+            ["pathid"] = "34"
           }
+        },
+        {
+          id = 36,
+          name = "pikeman",
+          type = "Pikeman",
+          shape = "rectangle",
+          x = 112,
+          y = 2112,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1227,
+          visible = true,
+          properties = {
+            ["pathid"] = "40"
+          }
+        },
+        {
+          id = 37,
+          name = "pikeman",
+          type = "Pikeman",
+          shape = "rectangle",
+          x = 176,
+          y = 2080,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1227,
+          visible = true,
+          properties = {
+            ["pathid"] = "34"
+          }
+        },
+        {
+          id = 38,
+          name = "pikeman",
+          type = "Pikeman",
+          shape = "rectangle",
+          x = 112,
+          y = 2080,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1227,
+          visible = true,
+          properties = {
+            ["pathid"] = "40"
+          }
+        },
+        {
+          id = 39,
+          name = "pikeman",
+          type = "Pikeman",
+          shape = "rectangle",
+          x = 176,
+          y = 2048,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1227,
+          visible = true,
+          properties = {
+            ["pathid"] = "34"
+          }
+        },
+        {
+          id = 40,
+          name = "leftpikemenpath",
+          type = "",
+          shape = "polyline",
+          x = 120,
+          y = 2048,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = -8, y = 64 },
+            { x = -80, y = 64 },
+            { x = -80, y = 152 },
+            { x = -184, y = 152 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
+        },
+        {
+          id = 41,
+          name = "pikeman",
+          type = "Pikeman",
+          shape = "rectangle",
+          x = 112,
+          y = 2048,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1227,
+          visible = true,
+          properties = {
+            ["pathid"] = "40"
+          }
+        },
+        {
+          id = 42,
+          name = "trigger",
+          type = "Trigger",
+          shape = "rectangle",
+          x = -16,
+          y = 2128,
+          width = 304,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
         },
         {
           id = 12,
@@ -2459,30 +2879,34 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1197,
+          gid = 1257,
           visible = true,
           properties = {
+            ["convertible"] = true,
             ["rideid"] = 6
           }
         },
         {
-          id = 15,
-          name = "trigger",
-          type = "Trigger",
+          id = 6,
+          name = "catapult",
+          type = "Catapult",
           shape = "rectangle",
-          x = 0,
-          y = 2128,
-          width = 288,
-          height = 16,
+          x = 144,
+          y = 2096,
+          width = 72,
+          height = 72,
           rotation = 0,
+          gid = 1157,
           visible = true,
-          properties = {}
+          properties = {
+            ["pathid"] = 12
+          }
         }
       }
     },
     {
       type = "objectgroup",
-      name = "archerscatapults1a",
+      name = "catapults1",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -2491,18 +2915,36 @@ return {
       properties = {},
       objects = {
         {
-          id = 4,
-          name = "catapult",
-          type = "Catapult",
+          id = 10,
+          name = "operator",
+          type = "CatapultOperator",
+          shape = "rectangle",
+          x = 216,
+          y = 2104,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1197,
+          visible = true,
+          properties = {
+            ["rideid"] = 5
+          }
+        },
+        {
+          id = 11,
+          name = "operator",
+          type = "CatapultOperator",
           shape = "rectangle",
           x = 72,
-          y = 2176,
-          width = 72,
-          height = 72,
+          y = 2104,
+          width = 24,
+          height = 32,
           rotation = 0,
-          gid = 1157,
+          gid = 1197,
           visible = true,
-          properties = {}
+          properties = {
+            ["rideid"] = 4
+          }
         },
         {
           id = 5,
@@ -2510,14 +2952,78 @@ return {
           type = "Catapult",
           shape = "rectangle",
           x = 216,
-          y = 2176,
+          y = 2136,
           width = 72,
           height = 72,
           rotation = 0,
           gid = 1157,
           visible = true,
+          properties = {
+            ["pathid"] = 46,
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 4,
+          name = "catapult",
+          type = "Catapult",
+          shape = "rectangle",
+          x = 72,
+          y = 2136,
+          width = 72,
+          height = 72,
+          rotation = 0,
+          gid = 1157,
+          visible = true,
+          properties = {
+            ["pathid"] = 46,
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 45,
+          name = "trigger",
+          type = "Trigger",
+          shape = "rectangle",
+          x = -16,
+          y = 2144,
+          width = 304,
+          height = 16,
+          rotation = 0,
+          visible = true,
           properties = {}
         },
+        {
+          id = 46,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 216,
+          y = 2136,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 48 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "archers1",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
         {
           id = 7,
           name = "archer",
@@ -2551,46 +3057,14 @@ return {
           }
         },
         {
-          id = 10,
-          name = "operator",
-          type = "CatapultOperator",
-          shape = "rectangle",
-          x = 216,
-          y = 2144,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1197,
-          visible = true,
-          properties = {
-            ["rideid"] = 5
-          }
-        },
-        {
-          id = 11,
-          name = "operator",
-          type = "CatapultOperator",
-          shape = "rectangle",
-          x = 72,
-          y = 2144,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1197,
-          visible = true,
-          properties = {
-            ["rideid"] = 4
-          }
-        },
-        {
           id = 14,
           name = "trigger",
           type = "Trigger",
           shape = "rectangle",
-          x = 0,
-          y = 2128,
-          width = 288,
-          height = 80,
+          x = -24,
+          y = 2192,
+          width = 312,
+          height = 8,
           rotation = 0,
           visible = true,
           properties = {}
@@ -2679,7 +3153,7 @@ return {
           type = "Camera",
           shape = "rectangle",
           x = 24,
-          y = 720,
+          y = 2240,
           width = 240,
           height = 320,
           rotation = 0,
