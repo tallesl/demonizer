@@ -4,19 +4,6 @@
  <properties>
   <property name="commonanimation" type="int" value="0"/>
   <property name="commoncollision" type="int" value="0"/>
-  <property name="row_archer" type="int" value="12"/>
-  <property name="row_civ1" type="int" value="0"/>
-  <property name="row_civ2" type="int" value="1"/>
-  <property name="row_civ3" type="int" value="2"/>
-  <property name="row_civ4" type="int" value="3"/>
-  <property name="row_civ5" type="int" value="4"/>
-  <property name="row_civ6" type="int" value="5"/>
-  <property name="row_civ7" type="int" value="6"/>
-  <property name="row_civ8" type="int" value="7"/>
-  <property name="row_mage" type="int" value="11"/>
-  <property name="row_pikeman" type="int" value="8"/>
-  <property name="row_priest" type="int" value="10"/>
-  <property name="row_swordsman" type="int" value="9"/>
  </properties>
  <image source="demonwomen.png" width="192" height="832"/>
  <tile id="0">
@@ -49,7 +36,7 @@
  </tile>
  <tile id="9">
   <properties>
-   <property name="name" value="townfolk-adult-f-004"/>
+   <property name="name" value="catapultoperator-f"/>
   </properties>
  </tile>
  <tile id="12">

@@ -999,20 +999,7 @@ return {
       },
       properties = {
         ["commonanimation"] = 0,
-        ["commoncollision"] = 0,
-        ["row_archer"] = 12,
-        ["row_civ1"] = 0,
-        ["row_civ2"] = 1,
-        ["row_civ3"] = 2,
-        ["row_civ4"] = 3,
-        ["row_civ5"] = 4,
-        ["row_civ6"] = 5,
-        ["row_civ7"] = 6,
-        ["row_civ8"] = 7,
-        ["row_mage"] = 11,
-        ["row_pikeman"] = 8,
-        ["row_priest"] = 10,
-        ["row_swordsman"] = 9
+        ["commoncollision"] = 0
       },
       terrains = {},
       tilecount = 39,
@@ -1079,7 +1066,7 @@ return {
         {
           id = 9,
           properties = {
-            ["name"] = "townfolk-adult-f-004"
+            ["name"] = "catapultoperator-f"
           }
         },
         {

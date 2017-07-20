@@ -61,7 +61,7 @@
   <property name="pathspeed" type="string" default="90"/>
   <property name="ridedestroyedko" type="bool" default="true"/>
   <property name="rideid" type="int" default="0"/>
-  <property name="score" type="int" default="250"/>
+  <property name="score" type="int" default="200"/>
   <property name="script" type="string" default="Human"/>
   <property name="strafearc" type="float" default="135"/>
  </objecttype>

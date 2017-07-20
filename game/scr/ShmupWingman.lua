@@ -17,16 +17,6 @@ function ShmupWingman:_init(object)
 	self:setCaptureEnabled(self.properties.conversionid == nil)
 
 	self.converttimer = 0
-	self.npctype = levity.map:getTileColumnName(self.object.gid)
-
-	-- TEMP until transition to new human tileset scheme complete
-	if type(self.npctype) == "number" then
-		self.npctype = levity.map.tilesets[levity.map.tiles[self.object.gid].tileset].name
-		local i, j = self.npctype:find("-f")
-		if i then
-			self.npctype = self.npctype:sub(1, i-1)
-		end
-	end
 
 	self.oncamera = false
 
@@ -184,7 +174,8 @@ function ShmupWingman:updateConversion(dt)
 		self.properties.captorid = nil
 		self.converttimer = nil
 
-		local gid = levity.map:getTileGid("demonwomen", self.npctype, 0)
+		local npctype = levity.map.tilesets[self.object.tile.tileset].name
+		local gid = levity.map:getTileGid("demonwomen", npctype)
 		self.object:setGid(gid, levity.map)
 		self:refreshFixtures()
 		self:setCaptureEnabled(levity.scripts:call("playerteam", "isWingmanActive", self.object.id))
