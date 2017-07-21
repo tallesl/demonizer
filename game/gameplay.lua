@@ -11,7 +11,8 @@ return {
   nextobjectid = 24,
   properties = {
     ["delayinitobjects"] = true,
-    ["script"] = "ShmupMap"
+    ["script"] = "ShmupMap",
+    ["staticsounds"] = "snd/alarm4.wav, snd/ballista.wav, snd/bomber.wav, snd/bomb.wav, snd/boom1.wav,\nsnd/boom2.wav, snd/bow.wav, snd/buzz.wav, snd/catapult.wav, snd/charge.wav,\nsnd/dragonfire.wav, snd/extend.wav, snd/hit.wav, snd/hyaa.wav, snd/item1.wav,\nsnd/item2.wav, snd/knockout.wav, snd/maxed.wav, snd/mmph.wav, snd/ow.wav,\nsnd/pause.wav, snd/pike.wav, snd/playershot.wav, snd/powershot.wav,\nsnd/powerup.wav, snd/respawn.wav, snd/scream.wav, snd/selfdestruct.wav,\nsnd/shriek.wav, snd/slash.wav, snd/sword.wav, snd/targetlock.wav,\nsnd/thankyou.wav, snd/ting.wav, snd/turbo.wav, snd/warp.wav"
   },
   tilesets = {
     {

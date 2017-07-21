@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="right-up" width="15" height="20" tilewidth="16" tileheight="16" nextobjectid="24">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-up" width="15" height="20" tilewidth="16" tileheight="16" nextobjectid="24">
  <properties>
   <property name="delayinitobjects" type="bool" value="true"/>
   <property name="script" value="ShmupMap"/>
+  <property name="staticsounds">snd/alarm4.wav, snd/ballista.wav, snd/bomber.wav, snd/bomb.wav, snd/boom1.wav,
+snd/boom2.wav, snd/bow.wav, snd/buzz.wav, snd/catapult.wav, snd/charge.wav,
+snd/dragonfire.wav, snd/extend.wav, snd/hit.wav, snd/hyaa.wav, snd/item1.wav,
+snd/item2.wav, snd/knockout.wav, snd/maxed.wav, snd/mmph.wav, snd/ow.wav,
+snd/pause.wav, snd/pike.wav, snd/playershot.wav, snd/powershot.wav,
+snd/powerup.wav, snd/respawn.wav, snd/scream.wav, snd/selfdestruct.wav,
+snd/shriek.wav, snd/slash.wav, snd/sword.wav, snd/targetlock.wav,
+snd/thankyou.wav, snd/ting.wav, snd/turbo.wav, snd/warp.wav</property>
  </properties>
  <tileset firstgid="1" source="img/bombgauge.tsx"/>
  <tileset firstgid="17" source="img/hud_icons.tsx"/>
