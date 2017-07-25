@@ -22,11 +22,11 @@ function Mover:start()
 	self.properties.pathid = pathid
 	local pathobj = levity.map.objects[pathid]
 
-	if self.properties.pathmode == "relative" then
+	if self.properties.pathmode == "relative" and pathobj then
 		local nearestx, nearesty = levity.scripts:call(pathid,
 			"findNearestPoint", x, y)
-		nearestx = nearestx or pathobj.x
-		nearesty = nearesty or pathobj.y
+		nearestx = nearestx or pathobj.body:getX()
+		nearesty = nearesty or pathobj.body:getY()
 		self.offx = x - nearestx
 		self.offy = y - nearesty
 	else
@@ -62,8 +62,10 @@ function Mover:start()
 			"findNearestPoint", x, y)
 	end
 
-	self.destx = self.destx or pathobj.body:getX()
-	self.desty = self.desty or pathobj.body:getY()
+	if pathobj then
+		self.destx = self.destx or pathobj.body:getX()
+		self.desty = self.desty or pathobj.body:getY()
+	end
 
 	self.prevx = x
 	self.prevy = y
