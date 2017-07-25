@@ -14,38 +14,44 @@ function TitleMap:_init(map)
 	love.mouse.setVisible(true)
 	love.mouse.setRelativeMode(false)
 end
-
+--[[
 function TitleMap:touchpressed(touch, x, y, dx, dy)
-	self:joystickpressed(nil, 1)
+	self:startGame()
 end
 
 function TitleMap:mousepressed(x, y, button)
-	self:joystickpressed(nil, button)
+	if button == 1 then
+		self:startGame()
+	end
 end
 
 function TitleMap:keypressed_z()
-	self:joystickpressed(nil, 1)
+	self:startGame()
 end
 
 function TitleMap:keypressed_escape()
 	love.event.quit()
 end
 
+function TitleMap:joystickpressed(joystick, button)
+	if button == 1 then
+		self:startGame()
+	end
+end
+]]
 local function endMove(self, dt)
 	if levity.scripts:call("curtain", "finishedClosing") then
 		levity:setNextMap(self.properties.nextmap)
 	end
 end
 
-function TitleMap:joystickpressed(joystick, button)
-	if button == 1 then
-		levity.scripts:call("curtain", "beginClose")
-		if levity.bank.currentmusic then
-			levity.bank.currentmusic:fade()
-		end
-		levity.scripts:scriptRemoveEventFunc(self, self.map.name, "joystickpressed")
-		levity.scripts:scriptAddEventFunc(self, self.map.name, "endMove", endMove)
+function TitleMap:startGame()
+	levity.scripts:call("curtain", "beginClose")
+	if levity.bank.currentmusic then
+		levity.bank.currentmusic:fade()
 	end
+	levity.scripts:scriptRemoveEventFunc(self, self.map.name, "startGame")
+	levity.scripts:scriptAddEventFunc(self, self.map.name, "endMove", endMove)
 end
 
 return TitleMap

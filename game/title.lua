@@ -8,7 +8,7 @@ return {
   height = 64,
   tilewidth = 5,
   tileheight = 5,
-  nextobjectid = 13,
+  nextobjectid = 15,
   properties = {
     ["music"] = "mus/02 - Burning Heart.vgm",
     ["nextmap"] = "demonrealm.lua",
@@ -211,6 +211,52 @@ return {
           properties = {
             ["text"] = "PRESS Z TO START",
             ["textfont"] = "fnt/pressstart2p.fnt"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "stagemenu",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 13,
+          name = "stage1",
+          type = "UIButton",
+          shape = "rectangle",
+          x = 48,
+          y = 32,
+          width = 144,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["nextmap"] = "demonrealm.lua",
+            ["script"] = "ButtonPlayStage",
+            ["text"] = "demonrealm"
+          }
+        },
+        {
+          id = 14,
+          name = "stage2",
+          type = "UIButton",
+          shape = "rectangle",
+          x = 48,
+          y = 64,
+          width = 144,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["nextmap"] = "village.lua",
+            ["script"] = "ButtonPlayStage",
+            ["text"] = "village"
           }
         }
       }

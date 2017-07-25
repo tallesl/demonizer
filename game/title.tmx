@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="64" tilewidth="5" tileheight="5" nextobjectid="13">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="48" height="64" tilewidth="5" tileheight="5" nextobjectid="15">
  <properties>
   <property name="music" type="file" value="mus/02 - Burning Heart.vgm"/>
   <property name="nextmap" type="file" value="demonrealm.lua"/>
@@ -44,6 +44,22 @@ C key: BOMB</property>
    <properties>
     <property name="text" value="PRESS Z TO START"/>
     <property name="textfont" type="file" value="fnt/pressstart2p.fnt"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="stagemenu">
+  <object id="13" name="stage1" type="UIButton" x="48" y="32" width="144" height="16">
+   <properties>
+    <property name="nextmap" type="file" value="demonrealm.lua"/>
+    <property name="script" value="ButtonPlayStage"/>
+    <property name="text" value="demonrealm"/>
+   </properties>
+  </object>
+  <object id="14" name="stage2" type="UIButton" x="48" y="64" width="144" height="16">
+   <properties>
+    <property name="nextmap" type="file" value="village.lua"/>
+    <property name="script" value="ButtonPlayStage"/>
+    <property name="text" value="village"/>
    </properties>
   </object>
  </objectgroup>
