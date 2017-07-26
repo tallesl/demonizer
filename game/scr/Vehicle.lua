@@ -43,6 +43,7 @@ function Vehicle:_init(object)
 	end
 
 	local pathid = self.properties.pathid
+	pathid = tonumber(pathid) or pathid
 	local pathfinder = self.properties.pathfinder
 
 	if pathid and pathid > 0 and pathfinder then
@@ -104,10 +105,10 @@ function Vehicle:canBeLockTarget()
 end
 
 function Vehicle:endMove(dt)
-	local vx, vy = self.body:getLinearVelocity()
-	if vx ~= 0 or vy ~= 0 then
-		self.facing:faceAngle(math.atan2(vy, vx))
-	end
+--	local vx, vy = self.body:getLinearVelocity()
+--	if vx ~= 0 or vy ~= 0 then
+--		self.facing:faceAngle(math.atan2(vy, vx))
+--	end
 end
 
 function Vehicle:beginContact_PlayerShot(myfixture, otherfixture, contact)

@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 91,
+  nextobjectid = 33,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -2288,196 +2288,6 @@ return {
   },
   layers = {
     {
-      type = "objectgroup",
-      name = "unused",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {
-        {
-          id = 15,
-          name = "trigger",
-          type = "Trigger",
-          shape = "rectangle",
-          x = 0,
-          y = -40,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 33,
-          name = "pikewoman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 520,
-          y = 1256,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1242,
-          visible = true,
-          properties = {
-            ["convertible"] = true
-          }
-        },
-        {
-          id = 11,
-          name = "operator",
-          type = "CatapultOperator",
-          shape = "rectangle",
-          x = 456,
-          y = 3320,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1197,
-          visible = true,
-          properties = {
-            ["rideid"] = 4
-          }
-        },
-        {
-          id = 10,
-          name = "operator",
-          type = "CatapultOperator",
-          shape = "rectangle",
-          x = 600,
-          y = 3320,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1197,
-          visible = true,
-          properties = {
-            ["rideid"] = 5
-          }
-        },
-        {
-          id = 78,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 456,
-          y = 1240,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "archers2_3_path"
-          }
-        },
-        {
-          id = 77,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 600,
-          y = 1240,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "archers2_3_path"
-          }
-        },
-        {
-          id = 79,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 456,
-          y = 1384,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "archers2_3_path"
-          }
-        },
-        {
-          id = 80,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 600,
-          y = 1384,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "archers2_3_path"
-          }
-        },
-        {
-          id = 4,
-          name = "catapult",
-          type = "HeavyMilitia",
-          shape = "rectangle",
-          x = 456,
-          y = 3352,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1272,
-          visible = true,
-          properties = {
-            ["pathid"] = 46,
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 46,
-          name = "path",
-          type = "",
-          shape = "polyline",
-          x = 600,
-          y = 3352,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 0, y = 48 }
-          },
-          properties = {
-            ["script"] = "PathGraph"
-          }
-        },
-        {
-          id = 5,
-          name = "catapult",
-          type = "HeavyMilitia",
-          shape = "rectangle",
-          x = 600,
-          y = 3352,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1272,
-          visible = true,
-          properties = {
-            ["pathid"] = 46,
-            ["pathmode"] = "relative"
-          }
-        }
-      }
-    },
-    {
       type = "tilelayer",
       name = "dirt",
       x = 0,
@@ -2491,7 +2301,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "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"
+      data = "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"
     },
     {
       type = "tilelayer",
@@ -2507,7 +2317,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAAAAAAAAL4GROgAAQ=="
+      data = "eJztWltuxDAIzP1Pt7lRVVVRLcRjBsabtNr52nVswAHzco7jF2fw+3DGo+cZXgEtO57hdNZ5siB7YWHljPgj+8rkexXPTzM3on0eNe11fbaPdR6jLw9WLo9eJheLyO68sWhvlbzR+PW+zyO3V5Ru9S5WPhkiW/bmMXMrntmcyg5Yfsg6ROZvZH4PlUNtxxGP6j2j2OU3mTWoPVdQ7MXKwsqV+SHEDqs9VDS8mHLtqROLI94oDevXPBqrbIgOq7zF8kXWsnNQdM+F1SMiE+ITMjrWTixt7zeCaO3EDtk4wtKveEf5xevA9BDxVNqeBetn17wGoX2tYZDlGZYmkuNVdKt56Pvv2l+Wa1S1BFrvoDrrQFkjKMDE1wxo7PXy5OpcRbENzbmj5wodZ7UlC88HoLm9p0ek5o94Mr7Lo21pomDOcDTmyaQ8a569snFrUiPZ+VnvA6XN9oKmuo38gPfbyoX4moj3tD6o6DJxs8qxkTwdGY/ifwaWRzan06d6SpxE5VX4/Gk88vwAGp+QugblPamhonk78/qMLwqmXq7eJ1tjsHPVfmBidxXYnG23nax+G+01Is8Y+5nm6VO5V1rePUWnFlfWXMqeLJJbdTGNLex6Za03weofFD2IClmPhEVH/0wcy3qIO9DlM83pOpi++3Vs9zlmc5csJ9hRw1b0bJzwzmunN+Dts1vL2f8KvWZyVnJEz7p6szIwOeOkL2vPtjoHUaHqJ1hke1H6g135+26aVW6oOqco1L2aaC2rr2lt847YzvKIckOGzg5bRvwwS68DVU8jm8v0jyt6d/vnd9yf/SV0z1SFSW6oiHtP6dNavDNXRtdO8t6opz7pO09sR+GXO/3IDKr+hgrq2DWtm9RQ7E2xh1059I79qWVFYv+us3C3/SnxNN+xAxN9qXvHyrzjgxw74uudUN7vqKCU6WPbfwNPtJ8nQdVXfep5+I86U9+NPQGTOqxbc01614gOmO9K7DlE7pHWNXfdjXhr0X2jvDz9Rn0Jjx57FxC9U6QXMrmzqMayfUzsQHFervPg6X/ntx3dvrp3hhg6Ua9YVddP7qMVc1TY2ddQ9yY/+MHub7om6H7bEtF4IjL5vgCT9cdN"
     },
     {
       type = "tilelayer",
@@ -2523,7 +2333,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "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"
+      data = "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"
     },
     {
       type = "tilelayer",
@@ -2539,7 +2349,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJzt1OkJwkAQxfGYgqKxR7UCjwo8KvCowKMCjw7UHnwBF5cg+TCzguj/Bw+CMA93NpplQFrd/JWmz/5Br5VlfWXQ8s2PlLEyMfQMo/mZMlcWhp5pNL9S1srG0LOM5nfKXjkYerbR/Ek5KxdDz1Ezbb2XhXLV8025G+8rzHsV+ftnq1IdHWNPNVs+Z60ddW1HT9iHp+MTvLt5dx7rGcvE9/Rtu654z5jid5XiewTfsuPC8V8RdwTervp+vX2dPN3d/6JU7zMAAAAAAAAAAAAAAAAAAAAAAAAAAECTB98DIn8="
+      data = "eJzt2+mNwkAMhuFAQQlsj7tUwFHBHhWwUAFHBRwdsPSAIxHtKOK0PySO95EsRSg2npnMT2cZoPXW/I9Tv72C90aWfVh0GrH8nkXfYuCo003yvyy+LX4cdT6T/F+LkcXYUWeY5E8tZhZzR51Jkr+0WFmsHXUWlpPbd1lYbOz5z2LrPK8qP6qd3JOW4M4U+/V5lHtT9ZCL7m9kTYW4F5VoP4f2xHtmbfE5efu4pWhPqjXdW52oso/o95N+y9F11e9V9J7lgvU9M/YGAAAAAAAAAAAAAAAAAAAAAAAAeBzR+VPF/KqyTik6Q6ackVLW8szaqWdF67Uje31sblnV8yV1qnfqc4PHnq9R7Gerq/lz1QzoJXfl3H+p9lg1p31tP+n7OwfJKII="
     },
     {
       type = "tilelayer",
@@ -2557,7 +2367,7 @@ return {
       },
       encoding = "base64",
       compression = "zlib",
-      data = "eJztwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAAAAAAAAL4GROgAAQ=="
+      data = "eJzt0dkKwjAQQFEf5l/dwA3c8Od9KKUkJDNJKjZT7oF50ExvJW42AAAAAAAAAPBfH5mm5owOnR470L1lmpozOnR67CD0kmFiDxkm9zl+vrdOTmnH4r3zlGFaO+PzvXWgy93fXYbJfY6f762TU9qxeO/kzks74/e9daC7yTTaWcn5Gjsaq1PqV50lzPndpf/XVcLx1NFYnVJLdOa8L36Pl85FwtE6GqtTynNH27M68Xnr7+65ozlLOK2W6Gh7Vic+99Kx/OI/WMJJwvlHR9uzOvH5GjvQHSU9tft02u7Tu4Okp3afTtt9ereX9NTu02m7T+92kp7afTpt9+ndVtJTu0+n7T4BAACg+wI0i2+c"
     },
     {
       type = "tilelayer",
@@ -2657,7 +2467,7 @@ return {
     },
     {
       type = "objectgroup",
-      name = "midboss",
+      name = "heavy5",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -2666,145 +2476,121 @@ return {
       properties = {},
       objects = {
         {
-          id = 89,
-          name = "trigger",
+          id = 28,
+          name = "heavy",
+          type = "HeavyMilitia",
+          shape = "rectangle",
+          x = 256,
+          y = 1504,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1272,
+          visible = true,
+          properties = {
+            ["pathid"] = "31"
+          }
+        },
+        {
+          id = 29,
+          name = "heavy",
+          type = "HeavyMilitia",
+          shape = "rectangle",
+          x = 32,
+          y = 1504,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1272,
+          visible = true,
+          properties = {
+            ["pathid"] = "30"
+          }
+        },
+        {
+          id = 32,
+          name = "heavy5",
           type = "Trigger",
-          shape = "polyline",
-          x = -312,
-          y = 720,
-          width = 0,
-          height = 0,
+          shape = "rectangle",
+          x = 72,
+          y = 1120,
+          width = 32,
+          height = 464,
           rotation = 0,
           visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 288, y = 0 }
-          },
           properties = {
-            ["pausecamera"] = true
+            ["activateobjectslayer"] = "ground"
           }
         }
       }
     },
     {
       type = "objectgroup",
-      name = "archers2_3_path",
+      name = "catapult4",
       visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
       draworder = "topdown",
-      properties = {
-        ["script"] = "PathGraph"
-      },
+      properties = {},
       objects = {
         {
-          id = 74,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 528,
-          y = 1384,
-          width = 0,
-          height = 0,
+          id = 25,
+          name = "catapult",
+          type = "Catapult",
+          shape = "rectangle",
+          x = 144,
+          y = 1200,
+          width = 72,
+          height = 72,
           rotation = 0,
+          gid = 1157,
           visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 72, y = 0 }
-          },
-          properties = {}
+          properties = {
+            ["pathid"] = "27"
+          }
         },
         {
-          id = 62,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = -152,
-          y = 1440,
-          width = 0,
-          height = 0,
+          id = 26,
+          name = "catapult4",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 128,
+          y = 1088,
+          width = 32,
+          height = 224,
           rotation = 0,
           visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 88, y = 0 }
-          },
-          properties = {}
+          properties = {
+            ["activateobjectslayer"] = "ground"
+          }
         },
         {
-          id = 75,
-          name = "",
+          id = 27,
+          name = "path",
           type = "",
           shape = "polyline",
-          x = -128,
+          x = 144,
           y = 1200,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 56, y = 0 },
-            { x = 80, y = 0 }
+            { x = 0, y = 0 },
+            { x = 0, y = 112 },
+            { x = 0, y = -96 },
+            { x = 0, y = 128 }
           },
-          properties = {}
-        },
-        {
-          id = 76,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 432,
-          y = 1384,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 72, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 72,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 528,
-          y = 1240,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 72, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 73,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 432,
-          y = 1240,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 72, y = 0 }
-          },
-          properties = {}
+          properties = {
+            ["script"] = "PathGraph"
+          }
         }
       }
     },
     {
       type = "objectgroup",
-      name = "archers3",
+      name = "catapult3",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -2813,79 +2599,73 @@ return {
       properties = {},
       objects = {
         {
-          id = 85,
-          name = "archer",
-          type = "Archer",
+          id = 22,
+          name = "catapult",
+          type = "Catapult",
           shape = "rectangle",
-          x = 408,
-          y = 1208,
-          width = 24,
-          height = 32,
+          x = 144,
+          y = 1440,
+          width = 72,
+          height = 72,
           rotation = 0,
-          gid = 1182,
+          gid = 1157,
           visible = true,
-          properties = {}
+          properties = {
+            ["pathid"] = "23"
+          }
         },
         {
-          id = 87,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 648,
-          y = 1320,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 84,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 408,
-          y = 1320,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 86,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 648,
-          y = 1208,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 82,
-          name = "trigger",
+          id = 24,
+          name = "catapult3",
           type = "Trigger",
           shape = "rectangle",
-          x = -336,
-          y = 1208,
-          width = 312,
-          height = 144,
+          x = 128,
+          y = 1328,
+          width = 32,
+          height = 224,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["activateobjectslayer"] = "ground"
+          }
+        },
+        {
+          id = 23,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 144,
+          y = 1440,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 112 },
+            { x = 0, y = -96 },
+            { x = 0, y = 128 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
         }
       }
     },
     {
       type = "objectgroup",
-      name = "archers2",
+      name = "heavycatapult1_path",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {}
+    },
+    {
+      type = "objectgroup",
+      name = "heavy4",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -2894,45 +2674,143 @@ return {
       properties = {},
       objects = {
         {
-          id = 88,
-          name = "archer",
-          type = "Archer",
+          id = 17,
+          name = "heavy",
+          type = "HeavyMilitia",
           shape = "rectangle",
-          x = 648,
-          y = 1432,
+          x = -8,
+          y = 2024,
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1182,
+          gid = 1272,
           visible = true,
-          properties = {}
+          properties = {
+            ["pathid"] = "19"
+          }
         },
         {
-          id = 81,
-          name = "trigger",
+          id = 18,
+          name = "heavy",
+          type = "HeavyMilitia",
+          shape = "rectangle",
+          x = 296,
+          y = 2024,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1272,
+          visible = true,
+          properties = {
+            ["pathid"] = "20"
+          }
+        },
+        {
+          id = 19,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = -8,
+          y = 2024,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 72, y = 0 },
+            { x = 72, y = -208 },
+            { x = 232, y = -208 },
+            { x = 232, y = -448 },
+            { x = 320, y = -448 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
+        },
+        {
+          id = 20,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 296,
+          y = 2024,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -72, y = 0 },
+            { x = -72, y = -224 },
+            { x = -232, y = -224 },
+            { x = -232, y = -448 },
+            { x = -320, y = -448 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
+        },
+        {
+          id = 21,
+          name = "heavy4",
           type = "Trigger",
           shape = "rectangle",
-          x = -336,
-          y = 1384,
-          width = 312,
-          height = 80,
+          x = 128,
+          y = 1568,
+          width = 32,
+          height = 456,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["activateobjectslayer"] = "ground"
+          }
         },
         {
-          id = 83,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 408,
-          y = 1432,
-          width = 24,
-          height = 32,
+          id = 30,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 32,
+          y = 1504,
+          width = 0,
+          height = 0,
           rotation = 0,
-          gid = 1182,
           visible = true,
-          properties = {}
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 64 },
+            { x = 0, y = -144 },
+            { x = 224, y = -144 },
+            { x = 224, y = -368 },
+            { x = 272, y = -368 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
+        },
+        {
+          id = 31,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 256,
+          y = 1504,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 64 },
+            { x = 0, y = -160 },
+            { x = -224, y = -160 },
+            { x = -224, y = -368 },
+            { x = -272, y = -368 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
         }
       }
     },
@@ -2947,373 +2825,61 @@ return {
       properties = {},
       objects = {
         {
-          id = 66,
-          name = "trigger",
-          type = "Trigger",
-          shape = "rectangle",
-          x = -312,
-          y = 1096,
-          width = 288,
-          height = 456,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 71,
+          id = 15,
           name = "heavy",
           type = "HeavyMilitia",
           shape = "rectangle",
-          x = 528,
-          y = 1520,
+          x = 80,
+          y = 2416,
           width = 24,
           height = 32,
           rotation = 0,
           gid = 1272,
           visible = true,
           properties = {
-            ["pathid"] = "heavy3_path"
+            ["pathid"] = "14"
           }
         },
         {
-          id = 64,
-          name = "heavy",
-          type = "HeavyMilitia",
-          shape = "rectangle",
-          x = 432,
-          y = 1504,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1272,
-          visible = true,
-          properties = {
-            ["pathid"] = "heavy3_path"
-          }
-        },
-        {
-          id = 68,
-          name = "heavy",
-          type = "HeavyMilitia",
-          shape = "rectangle",
-          x = 624,
-          y = 1504,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1272,
-          visible = true,
-          properties = {
-            ["pathid"] = "heavy3_path"
-          }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      name = "heavy3_path",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {
-        ["script"] = "PathGraph"
-      },
-      objects = {
-        {
-          id = 67,
+          id = 14,
           name = "path",
           type = "",
           shape = "polyline",
-          x = 624,
-          y = 1504,
+          x = 80,
+          y = 2408,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 0 },
-            { x = 0, y = 40 },
-            { x = 0, y = -120 },
-            { x = -80, y = -120 },
-            { x = -80, y = -264 },
-            { x = 0, y = -264 },
-            { x = 0, y = -408 },
-            { x = 104, y = -408 }
+            { x = 0, y = 8 },
+            { x = 0, y = 56 },
+            { x = 0, y = -88 },
+            { x = 128, y = -88 },
+            { x = 128, y = -232 },
+            { x = 0, y = -232 },
+            { x = 0, y = -376 },
+            { x = 128, y = -376 },
+            { x = 128, y = 8 }
           },
-          properties = {}
-        },
-        {
-          id = 70,
-          name = "path",
-          type = "",
-          shape = "polyline",
-          x = 528,
-          y = 1520,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 0, y = 40 },
-            { x = 0, y = -424 },
-            { x = 0, y = -136 }
-          },
-          properties = {}
-        },
-        {
-          id = 65,
-          name = "path",
-          type = "",
-          shape = "polyline",
-          x = 432,
-          y = 1520,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = -16 },
-            { x = 0, y = 24 },
-            { x = 0, y = -136 },
-            { x = 80, y = -136 },
-            { x = 80, y = -280 },
-            { x = 0, y = -280 },
-            { x = 0, y = -424 },
-            { x = -104, y = -424 }
-          },
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      name = "militia3",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {
-        {
-          id = 63,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 496,
-          y = 1688,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
           properties = {
-            ["pathid"] = "militia2_3_path"
+            ["script"] = "PathGraph"
           }
         },
         {
-          id = 61,
-          name = "trigger",
+          id = 16,
+          name = "heavy3",
           type = "Trigger",
           shape = "rectangle",
-          x = -336,
-          y = 1648,
-          width = 312,
-          height = 72,
+          x = 128,
+          y = 2024,
+          width = 32,
+          height = 408,
           rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 59,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 448,
-          y = 1640,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
           visible = true,
           properties = {
-            ["pathid"] = "militia2_3_path"
+            ["activateobjectslayer"] = "ground"
           }
-        },
-        {
-          id = 60,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 608,
-          y = 1640,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "militia2_3_path"
-          }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      name = "militia2",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {
-        {
-          id = 58,
-          name = "trigger",
-          type = "Trigger",
-          shape = "rectangle",
-          x = -336,
-          y = 1744,
-          width = 312,
-          height = 24,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 57,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 664,
-          y = 1736,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "militia2_3_path"
-          }
-        },
-        {
-          id = 53,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 392,
-          y = 1736,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "militia2_3_path"
-          }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      name = "militia2_3_path",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {
-        ["script"] = "PathGraph"
-      },
-      objects = {
-        {
-          id = 56,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 584,
-          y = 1640,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 80, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 55,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 584,
-          y = 1736,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 80, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 52,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 368,
-          y = 1736,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 80, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 54,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 368,
-          y = 1640,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 80, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 69,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 472,
-          y = 1688,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 88, y = 0 }
-          },
-          properties = {}
         }
       }
     },
@@ -3328,87 +2894,55 @@ return {
       properties = {},
       objects = {
         {
-          id = 49,
-          name = "trigger",
+          id = 8,
+          name = "heavy",
+          type = "HeavyMilitia",
+          shape = "rectangle",
+          x = -8,
+          y = 2760,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1272,
+          visible = true,
+          properties = {
+            ["pathid"] = "9"
+          }
+        },
+        {
+          id = 10,
+          name = "heavy2",
           type = "Trigger",
           shape = "rectangle",
-          x = -312,
-          y = 1544,
-          width = 288,
-          height = 288,
+          x = 96,
+          y = 2464,
+          width = 32,
+          height = 304,
           rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 47,
-          name = "heavy",
-          type = "HeavyMilitia",
-          shape = "rectangle",
-          x = 464,
-          y = 1800,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1272,
           visible = true,
           properties = {
-            ["pathid"] = "48"
+            ["activateobjectslayer"] = "ground"
           }
         },
         {
-          id = 48,
+          id = 9,
           name = "path",
           type = "",
           shape = "polyline",
-          x = 464,
-          y = 1800,
+          x = 80,
+          y = 2704,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 0 },
-            { x = 0, y = 32 },
-            { x = 0, y = -256 },
-            { x = -104, y = -256 }
-          },
-          properties = {
-            ["script"] = "PathGraph"
-          }
-        },
-        {
-          id = 51,
-          name = "heavy",
-          type = "HeavyMilitia",
-          shape = "rectangle",
-          x = 592,
-          y = 1800,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1272,
-          visible = true,
-          properties = {
-            ["pathid"] = "50"
-          }
-        },
-        {
-          id = 50,
-          name = "path",
-          type = "",
-          shape = "polyline",
-          x = 592,
-          y = 1800,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 0, y = 32 },
-            { x = 0, y = -256 },
-            { x = 104, y = -256 }
+            { x = -88, y = 56 },
+            { x = 0, y = 56 },
+            { x = 0, y = -96 },
+            { x = 128, y = -96 },
+            { x = 128, y = -240 },
+            { x = 0, y = -240 },
+            { x = 0, y = 72 }
           },
           properties = {
             ["script"] = "PathGraph"
@@ -3418,7 +2952,7 @@ return {
     },
     {
       type = "objectgroup",
-      name = "pikemenmilitia1",
+      name = "catapult2",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -3427,424 +2961,20 @@ return {
       properties = {},
       objects = {
         {
-          id = 18,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 392,
-          y = 1976,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "32",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 43,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 416,
-          y = 1976,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "32",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 28,
-          name = "trigger",
-          type = "Trigger",
-          shape = "rectangle",
-          x = -312,
-          y = 1984,
-          width = 288,
-          height = 24,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 24,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 520,
-          y = 1952,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "29"
-          }
-        },
-        {
-          id = 32,
-          name = "leftmilitiapath",
-          type = "",
-          shape = "polyline",
-          x = 392,
-          y = 1976,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 24, y = 0 },
-            { x = 96, y = 0 }
-          },
-          properties = {
-            ["script"] = "PathGraph"
-          }
-        },
-        {
-          id = 22,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 520,
-          y = 1920,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "29"
-          }
-        },
-        {
-          id = 20,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 520,
-          y = 1888,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "29"
-          }
-        },
-        {
-          id = 21,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 536,
-          y = 1888,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "30"
-          }
-        },
-        {
-          id = 25,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 536,
-          y = 1952,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "30"
-          }
-        },
-        {
-          id = 30,
-          name = "rightpikemenpath",
-          type = "",
-          shape = "polyline",
-          x = 536,
-          y = 3176,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 0, y = 248 },
-            { x = 0, y = 16 },
-            { x = 192, y = 16 }
-          },
-          properties = {
-            ["script"] = "PathGraph"
-          }
-        },
-        {
-          id = 44,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 640,
-          y = 1976,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "31",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 23,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 536,
-          y = 1920,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "30"
-          }
-        },
-        {
-          id = 31,
-          name = "rightmilitiapath",
-          type = "",
-          shape = "polyline",
-          x = 664,
-          y = 1976,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = -24, y = 0 },
-            { x = -96, y = 0 }
-          },
-          properties = {
-            ["script"] = "PathGraph"
-          }
-        },
-        {
-          id = 29,
-          name = "leftpikemenpath",
-          type = "",
-          shape = "polyline",
-          x = 520,
-          y = 3176,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 0, y = 248 },
-            { x = 0, y = 16 },
-            { x = -192, y = 16 }
-          },
-          properties = {
-            ["script"] = "PathGraph"
-          }
-        },
-        {
-          id = 19,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 664,
-          y = 1976,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "31",
-            ["pathmode"] = "relative"
-          }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      name = "pikemencatapult1",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {
-        {
-          id = 34,
-          name = "rightpikemenpath",
-          type = "",
-          shape = "polyline",
-          x = 552,
-          y = 3272,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 8, y = 56 },
-            { x = 80, y = 56 },
-            { x = 80, y = 144 },
-            { x = 168, y = 144 }
-          },
-          properties = {
-            ["script"] = "PathGraph"
-          }
-        },
-        {
-          id = 40,
-          name = "leftpikemenpath",
-          type = "",
-          shape = "polyline",
-          x = 504,
-          y = 3264,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = -8, y = 64 },
-            { x = -80, y = 64 },
-            { x = -80, y = 152 },
-            { x = -184, y = 152 }
-          },
-          properties = {
-            ["script"] = "PathGraph"
-          }
-        },
-        {
-          id = 41,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 496,
-          y = 3264,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "40"
-          }
-        },
-        {
-          id = 39,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 560,
-          y = 3264,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "34"
-          }
-        },
-        {
-          id = 36,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 496,
-          y = 3328,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "40"
-          }
-        },
-        {
-          id = 6,
+          id = 11,
           name = "catapult",
           type = "Catapult",
           shape = "rectangle",
-          x = 528,
-          y = 3280,
+          x = 144,
+          y = 3128,
           width = 72,
           height = 72,
           rotation = 0,
           gid = 1157,
           visible = true,
           properties = {
-            ["pathid"] = 12,
+            ["pathid"] = "12",
             ["pathspeed"] = "60"
-          }
-        },
-        {
-          id = 37,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 560,
-          y = 3296,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "34"
-          }
-        },
-        {
-          id = 42,
-          name = "trigger",
-          type = "Trigger",
-          shape = "rectangle",
-          x = -344,
-          y = 2952,
-          width = 304,
-          height = 416,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 38,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 496,
-          y = 3296,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1227,
-          visible = true,
-          properties = {
-            ["pathid"] = "40"
           }
         },
         {
@@ -3852,16 +2982,17 @@ return {
           name = "path",
           type = "",
           shape = "polyline",
-          x = 528,
-          y = 3312,
+          x = 144,
+          y = 3128,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = -32 },
-            { x = 0, y = 72 },
-            { x = 0, y = -376 }
+            { x = 0, y = 0 },
+            { x = 0, y = 40 },
+            { x = 0, y = -360 },
+            { x = 0, y = -216 }
           },
           properties = {
             ["script"] = "PathGraph"
@@ -3869,169 +3000,96 @@ return {
         },
         {
           id = 13,
-          name = "operator",
-          type = "CatapultOperator",
+          name = "trigger",
+          type = "Trigger",
           shape = "rectangle",
-          x = 528,
-          y = 3248,
-          width = 24,
-          height = 32,
+          x = 128,
+          y = 2768,
+          width = 32,
+          height = 384,
           rotation = 0,
-          gid = 1257,
           visible = true,
           properties = {
-            ["convertible"] = true,
-            ["kolaunch"] = true,
-            ["rideid"] = 6
+            ["activateobjectslayer"] = "ground"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "catapult1",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 5,
+          name = "catapult",
+          type = "Catapult",
+          shape = "rectangle",
+          x = 144,
+          y = 3472,
+          width = 72,
+          height = 72,
+          rotation = 0,
+          gid = 1157,
+          visible = true,
+          properties = {
+            ["pathid"] = "6",
+            ["pathspeed"] = "60"
           }
         },
         {
-          id = 35,
-          name = "pikeman",
-          type = "Pikeman",
-          shape = "rectangle",
-          x = 560,
-          y = 3328,
-          width = 24,
-          height = 32,
+          id = 6,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 144,
+          y = 3472,
+          width = 0,
+          height = 0,
           rotation = 0,
-          gid = 1227,
           visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 56 },
+            { x = 0, y = -296 },
+            { x = 0, y = -152 }
+          },
           properties = {
-            ["pathid"] = "34"
+            ["script"] = "PathGraph"
           }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      name = "heavy1",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {
-        {
-          id = 45,
-          name = "trigger",
-          type = "Trigger",
-          shape = "rectangle",
-          x = -344,
-          y = 3368,
-          width = 304,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      name = "archers1",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {
-        {
-          id = 14,
-          name = "trigger",
-          type = "Trigger",
-          shape = "rectangle",
-          x = -352,
-          y = 3416,
-          width = 312,
-          height = 8,
-          rotation = 0,
-          visible = true,
-          properties = {}
         },
         {
           id = 7,
-          name = "archer",
-          type = "Archer",
+          name = "trigger",
+          type = "Trigger",
           shape = "rectangle",
-          x = 376,
-          y = 3432,
-          width = 24,
-          height = 32,
+          x = 128,
+          y = 3176,
+          width = 32,
+          height = 320,
           rotation = 0,
-          gid = 1182,
           visible = true,
           properties = {
-            ["pathid"] = "fencepath"
-          }
-        },
-        {
-          id = 8,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 680,
-          y = 3432,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "fencepath"
+            ["activateobjectslayer"] = "ground"
           }
         }
       }
     },
     {
       type = "objectgroup",
-      name = "fencepath",
+      name = "ground",
       visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
       draworder = "topdown",
-      properties = {
-        ["script"] = "PathGraph"
-      },
-      objects = {
-        {
-          id = 16,
-          name = "pathleft",
-          type = "",
-          shape = "polyline",
-          x = 376,
-          y = 3432,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 120, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 17,
-          name = "pathright",
-          type = "",
-          shape = "polyline",
-          x = 680,
-          y = 3432,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = -120, y = 0 }
-          },
-          properties = {}
-        }
-      }
+      properties = {},
+      objects = {}
     },
     {
       type = "tilelayer",
@@ -4049,7 +3107,7 @@ return {
       },
       encoding = "base64",
       compression = "zlib",
-      data = "eJztyqERACAMALEK9mMCYP8tMK0Dh+IS8+YjAAAAAAAAAAAAAAAAAAAA3ujt3JGd2XX5qgDAfzYe6wMZ"
+      data = "eJztyqEBACAMwLAJ/uMC4P8vMJsDDSIxNY0AAAAAAAAAAAAAAAAAAACA93o7d2Rndl2+KgB/2iiCAxk="
     },
     {
       type = "objectgroup",
@@ -4108,7 +3166,7 @@ return {
           properties = {}
         },
         {
-          id = 90,
+          id = 4,
           name = "path",
           type = "",
           shape = "polyline",
