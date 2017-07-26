@@ -7,7 +7,7 @@ function ButtonPlayStage:buttonReleased()
 	levity.map.properties.nextmap = self.object.properties.nextmap
 	levity.scripts:send(levity.mapfile, "startGame")
 
-	local menu = levity.map.layers["stagemenu"]
+	local menu = self.object.layer
 	if menu then
 		for _, object in pairs(menu.objects) do
 			levity:discardObject(object.id)

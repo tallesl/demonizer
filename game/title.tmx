@@ -48,14 +48,14 @@ C key: BOMB</property>
   </object>
  </objectgroup>
  <objectgroup name="stagemenu">
-  <object id="13" name="stage1" type="UIButton" x="48" y="32" width="144" height="16">
+  <object id="13" name="stage1" type="UIButton" x="40" y="130" width="160" height="20">
    <properties>
     <property name="nextmap" type="file" value="demonrealm.lua"/>
     <property name="script" value="ButtonPlayStage"/>
     <property name="text" value="demonrealm"/>
    </properties>
   </object>
-  <object id="14" name="stage2" type="UIButton" x="48" y="64" width="144" height="16">
+  <object id="14" name="stage2" type="UIButton" x="40" y="160" width="160" height="20">
    <properties>
     <property name="nextmap" type="file" value="village.lua"/>
     <property name="script" value="ButtonPlayStage"/>
