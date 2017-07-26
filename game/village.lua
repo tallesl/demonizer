@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 90,
+  nextobjectid = 91,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -4073,9 +4073,23 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["pathid"] = 3
+            ["pathid"] = "camera_path"
           }
-        },
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "camera_path",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {
+        ["script"] = "PathGraph"
+      },
+      objects = {
         {
           id = 3,
           name = "path",
@@ -4091,8 +4105,25 @@ return {
             { x = 0, y = 320 },
             { x = 0, y = -2560 }
           },
+          properties = {}
+        },
+        {
+          id = 90,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = 24,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 320 },
+            { x = 0, y = -400 }
+          },
           properties = {
-            ["script"] = "PathGraph"
+            ["cost"] = 2
           }
         }
       }

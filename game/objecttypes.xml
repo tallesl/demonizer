@@ -14,6 +14,7 @@
   <property name="collidable" type="bool" default="true"/>
   <property name="pathfinder" type="string" default="linearUp"/>
   <property name="pathmode" type="string" default="relative"/>
+  <property name="pathspeedweighted" type="bool" default="true"/>
   <property name="script" type="string" default="ShmupCam"/>
   <property name="sensor" type="bool" default="true"/>
  </objecttype>

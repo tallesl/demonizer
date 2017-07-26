@@ -39,12 +39,12 @@ function Mover:start()
 
 	local paths = levity.scripts:call(pathid, "getPaths", x, y)
 
-	local pathfinder = self.properties.pathfinder or "linear1way"
+	local pathfinder = self.properties.pathfinder
 	pathfinder = pathfinder and Mover["pathfind_"..pathfinder]
-	if pathfinder then
-		levity.scripts:scriptAddEventFunc(self, self.id, "pathfind",
-							pathfinder)
-	end
+	--if pathfinder then
+	--	levity.scripts:scriptAddEventFunc(self, self.id, "pathfind",
+	--						pathfinder)
+	--end
 
 	if paths and pathfinder then
 		local path = pathfinder(self, paths, x, y)
@@ -102,6 +102,9 @@ function Mover:beginMove(dt)
 	end
 
 	local speed = self.properties.pathspeed or 60
+	if self.path and self.properties.pathspeedweighted then
+		speed = speed / self.path.cost
+	end
 	local x, y = self.body:getPosition()
 
 	local vx, vy = 0, 0
@@ -121,7 +124,6 @@ function Mover:beginMove(dt)
 			vx, vy = distx / dt, disty / dt
 		end
 	else
-
 		local dist = math.hypot(distx, disty)
 		exdist = speed*dt - dist
 		if exdist < 0 then
@@ -136,8 +138,14 @@ function Mover:beginMove(dt)
 						self.destx, self.desty)
 		local nextpath
 		if paths then
-			nextpath = levity.scripts:call(self.id,
-				"pathfind", paths, self.prevx, self.prevy)
+			local pathfinder = self.properties.pathfinder
+			pathfinder = pathfinder and Mover["pathfind_"..pathfinder]
+
+			if pathfinder then
+				nextpath = pathfinder(self, paths, self.prevx, self.prevy)
+			else
+				nextpath = nil
+			end
 		end
 
 		if nextpath then
