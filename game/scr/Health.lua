@@ -1,5 +1,6 @@
 local levity = require "levity"
 local ShmupBullet = require "ShmupBullet"
+local ShmupCollision = require "ShmupCollision"
 
 local Health = class()
 function Health:_init(object)
@@ -10,6 +11,8 @@ function Health:_init(object)
 	self.dps = 0
 	self.hitparticles = levity.scripts:newScript(self.id, "HitParticles",
 		object, levity.map:getTileGid("particles", "damage"), 32)
+	self.oncamera = false
+	self.oncameraedge = false
 end
 
 Health.HitSparkParams = {
@@ -25,6 +28,24 @@ levity.bank:load(Sounds)
 
 function Health:beginMove(dt)
 	self.movedamage = 0
+end
+
+function Health:beginContact(myfixture, otherfixture, contact)
+	local category = otherfixture:getCategory()
+	if category == ShmupCollision.Category_Camera then
+		self.oncamera = true
+	elseif category == ShmupCollision.Category_CameraEdge then
+		self.oncameraedge = true
+	end
+end
+
+function Health:endContact(myfixture, otherfixture, contact)
+	local category = otherfixture:getCategory()
+	if category == ShmupCollision.Category_Camera then
+		self.oncamera = false
+	elseif category == ShmupCollision.Category_CameraEdge then
+		self.oncameraedge = false
+	end
 end
 
 function Health:createContactHitFX(contact, myfixture)
@@ -59,6 +80,10 @@ function Health:addDamage(damage, sparkx, sparky, angle)
 end
 
 function Health:endMove(dt)
+	if self.oncamera == false or self.oncameraedge == true then
+		return
+	end
+
 	local health = self.health - self.movedamage - (self.dps * dt)
 	if self.dps > 0 then
 		self:createHitFX()

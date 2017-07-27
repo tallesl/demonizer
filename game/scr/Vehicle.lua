@@ -78,13 +78,11 @@ Vehicle.NonCoverCategory = {
 }
 
 Vehicle.CombatantMask = {
-	ShmupCollision.Category_CameraEdge,
 	ShmupCollision.Category_PlayerTeam,
 	ShmupCollision.Category_EnemyShot
 }
 
 Vehicle.NonCombatantMask = {
-	ShmupCollision.Category_CameraEdge,
 	ShmupCollision.Category_PlayerTeam,
 	ShmupCollision.Category_PlayerShot,
 	ShmupCollision.Category_EnemyShot

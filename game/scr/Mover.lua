@@ -20,13 +20,13 @@ function Mover:start()
 	local pathid = self.properties.pathid
 	pathid = tonumber(pathid) or pathid
 	self.properties.pathid = pathid
-	local pathobj = levity.map.objects[pathid]
+	local pathobj = levity.map.objects[pathid] or levity.map.layers[pathid]
 
 	if self.properties.pathmode == "relative" and pathobj then
 		local nearestx, nearesty = levity.scripts:call(pathid,
 			"findNearestPoint", x, y)
-		nearestx = nearestx or pathobj.body:getX()
-		nearesty = nearesty or pathobj.body:getY()
+		nearestx = nearestx or (pathobj.body and pathobj.body:getX())
+		nearesty = nearesty or (pathobj.body and pathobj.body:getY())
 		self.offx = x - nearestx
 		self.offy = y - nearesty
 	else
@@ -63,8 +63,8 @@ function Mover:start()
 	end
 
 	if pathobj then
-		self.destx = self.destx or pathobj.body:getX()
-		self.desty = self.desty or pathobj.body:getY()
+		self.destx = self.destx or (pathobj.body and pathobj.body:getX())
+		self.desty = self.desty or (pathobj.body and pathobj.body:getY())
 	end
 
 	self.prevx = x
@@ -95,8 +95,8 @@ function Mover:beginMove(dt)
 
 	local pathid = self.properties.pathid
 	if not levity.scripts:call(pathid, "is_a", PathGraph) then
-		local pathobj = levity.map.objects[pathid]
-		if pathobj then
+		local pathobj = levity.map.objects[pathid] or levity.map.layers[pathid]
+		if pathobj and pathobj.body then
 			self.destx, self.desty = pathobj.body:getPosition()
 		end
 	end

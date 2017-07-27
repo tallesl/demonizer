@@ -89,12 +89,10 @@ Human.MaxReleasedCaptives = 10
 Human.ReleaseLaunchVelY = -250
 
 Human.CombatantMask = {
-	ShmupCollision.Category_CameraEdge,
 	ShmupCollision.Category_EnemyShot
 }
 
 Human.NonCombatantMask = {
-	ShmupCollision.Category_CameraEdge,
 	ShmupCollision.Category_PlayerShot,
 	ShmupCollision.Category_EnemyTeam,
 	ShmupCollision.Category_EnemyShot,
