@@ -56,7 +56,7 @@
   <property name="firetime" type="float" default="1"/>
   <property name="health" type="int" default="8"/>
   <property name="kolaunch" type="bool" default="false"/>
-  <property name="pathfinder" type="string" default="linear2way"/>
+  <property name="pathfinder" type="string" default="linear1way"/>
   <property name="pathid" type="string" default="0"/>
   <property name="pathmode" type="string" default="absolute"/>
   <property name="pathspeed" type="string" default="90"/>

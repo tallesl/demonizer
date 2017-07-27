@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="18" height="245" tilewidth="16" tileheight="16" nextobjectid="33">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="18" height="245" tilewidth="16" tileheight="16" nextobjectid="128">
  <properties>
   <property name="cameraid" type="int" value="2"/>
   <property name="music" type="file" value="mus/09 - Blue Sky Laundry.vgm"/>
@@ -22,6 +22,49 @@
  <tileset firstgid="1239" source="img/human/enemy/pikeman-f.tsx"/>
  <tileset firstgid="1254" source="img/human/enemy/catapultoperator-f.tsx"/>
  <tileset firstgid="1269" source="img/human/enemy/heavymilitia-m.tsx"/>
+ <tileset firstgid="1284" source="img/human/enemy/archer-f.tsx"/>
+ <objectgroup name="unused" visible="0">
+  <object id="125" type="Trigger" x="0" y="-48" width="16" height="16"/>
+  <object id="80" name="path" x="352" y="2520">
+   <polyline points="-8,0 48,0"/>
+  </object>
+  <object id="98" name="archer" type="Archer" gid="1182" x="400" y="2520" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="76" name="militia" type="Militia" gid="1212" x="368" y="2896" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="75" name="militia" type="Militia" gid="1212" x="-80" y="2896" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="85" name="path" x="0" y="2272">
+   <polyline points="-8,0 48,0"/>
+  </object>
+  <object id="84" name="path" x="248" y="2272">
+   <polyline points="-8,0 48,0"/>
+  </object>
+  <object id="108" name="archer" type="Archer" gid="1182" x="32" y="2272" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="107" name="archer" type="Archer" gid="1182" x="256" y="2272" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer name="dirt" width="18" height="245">
   <data encoding="base64" compression="zlib">
    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
@@ -34,12 +77,12 @@
  </layer>
  <layer name="grass" width="18" height="245">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <layer name="grassdeco" width="18" height="245">
   <data encoding="base64" compression="zlib">
-   eJzt2+mNwkAMhuFAQQlsj7tUwFHBHhWwUAFHBRwdsPSAIxHtKOK0PySO95EsRSg2npnMT2cZoPXW/I9Tv72C90aWfVh0GrH8nkXfYuCo003yvyy+LX4cdT6T/F+LkcXYUWeY5E8tZhZzR51Jkr+0WFmsHXUWlpPbd1lYbOz5z2LrPK8qP6qd3JOW4M4U+/V5lHtT9ZCL7m9kTYW4F5VoP4f2xHtmbfE5efu4pWhPqjXdW52oso/o95N+y9F11e9V9J7lgvU9M/YGAAAAAAAAAAAAAAAAAAAAAAAAeBzR+VPF/KqyTik6Q6ackVLW8szaqWdF67Uje31sblnV8yV1qnfqc4PHnq9R7Gerq/lz1QzoJXfl3H+p9lg1p31tP+n7OwfJKII=
+   eJzt2+1Nw0AMxvG0AyWkA9BvdDJgAgoTUDoBlAl4mQDoBoUdeCJx4ho1JbGNxMv/J1lKq557d44/uiiAWJPxZ+z77j84HhXFieJ05Fs/V5wrLgx5zrL1C8WVYmnIc5mtv1GsFLeGPNfZ+nvFg+LRkOcuW/+seFGsDXmetKbUe1kpNnp+VbwZ65XWe9VZnxwE9Ez1cT6L5m7SHsqg/vWcqQreSxTvfnbdibVmdXCdrPv4Tt49RZ3pp+XxavbhfX/yd9l7rnZfefusDDjfX8bdAAAAAAAAAAAAAAAAAAAAAAAAAL+Hd/60WX+omAbkOVLMAuaTvDNk3hmp/D48udr3YZm16/r/oTXb9Z7Uzpp1zS1Hzaj1yZN+054b7Hoeohpv90ef+u2rS7rrPj37VV2i7nhor7XPlz4P3U9+vneUjy56
   </data>
  </layer>
  <layer name="crops" width="18" height="245" offsetx="0" offsety="-16">
@@ -47,7 +90,7 @@
    <property name="note" value="Temp Y offset to compensate for tile rendering bug"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt0dkKwjAQQFEf5l/dwA3c8Od9KKUkJDNJKjZT7oF50ExvJW42AAAAAAAAAPBfH5mm5owOnR470L1lmpozOnR67CD0kmFiDxkm9zl+vrdOTmnH4r3zlGFaO+PzvXWgy93fXYbJfY6f762TU9qxeO/kzks74/e9daC7yTTaWcn5Gjsaq1PqV50lzPndpf/XVcLx1NFYnVJLdOa8L36Pl85FwtE6GqtTynNH27M68Xnr7+65ozlLOK2W6Gh7Vic+99Kx/OI/WMJJwvlHR9uzOvH5GjvQHSU9tft02u7Tu4Okp3afTtt9ereX9NTu02m7T+92kp7afTpt9+ndVtJTu0+n7T4BAACg+wI0i2+c
+   eJzt0tmKAjEQRmEv6l1ndGAWwY15eS+k6U5DFfnTahbOB3UhqRzbZbcDAAAAAAAAgPf6t3mUMzp0WuwgdrN5lDM6dFrsIHW1eZbO9hjv9fruqB1PTidHrc7F5lE7y7u9dHJsuftq0+fe8t9Yz9LJHuO9br3jyenkqNWZztc7OZ3l3VE7iB0tndKzUTul353iWZ0aSp9d+b3+LJ2eOpGoo6jRKX3P9b2eOr+WTtSJRB1Fz51oVzkrffbWO5EfS6dUjU60q5z11Cn9Plr3bem8oxPtKmejdhD7Mn+UXTra7igO5o+yS0fbHcXe/FF26Wi7o/g0f5RdOtruKD7MH2WXjrYLAACAPHdE/LGu
   </data>
  </layer>
  <layer name="houses" width="18" height="245">
@@ -80,18 +123,18 @@
    eJztzt1NAkEUQOHJKFSgVADWo5ECIFAAIAX4V4JQAVgB+izRAjRQAIgFCFiA53GzrpvsPpl4vuQks3NvJhuCJEmSJOm/Oo0hnNEdjWhM59SMxXZanNs0oSndU4e6JXdm9ECPJXd6nPs0SHRBw4I7l5yv6DrRDd0W3PnLnvjPOR0ehFChKj3z/RLzZ2mv3L3RETvHVKMF38uYP/vtnTo7DTrJeCdrlrbibk3viTb0EfNnaZ/cbWmXaE9fMX8mSZIkSZIkSZIkSZIkSZIkSZIk6advn0BRDw==
   </data>
  </layer>
- <objectgroup name="heavy5">
-  <object id="28" name="heavy" type="HeavyMilitia" gid="1272" x="256" y="1504" width="24" height="32">
+ <objectgroup name="heavy4">
+  <object id="28" name="heavy" type="HeavyMilitia" gid="1272" x="248" y="1504" width="24" height="32">
    <properties>
     <property name="pathid" value="31"/>
    </properties>
   </object>
-  <object id="29" name="heavy" type="HeavyMilitia" gid="1272" x="32" y="1504" width="24" height="32">
+  <object id="29" name="heavy" type="HeavyMilitia" gid="1272" x="40" y="1504" width="24" height="32">
    <properties>
     <property name="pathid" value="30"/>
    </properties>
   </object>
-  <object id="32" name="heavy5" type="Trigger" x="72" y="1120" width="32" height="464">
+  <object id="32" name="heavy4" type="Trigger" x="72" y="1120" width="32" height="464">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
@@ -114,6 +157,12 @@
    </properties>
    <polyline points="0,0 0,112 0,-96 0,128"/>
   </object>
+  <object id="123" name="operator" type="CatapultOperator" gid="1197" x="144" y="1168" width="24" height="32">
+   <properties>
+    <property name="kolaunch" type="bool" value="true"/>
+    <property name="rideid" type="int" value="25"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="catapult3">
   <object id="22" name="catapult" type="Catapult" gid="1157" x="144" y="1440" width="72" height="72">
@@ -132,9 +181,15 @@
    </properties>
    <polyline points="0,0 0,112 0,-96 0,128"/>
   </object>
+  <object id="124" name="operator" type="CatapultOperator" gid="1197" x="144" y="1408" width="24" height="32">
+   <properties>
+    <property name="kolaunch" type="bool" value="true"/>
+    <property name="rideid" type="int" value="22"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="heavycatapult1_path"/>
- <objectgroup name="heavy4">
+ <objectgroup name="heavy3">
   <object id="17" name="heavy" type="HeavyMilitia" gid="1272" x="-8" y="2024" width="24" height="32">
    <properties>
     <property name="pathid" value="19"/>
@@ -149,15 +204,15 @@
    <properties>
     <property name="script" value="PathGraph"/>
    </properties>
-   <polyline points="0,0 72,0 72,-208 232,-208 232,-448 320,-448"/>
+   <polyline points="0,0 80,0 80,-208 224,-208 224,-448 320,-448"/>
   </object>
   <object id="20" name="path" x="296" y="2024">
    <properties>
     <property name="script" value="PathGraph"/>
    </properties>
-   <polyline points="0,0 -72,0 -72,-224 -232,-224 -232,-448 -320,-448"/>
+   <polyline points="0,0 -80,0 -80,-224 -224,-224 -224,-448 -320,-448"/>
   </object>
-  <object id="21" name="heavy4" type="Trigger" x="128" y="1568" width="32" height="456">
+  <object id="21" name="heavy3" type="Trigger" x="128" y="1568" width="32" height="456">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
@@ -166,16 +221,16 @@
    <properties>
     <property name="script" value="PathGraph"/>
    </properties>
-   <polyline points="0,0 0,64 0,-144 224,-144 224,-368 272,-368"/>
+   <polyline points="8,0 8,64 8,-144 216,-144 216,-368 272,-368"/>
   </object>
   <object id="31" name="path" x="256" y="1504">
    <properties>
     <property name="script" value="PathGraph"/>
    </properties>
-   <polyline points="0,0 0,64 0,-160 -224,-160 -224,-368 -272,-368"/>
+   <polyline points="-8,0 -8,64 -8,-160 -216,-160 -216,-368 -272,-368"/>
   </object>
  </objectgroup>
- <objectgroup name="heavy3">
+ <objectgroup name="heavy2">
   <object id="15" name="heavy" type="HeavyMilitia" gid="1272" x="80" y="2416" width="24" height="32">
    <properties>
     <property name="pathid" value="14"/>
@@ -185,21 +240,183 @@
    <properties>
     <property name="script" value="PathGraph"/>
    </properties>
-   <polyline points="0,8 0,56 0,-88 128,-88 128,-232 0,-232 0,-376 128,-376 128,8"/>
+   <polyline points="8,8 8,56 8,-88 120,-88 120,-232 8,-232 8,-384 120,-384 120,8"/>
   </object>
-  <object id="16" name="heavy3" type="Trigger" x="128" y="2024" width="32" height="408">
+  <object id="16" name="heavy2" type="Trigger" x="128" y="2024" width="32" height="408">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="heavy2">
+ <objectgroup name="archersmilitia">
+  <object id="111" name="archer" type="Archer" gid="1182" x="256" y="2144" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="112" name="archer" type="Archer" gid="1182" x="32" y="2128" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="113" name="archer" type="Archer" gid="1182" x="8" y="2128" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="114" name="archer" type="Archer" gid="1182" x="280" y="2144" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="115" name="militia" type="Militia" gid="1212" x="0" y="2160" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="116" name="militia" type="Militia" gid="1212" x="-24" y="2160" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="117" name="militia" type="Militia" gid="1212" x="288" y="2160" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="118" name="militia" type="Militia" gid="1212" x="312" y="2160" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="122" name="trigger" type="Trigger" x="112" y="2120" width="64" height="56">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="archers2">
+  <object id="109" name="archer" type="Archer" gid="1182" x="8" y="2280" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="110" name="archer" type="Archer" gid="1182" x="280" y="2264" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="121" name="trigger" type="Trigger" x="112" y="2240" width="64" height="56">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="militiaarchers1">
+  <object id="101" name="militia" type="Militia" gid="1212" x="0" y="2400" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="102" name="militia" type="Militia" gid="1212" x="-16" y="2400" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="103" name="archer" type="Archer" gid="1182" x="8" y="2384" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="104" name="militia" type="Militia" gid="1212" x="304" y="2400" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="105" name="militia" type="Militia" gid="1212" x="288" y="2400" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="106" name="archer" type="Archer" gid="1182" x="280" y="2384" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="120" name="trigger" type="Trigger" x="112" y="2360" width="64" height="56">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="archers1">
+  <object id="97" name="archer" type="Archer" gid="1287" x="8" y="2512" width="24" height="32">
+   <properties>
+    <property name="convertible" type="bool" value="true"/>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="119" name="trigger" type="Trigger" x="112" y="2464" width="64" height="56">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="militia6">
+  <object id="94" name="militia" type="Militia" gid="1212" x="-24" y="2640" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="95" name="militia" type="Militia" gid="1212" x="312" y="2640" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="96" name="trigger" type="Trigger" x="112" y="2608" width="64" height="56">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+  <object id="99" name="militia" type="Militia" gid="1212" x="-8" y="2624" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="100" name="militia" type="Militia" gid="1212" x="296" y="2624" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="heavy1">
   <object id="8" name="heavy" type="HeavyMilitia" gid="1272" x="-8" y="2760" width="24" height="32">
    <properties>
     <property name="pathid" value="9"/>
    </properties>
   </object>
-  <object id="10" name="heavy2" type="Trigger" x="96" y="2464" width="32" height="304">
+  <object id="10" name="heavy1" type="Trigger" x="96" y="2464" width="32" height="304">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
@@ -208,45 +425,336 @@
    <properties>
     <property name="script" value="PathGraph"/>
    </properties>
-   <polyline points="-88,56 0,56 0,-96 128,-96 128,-240 0,-240 0,72"/>
+   <polyline points="-88,56 8,56 8,-96 120,-96 120,-240 8,-240 8,72"/>
   </object>
  </objectgroup>
  <objectgroup name="catapult2">
-  <object id="11" name="catapult" type="Catapult" gid="1157" x="144" y="3128" width="72" height="72">
+  <object id="11" name="catapult" type="Catapult" gid="1157" x="144" y="2992" width="72" height="72">
    <properties>
     <property name="pathid" value="12"/>
-    <property name="pathspeed" value="60"/>
    </properties>
   </object>
-  <object id="12" name="path" x="144" y="3128">
+  <object id="12" name="path" x="144" y="2992">
    <properties>
     <property name="script" value="PathGraph"/>
    </properties>
-   <polyline points="0,0 0,40 0,-360 0,-216"/>
+   <polyline points="0,0 0,56 0,-184"/>
   </object>
-  <object id="13" name="trigger" type="Trigger" x="128" y="2768" width="32" height="384">
+  <object id="13" name="trigger" type="Trigger" x="128" y="2768" width="32" height="248">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+  <object id="33" name="operator" type="CatapultOperator" gid="1197" x="144" y="2960" width="24" height="32">
+   <properties>
+    <property name="kolaunch" type="bool" value="true"/>
+    <property name="rideid" type="int" value="11"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="militia5">
+  <object id="71" name="militia" type="Militia" gid="1212" x="0" y="2896" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="72" name="militia" type="Militia" gid="1212" x="288" y="2896" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="73" name="militia" type="Militia" gid="1212" x="-48" y="2896" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="74" name="militia" type="Militia" gid="1212" x="336" y="2896" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="77" name="trigger" type="Trigger" x="112" y="2880" width="64" height="40">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="catapult1">
-  <object id="5" name="catapult" type="Catapult" gid="1157" x="144" y="3472" width="72" height="72">
+ <objectgroup name="militia4">
+  <object id="60" name="militia" type="Militia" gid="1212" x="0" y="3024" width="24" height="32">
    <properties>
-    <property name="pathid" value="6"/>
-    <property name="pathspeed" value="60"/>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
    </properties>
   </object>
-  <object id="6" name="path" x="144" y="3472">
+  <object id="61" name="militia" type="Militia" gid="1212" x="288" y="3024" width="24" height="32">
    <properties>
-    <property name="script" value="PathGraph"/>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
    </properties>
-   <polyline points="0,0 0,56 0,-296 0,-152"/>
   </object>
-  <object id="7" name="trigger" type="Trigger" x="128" y="3176" width="32" height="320">
+  <object id="62" name="militia" type="Militia" gid="1212" x="-24" y="3024" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="63" name="militia" type="Militia" gid="1212" x="312" y="3024" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="64" name="militia" type="Militia" gid="1212" x="-48" y="3024" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="65" name="militia" type="Militia" gid="1212" x="336" y="3024" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="68" name="trigger" type="Trigger" x="112" y="3008" width="64" height="40">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="militia3">
+  <object id="56" name="militia" type="Militia" gid="1212" x="0" y="3152" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="57" name="militia" type="Militia" gid="1212" x="288" y="3152" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="58" name="militia" type="Militia" gid="1212" x="-24" y="3152" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="59" name="militia" type="Militia" gid="1212" x="312" y="3152" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="67" name="trigger" type="Trigger" x="112" y="3136" width="64" height="40">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="militia2">
+  <object id="48" name="militia" type="Militia" gid="1212" x="0" y="3280" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="49" name="militia" type="Militia" gid="1212" x="288" y="3280" width="24" height="32">
+   <properties>
+    <property name="pathid" value="fields_paths"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="66" name="trigger" type="Trigger" x="112" y="3264" width="64" height="40">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="fields_paths">
+  <properties>
+   <property name="script" value="PathGraph"/>
+  </properties>
+  <object id="50" name="path" x="0" y="3280">
+   <polyline points="0,0 112,0"/>
+  </object>
+  <object id="51" name="path" x="192" y="3280">
+   <polyline points="-16,0 96,0"/>
+  </object>
+  <object id="52" name="path" x="0" y="3152">
+   <polyline points="0,0 112,0"/>
+  </object>
+  <object id="53" name="path" x="192" y="3152">
+   <polyline points="-16,0 96,0"/>
+  </object>
+  <object id="54" name="path" x="0" y="3024">
+   <polyline points="0,0 112,0"/>
+  </object>
+  <object id="55" name="path" x="192" y="3024">
+   <polyline points="-16,0 96,0"/>
+  </object>
+  <object id="69" name="path" x="192" y="2896">
+   <polyline points="-16,0 96,0"/>
+  </object>
+  <object id="70" name="path" x="0" y="2896">
+   <polyline points="0,0 112,0"/>
+  </object>
+  <object id="78" name="path" x="0" y="2624">
+   <polyline points="-8,0 64,0"/>
+  </object>
+  <object id="79" name="path" x="248" y="2624">
+   <polyline points="-24,0 48,0"/>
+  </object>
+  <object id="81" name="path" x="0" y="2512">
+   <polyline points="8,0 72,0 112,-40 176,-40 216,0 280,0"/>
+  </object>
+  <object id="82" name="path" x="8" y="2384">
+   <polyline points="-8,0 64,0"/>
+  </object>
+  <object id="83" name="path" x="240" y="2384">
+   <polyline points="-24,0 48,0"/>
+  </object>
+  <object id="86" name="path" x="248" y="2184">
+   <polyline points="-24,0 48,0"/>
+  </object>
+  <object id="87" name="path" x="0" y="2184">
+   <polyline points="-8,0 64,0"/>
+  </object>
+  <object id="88" name="path" x="-16" y="1904">
+   <polyline points="8,0 48,0"/>
+  </object>
+  <object id="89" name="path" x="248" y="1904">
+   <polyline points="8,0 48,0"/>
+  </object>
+  <object id="90" name="path" x="248" y="1792">
+   <polyline points="8,0 48,0"/>
+  </object>
+  <object id="91" name="path" x="-16" y="1792">
+   <polyline points="8,0 48,0"/>
+  </object>
+  <object id="92" name="path" x="-16" y="1680">
+   <polyline points="8,0 48,0"/>
+  </object>
+  <object id="93" name="path" x="248" y="1680">
+   <polyline points="8,0 48,0"/>
+  </object>
+  <object id="126" name="path" x="0" y="2272">
+   <polyline points="8,0 72,0 112,48 176,48 216,0 280,0"/>
+  </object>
+  <object id="127" name="path" x="0" y="2128">
+   <polyline points="8,0 72,0 112,32 176,32 216,0 280,0"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="catapult1">
+  <object id="5" name="catapult" type="Catapult" gid="1157" x="144" y="3392" width="72" height="72">
+   <properties>
+    <property name="pathid" value="6"/>
+   </properties>
+  </object>
+  <object id="6" name="path" x="144" y="3392">
+   <properties>
+    <property name="script" value="PathGraph"/>
+   </properties>
+   <polyline points="0,0 0,64 0,-160"/>
+  </object>
+  <object id="7" name="trigger" type="Trigger" x="128" y="3192" width="32" height="224">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+  <object id="34" name="operator" type="CatapultOperator" gid="1257" x="144" y="3360" width="24" height="32">
+   <properties>
+    <property name="convertible" type="bool" value="true"/>
+    <property name="kolaunch" type="bool" value="true"/>
+    <property name="rideid" type="int" value="5"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="militia1a">
+  <object id="41" type="Militia" gid="1212" x="184" y="3480" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="42" type="Militia" gid="1212" x="104" y="3480" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="43" type="Militia" gid="1212" x="128" y="3496" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="45" name="trigger" type="Trigger" x="112" y="3480" width="64" height="32">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+  <object id="47" type="Militia" gid="1212" x="160" y="3496" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="militia1b">
+  <object id="39" type="Militia" gid="1212" x="224" y="3464" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="40" type="Militia" gid="1212" x="160" y="3456" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="38" type="Militia" gid="1212" x="200" y="3448" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="36" type="Militia" gid="1212" x="64" y="3464" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="37" type="Militia" gid="1212" x="128" y="3456" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="35" type="Militia" gid="1212" x="88" y="3448" width="24" height="32">
+   <properties>
+    <property name="pathid" value="militia1_path"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="46" name="trigger" type="Trigger" x="56" y="3448" width="176" height="32">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="militia1_path">
+  <properties>
+   <property name="script" value="PathGraph"/>
+  </properties>
+  <object id="44" name="path" x="144" y="3520">
+   <polyline points="0,-24 0,24"/>
   </object>
  </objectgroup>
  <objectgroup name="ground"/>
