@@ -269,8 +269,13 @@ return {
           properties = {}
         },
         {
-          name = "Soil",
+          name = "Soil Horizontal",
           tile = 329,
+          properties = {}
+        },
+        {
+          name = "Soil Vertical",
+          tile = 332,
           properties = {}
         }
       },
@@ -1181,6 +1186,14 @@ return {
           terrain = { 11, 11, 0, 11 }
         },
         {
+          id = 296,
+          terrain = { 12, 12, 12, 0 }
+        },
+        {
+          id = 297,
+          terrain = { 12, 12, 0, 12 }
+        },
+        {
           id = 300,
           terrain = { 10, 10, 10, -1 }
         },
@@ -1195,6 +1208,14 @@ return {
         {
           id = 306,
           terrain = { 0, 11, 11, 11 }
+        },
+        {
+          id = 308,
+          terrain = { 12, 0, 12, 12 }
+        },
+        {
+          id = 309,
+          terrain = { 0, 12, 12, 12 }
         },
         {
           id = 313,
@@ -1221,6 +1242,18 @@ return {
           terrain = { 0, 0, 11, 0 }
         },
         {
+          id = 319,
+          terrain = { 0, 0, 0, 12 }
+        },
+        {
+          id = 320,
+          terrain = { 0, 0, 12, 12 }
+        },
+        {
+          id = 321,
+          terrain = { 0, 0, 12, 0 }
+        },
+        {
           id = 325,
           terrain = { -1, 10, -1, 10 }
         },
@@ -1245,6 +1278,18 @@ return {
           terrain = { 11, 0, 11, 0 }
         },
         {
+          id = 331,
+          terrain = { 0, 12, 0, 12 }
+        },
+        {
+          id = 332,
+          terrain = { 12, 12, 12, 12 }
+        },
+        {
+          id = 333,
+          terrain = { 12, 0, 12, 0 }
+        },
+        {
           id = 337,
           terrain = { -1, 10, -1, -1 }
         },
@@ -1267,6 +1312,18 @@ return {
         {
           id = 342,
           terrain = { 11, 0, 0, 0 }
+        },
+        {
+          id = 343,
+          terrain = { 0, 12, 0, 0 }
+        },
+        {
+          id = 344,
+          terrain = { 12, 12, 0, 0 }
+        },
+        {
+          id = 345,
+          terrain = { 12, 0, 0, 0 }
         },
         {
           id = 372,
@@ -5368,7 +5425,7 @@ return {
         {
           id = 335,
           name = "",
-          type = "DestructibleCover",
+          type = "Destructible",
           shape = "rectangle",
           x = 120,
           y = 536,
@@ -5377,12 +5434,14 @@ return {
           rotation = 0,
           gid = 723,
           visible = true,
-          properties = {}
+          properties = {
+            ["cover"] = true
+          }
         },
         {
           id = 336,
           name = "",
-          type = "DestructibleCover",
+          type = "Destructible",
           shape = "rectangle",
           x = 168,
           y = 536,
@@ -5391,7 +5450,9 @@ return {
           rotation = 0,
           gid = 722,
           visible = true,
-          properties = {}
+          properties = {
+            ["cover"] = true
+          }
         }
       }
     },
@@ -6705,7 +6766,7 @@ return {
         {
           id = 334,
           name = "rock",
-          type = "DestructibleCover",
+          type = "Destructible",
           shape = "rectangle",
           x = 152,
           y = 1096,
@@ -6714,7 +6775,9 @@ return {
           rotation = 0,
           gid = 722,
           visible = true,
-          properties = {}
+          properties = {
+            ["cover"] = true
+          }
         },
         {
           id = 143,

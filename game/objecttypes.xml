@@ -235,9 +235,11 @@
   <property name="pathspeed" type="string" default="75"/>
   <property name="strafearc" type="float" default="180"/>
  </objecttype>
- <objecttype name="DestructibleCover" color="#ff7f7f">
+ <objecttype name="Destructible" color="#ff7f7f">
   <property name="combatant" type="bool" default="false"/>
-  <property name="cover" type="bool" default="true"/>
+  <property name="cover" type="bool" default="false"/>
+  <property name="defeathidelayers" type="string"/>
+  <property name="defeatshowlayers" type="string"/>
   <property name="health" type="int" default="1"/>
   <property name="score" type="int" default="1000"/>
   <property name="script" type="string" default="Vehicle"/>

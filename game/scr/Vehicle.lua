@@ -37,7 +37,9 @@ function Vehicle:_init(object)
 
 	self.body:setFixedRotation(true)
 	self.facing = levity.scripts:newScript(self.id, "Facing", self.object)
-	local faceangle = self.object.tile.properties.faceangle
+	local faceangle = self.object.tile
+		and self.object.tile.properties.faceangle
+		or self.object.properties.faceangle
 	if faceangle then
 		self.facing:faceAngle(math.rad(faceangle))
 	end
@@ -168,7 +170,7 @@ end
 
 function Vehicle:defeat()
 	local destroyedtile = self.properties.destroyedtile
-		or self.object.tile.properties.destroyedtile
+		or self.object.tile and self.object.tile.properties.destroyedtile
 
 	if destroyedtile then
 		local destroyedgid = levity.map:getTileGid(
@@ -205,6 +207,28 @@ function Vehicle:defeat()
 	self.mover = levity.scripts:destroyScript(self.mover, self.id)
 	self.shooter = levity.scripts:destroyScript(self.shooter, self.id)
 	self.health = levity.scripts:destroyScript(self.health, self.id)
+
+	local LayerPattern = "([^\n]+)\n"
+	local maplayers = levity.map.layers
+	local defeatshowlayers = self.properties.defeatshowlayers
+		and self.properties.defeatshowlayers..'\n'
+	local defeathidelayers = self.properties.defeathidelayers
+		and self.properties.defeathidelayers..'\n'
+
+	if defeatshowlayers then
+		for layer in defeatshowlayers:gmatch(LayerPattern) do
+			if maplayers[layer] then
+				maplayers[layer].visible = true
+			end
+		end
+	end
+	if defeathidelayers then
+		for layer in defeathidelayers:gmatch(LayerPattern) do
+			if maplayers[layer] then
+				maplayers[layer].visible = false
+			end
+		end
+	end
 end
 
 return Vehicle
