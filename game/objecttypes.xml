@@ -13,7 +13,7 @@
  <objecttype name="Camera" color="#0000ff">
   <property name="collidable" type="bool" default="true"/>
   <property name="pathfinder" type="string" default="linearUp"/>
-  <property name="pathmode" type="string" default="relative"/>
+  <property name="pathmode" type="string" default="absolute"/>
   <property name="pathspeedweighted" type="bool" default="true"/>
   <property name="script" type="string" default="ShmupCam"/>
   <property name="sensor" type="bool" default="true"/>
@@ -182,6 +182,7 @@
   <property name="rideid" type="int" default="0"/>
   <property name="score" type="int" default="500"/>
   <property name="script" type="string" default="Human"/>
+  <property name="strafearc" type="float" default="180"/>
  </objecttype>
  <objecttype name="BulletFireArrow" color="#00aaff">
   <property name="accelx" type="float" default="0"/>
