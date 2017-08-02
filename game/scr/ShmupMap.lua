@@ -42,6 +42,8 @@ local ShmupMap = class()
 function ShmupMap:_init(map)
 	self.map = map
 	self.properties = self.map.properties
+	assert(self.properties.delayinitobjects == true,
+		"This game requires map property delayinitobjects=true.")
 
 	local npcshotslayer = levity.map.layers["npcshots"] or
 				Layer(self.map, "npcshots")
@@ -87,7 +89,8 @@ function ShmupMap:_init(map)
 			if layer.type == "dynamiclayer" then
 				local istrigger = nil
 				for _, object in ipairs(layer.objects) do
-					if object.type == "Trigger" then
+					if object.type == "Trigger"
+					or object.type == "BombTrigger" then
 						Object.init(object, layer, map)
 						istrigger = true
 						layer.visible = false

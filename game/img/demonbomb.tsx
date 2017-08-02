@@ -7,6 +7,7 @@
    <object id="1" x="-64" y="128" width="128" height="128">
     <properties>
      <property name="collidable" type="bool" value="true"/>
+     <property name="sensor" type="bool" value="true"/>
     </properties>
     <ellipse/>
    </object>

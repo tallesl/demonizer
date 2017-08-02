@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="18" height="245" tilewidth="16" tileheight="16" nextobjectid="164">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="18" height="245" tilewidth="16" tileheight="16" nextobjectid="192">
  <properties>
   <property name="cameraid" type="int" value="2"/>
   <property name="music" type="file" value="mus/09 - Blue Sky Laundry.vgm"/>
@@ -24,7 +24,8 @@
  <tileset firstgid="1269" source="img/human/enemy/heavymilitia-m.tsx"/>
  <tileset firstgid="1284" source="img/human/enemy/archer-f.tsx"/>
  <tileset firstgid="1299" source="img/doors_opening.tsx"/>
- <objectgroup name="unused" visible="0">
+ <tileset firstgid="1314" source="img/sparks_huge.tsx"/>
+ <objectgroup name="unused">
   <object id="125" type="Trigger" x="0" y="-48" width="16" height="16"/>
   <object id="80" name="path" x="352" y="2520">
    <polyline points="-8,0 48,0"/>
@@ -114,19 +115,7 @@
    eJztzMEJwCAQBMAD049VaDvp/5eICP7Ul58ZWA6WYyMAAAA49aaI/PQ7p2n9jvL/1UXKxtZqYwQAAAAAAAAAAAAAAAAAbvoAh+UIZw==
   </data>
  </layer>
- <objectgroup name="storehouse2ndobjects">
-  <object id="136" name="bombtarget" type="Destructible" x="80" y="736" width="128" height="48">
-   <properties>
-    <property name="collidable" type="bool" value="true"/>
-    <property name="defeathidelayers">storehouse2ndfront
-storehouseroof</property>
-    <property name="defeatshowlayers" value="storehouse2nddestroyed"/>
-    <property name="health" type="int" value="16"/>
-    <property name="score" type="int" value="2000"/>
-    <property name="sensor" type="bool" value="true"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup name="storehouse2ndobjects"/>
  <layer name="storehouse2nddestroyed" width="18" height="245">
   <data encoding="base64" compression="zlib">
    eJztyrENABAURdGfMIfYwP5TWUEUQkenOae5r3gRAAAA/FDy/VMfPj1FtLx77tm1AQAAAAAAAAAAAAAAAOCnASofBgA=
@@ -142,6 +131,157 @@ storehouseroof</property>
    eJzt0TEKgDAQRcEl9z+geAFFD6BoYxohiERi2hn43fKajQAAAKgbUsSY+htz3tLRuht73vGzVTZura23RmtrqjSerbVys300ytbZ+UMAAAAAAAAAAAAAAAAA6HEBSxkfVw==
   </data>
  </layer>
+ <objectgroup name="storehouse2nddestruction">
+  <object id="167" name="explosion" type="Spark" gid="1314" x="144" y="792" width="96" height="96"/>
+  <object id="166" name="explosion" type="Spark" gid="1314" x="144" y="736" width="96" height="96"/>
+  <object id="165" name="explosion" type="Spark" gid="1314" x="192" y="776" width="96" height="96"/>
+  <object id="164" name="explosion" type="Spark" gid="1314" x="96" y="776" width="96" height="96"/>
+  <object id="136" name="bombtrigger" type="BombTrigger" x="80" y="736" width="128" height="48">
+   <properties>
+    <property name="defeathidelayers">storehouse2ndfront
+storehouseroof</property>
+    <property name="defeatshowlayers" value="storehouse2nddestroyed"/>
+    <property name="health" type="int" value="16"/>
+    <property name="score" type="int" value="2000"/>
+   </properties>
+  </object>
+  <object id="168" name="walldebris" type="Debris" gid="1007" x="88" y="784" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-180"/>
+   </properties>
+  </object>
+  <object id="169" name="walldebris" type="Debris" gid="1007" x="104" y="768" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-120"/>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="170" name="walldebris" type="Debris" gid="1007" x="136" y="768" width="16" height="16">
+   <properties>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="171" name="walldebris" type="Debris" gid="1060" x="120" y="784" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-60"/>
+   </properties>
+  </object>
+  <object id="172" name="walldebris" type="Debris" gid="1007" x="168" y="768" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="120"/>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="173" name="walldebris" type="Debris" gid="1062" x="152" y="784" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="60"/>
+   </properties>
+  </object>
+  <object id="174" name="walldebris" type="Debris" gid="895" x="120" y="752" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-60"/>
+    <property name="vely" type="float" value="-200"/>
+   </properties>
+  </object>
+  <object id="175" name="walldebris" type="Debris" gid="1007" x="184" y="784" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="180"/>
+   </properties>
+  </object>
+  <object id="176" name="walldebris" type="Debris" gid="895" x="152" y="752" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="60"/>
+    <property name="vely" type="float" value="-200"/>
+   </properties>
+  </object>
+  <object id="177" name="roofdebris" type="Debris" gid="728" x="104" y="736" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-120"/>
+    <property name="vely" type="float" value="-240"/>
+   </properties>
+  </object>
+  <object id="178" name="roofdebris" type="Debris" gid="728" x="88" y="752" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-180"/>
+    <property name="vely" type="float" value="-200"/>
+   </properties>
+  </object>
+  <object id="179" name="roofdebris" type="Debris" gid="728" x="72" y="768" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-240"/>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="180" name="roofdebris" type="Debris" gid="760" x="88" y="768" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-180"/>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="181" name="roofdebris" type="Debris" gid="760" x="104" y="752" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-120"/>
+    <property name="vely" type="float" value="-200"/>
+   </properties>
+  </object>
+  <object id="182" name="windowdebris" type="Debris" gid="1044" x="120" y="768" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-60"/>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="183" name="windowdebris" type="Debris" gid="1046" x="152" y="768" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="60"/>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="184" name="roofdebris" type="Debris" gid="760" x="72" y="784" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="-240"/>
+   </properties>
+  </object>
+  <object id="185" name="roofdebris" type="Debris" gid="730" x="168" y="736" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="120"/>
+    <property name="vely" type="float" value="-240"/>
+   </properties>
+  </object>
+  <object id="186" name="roofdebris" type="Debris" gid="762" x="168" y="752" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="120"/>
+    <property name="vely" type="float" value="-200"/>
+   </properties>
+  </object>
+  <object id="187" name="roofdebris" type="Debris" gid="762" x="184" y="768" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="180"/>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="188" name="roofdebris" type="Debris" gid="730" x="184" y="752" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="180"/>
+    <property name="vely" type="float" value="-200"/>
+   </properties>
+  </object>
+  <object id="189" name="roofdebris" type="Debris" gid="762" x="200" y="784" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="240"/>
+   </properties>
+  </object>
+  <object id="190" name="roofdebris" type="Debris" gid="730" x="200" y="768" width="16" height="16">
+   <properties>
+    <property name="velx" type="float" value="240"/>
+    <property name="vely" type="float" value="-160"/>
+   </properties>
+  </object>
+  <object id="191" name="roofdebris" type="Debris" gid="745" x="136" y="736" width="16" height="16">
+   <properties>
+    <property name="vely" type="float" value="-240"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer name="model houses" width="18" height="245" visible="0">
   <data encoding="base64" compression="zlib">
    eJzt0sEJg0AQBdAFU5olhJACRFJQEAsQSXXREtyLMJB12Vsu78G/fP5tJiUAAADgyrtLaQ6Zut/NPXfPkEdhs+TuE7IWNkPuXiFjYfPN3RayVzb97XpDu9p9W/7jVLtvy3+caj/Q8h8AAAAAAAAAAAAAAADwLwelzyaH
@@ -153,7 +293,7 @@ storehouseroof</property>
   </data>
  </layer>
  <objectgroup name="midboss">
-  <object id="131" type="Trigger" x="0" y="720">
+  <object id="131" type="Trigger" x="0" y="704">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
     <property name="pausecamera" type="bool" value="true"/>
@@ -995,13 +1135,13 @@ storehouseroof</property>
    <property name="script" value="PathGraph"/>
   </properties>
   <object id="3" name="path" x="24" y="3280">
-   <polyline points="0,320 0,-2560"/>
+   <polyline points="0,320 0,-2576"/>
   </object>
   <object id="4" name="path" x="24" y="400">
    <properties>
     <property name="cost" type="int" value="2"/>
    </properties>
-   <polyline points="0,320 0,-400"/>
+   <polyline points="0,304 0,-400"/>
   </object>
  </objectgroup>
  <objectgroup name="sparks"/>

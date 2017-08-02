@@ -236,13 +236,28 @@
   <property name="pathspeed" type="string" default="75"/>
   <property name="strafearc" type="float" default="180"/>
  </objecttype>
- <objecttype name="Destructible" color="#ff7f7f">
+ <objecttype name="BombTrigger" color="#ff7f7f">
+  <property name="collidable" type="bool" default="true"/>
   <property name="combatant" type="bool" default="false"/>
   <property name="cover" type="bool" default="false"/>
+  <property name="defeatactivateobjects" type="bool" default="true"/>
+  <property name="defeatactivateobjectslayer" type="string" default="sparks"/>
   <property name="defeathidelayers" type="string"/>
   <property name="defeatshowlayers" type="string"/>
   <property name="health" type="int" default="1"/>
   <property name="score" type="int" default="1000"/>
   <property name="script" type="string" default="Vehicle"/>
+  <property name="sensor" type="bool" default="true"/>
+ </objecttype>
+ <objecttype name="Spark" color="#ffaa00">
+  <property name="lifetime" type="string" default="animation"/>
+  <property name="script" type="string" default="ShmupBullet"/>
+ </objecttype>
+ <objecttype name="Debris" color="#ffaa00">
+  <property name="accely" type="float" default="480"/>
+  <property name="lifetime" type="float" default="1"/>
+  <property name="script" type="string" default="ShmupBullet"/>
+  <property name="velx" type="float" default="0"/>
+  <property name="vely" type="float" default="-120"/>
  </objecttype>
 </objecttypes>

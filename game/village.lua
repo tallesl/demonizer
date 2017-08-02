@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 164,
+  nextobjectid = 192,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -2441,13 +2441,162 @@ return {
       terrains = {},
       tilecount = 15,
       tiles = {}
+    },
+    {
+      name = "sparks_huge",
+      firstgid = 1314,
+      filename = "img/sparks_huge.tsx",
+      tilewidth = 96,
+      tileheight = 96,
+      spacing = 0,
+      margin = 0,
+      image = "img/sparks_huge.png",
+      imagewidth = 480,
+      imageheight = 384,
+      tileoffset = {
+        x = -48,
+        y = 48
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 96,
+        height = 96
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 20,
+      tiles = {
+        {
+          id = 0,
+          properties = {
+            ["name"] = "explosion"
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 67
+            },
+            {
+              tileid = 1,
+              duration = 67
+            },
+            {
+              tileid = 2,
+              duration = 67
+            },
+            {
+              tileid = 3,
+              duration = 67
+            },
+            {
+              tileid = 4,
+              duration = 67
+            },
+            {
+              tileid = 5,
+              duration = 67
+            },
+            {
+              tileid = 6,
+              duration = 67
+            },
+            {
+              tileid = 7,
+              duration = 67
+            },
+            {
+              tileid = 8,
+              duration = 67
+            },
+            {
+              tileid = 9,
+              duration = 67
+            }
+          }
+        },
+        {
+          id = 10,
+          properties = {
+            ["name"] = "playerexplosion"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -42,
+                y = 54,
+                width = 84,
+                height = 84,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 10,
+              duration = 83
+            },
+            {
+              tileid = 11,
+              duration = 83
+            },
+            {
+              tileid = 12,
+              duration = 83
+            },
+            {
+              tileid = 13,
+              duration = 83
+            },
+            {
+              tileid = 14,
+              duration = 83
+            },
+            {
+              tileid = 15,
+              duration = 83
+            },
+            {
+              tileid = 16,
+              duration = 83
+            },
+            {
+              tileid = 17,
+              duration = 83
+            },
+            {
+              tileid = 18,
+              duration = 83
+            },
+            {
+              tileid = 19,
+              duration = 83
+            }
+          }
+        }
+      }
     }
   },
   layers = {
     {
       type = "objectgroup",
       name = "unused",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -2760,28 +2909,7 @@ return {
       offsety = 0,
       draworder = "topdown",
       properties = {},
-      objects = {
-        {
-          id = 136,
-          name = "bombtarget",
-          type = "Destructible",
-          shape = "rectangle",
-          x = 80,
-          y = 736,
-          width = 128,
-          height = 48,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["collidable"] = true,
-            ["defeathidelayers"] = "storehouse2ndfront\nstorehouseroof",
-            ["defeatshowlayers"] = "storehouse2nddestroyed",
-            ["health"] = 16,
-            ["score"] = 2000,
-            ["sensor"] = true
-          }
-        }
-      }
+      objects = {}
     },
     {
       type = "tilelayer",
@@ -2832,6 +2960,492 @@ return {
       data = "eJzt0TEKgDAQRcEl9z+geAFFD6BoYxohiERi2hn43fKajQAAAKgbUsSY+htz3tLRuht73vGzVTZura23RmtrqjSerbVys300ytbZ+UMAAAAAAAAAAAAAAAAA6HEBSxkfVw=="
     },
     {
+      type = "objectgroup",
+      name = "storehouse2nddestruction",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 167,
+          name = "explosion",
+          type = "Spark",
+          shape = "rectangle",
+          x = 144,
+          y = 792,
+          width = 96,
+          height = 96,
+          rotation = 0,
+          gid = 1314,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 166,
+          name = "explosion",
+          type = "Spark",
+          shape = "rectangle",
+          x = 144,
+          y = 736,
+          width = 96,
+          height = 96,
+          rotation = 0,
+          gid = 1314,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 165,
+          name = "explosion",
+          type = "Spark",
+          shape = "rectangle",
+          x = 192,
+          y = 776,
+          width = 96,
+          height = 96,
+          rotation = 0,
+          gid = 1314,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 164,
+          name = "explosion",
+          type = "Spark",
+          shape = "rectangle",
+          x = 96,
+          y = 776,
+          width = 96,
+          height = 96,
+          rotation = 0,
+          gid = 1314,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 136,
+          name = "bombtrigger",
+          type = "BombTrigger",
+          shape = "rectangle",
+          x = 80,
+          y = 736,
+          width = 128,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["defeathidelayers"] = "storehouse2ndfront\nstorehouseroof",
+            ["defeatshowlayers"] = "storehouse2nddestroyed",
+            ["health"] = 16,
+            ["score"] = 2000
+          }
+        },
+        {
+          id = 168,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 88,
+          y = 784,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1007,
+          visible = true,
+          properties = {
+            ["velx"] = -180
+          }
+        },
+        {
+          id = 169,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 104,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1007,
+          visible = true,
+          properties = {
+            ["velx"] = -120,
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 170,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 136,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1007,
+          visible = true,
+          properties = {
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 171,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 120,
+          y = 784,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1060,
+          visible = true,
+          properties = {
+            ["velx"] = -60
+          }
+        },
+        {
+          id = 172,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 168,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1007,
+          visible = true,
+          properties = {
+            ["velx"] = 120,
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 173,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 152,
+          y = 784,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1062,
+          visible = true,
+          properties = {
+            ["velx"] = 60
+          }
+        },
+        {
+          id = 174,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 120,
+          y = 752,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 895,
+          visible = true,
+          properties = {
+            ["velx"] = -60,
+            ["vely"] = -200
+          }
+        },
+        {
+          id = 175,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 184,
+          y = 784,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1007,
+          visible = true,
+          properties = {
+            ["velx"] = 180
+          }
+        },
+        {
+          id = 176,
+          name = "walldebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 152,
+          y = 752,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 895,
+          visible = true,
+          properties = {
+            ["velx"] = 60,
+            ["vely"] = -200
+          }
+        },
+        {
+          id = 177,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 104,
+          y = 736,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 728,
+          visible = true,
+          properties = {
+            ["velx"] = -120,
+            ["vely"] = -240
+          }
+        },
+        {
+          id = 178,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 88,
+          y = 752,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 728,
+          visible = true,
+          properties = {
+            ["velx"] = -180,
+            ["vely"] = -200
+          }
+        },
+        {
+          id = 179,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 72,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 728,
+          visible = true,
+          properties = {
+            ["velx"] = -240,
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 180,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 88,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 760,
+          visible = true,
+          properties = {
+            ["velx"] = -180,
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 181,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 104,
+          y = 752,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 760,
+          visible = true,
+          properties = {
+            ["velx"] = -120,
+            ["vely"] = -200
+          }
+        },
+        {
+          id = 182,
+          name = "windowdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 120,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1044,
+          visible = true,
+          properties = {
+            ["velx"] = -60,
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 183,
+          name = "windowdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 152,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1046,
+          visible = true,
+          properties = {
+            ["velx"] = 60,
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 184,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 72,
+          y = 784,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 760,
+          visible = true,
+          properties = {
+            ["velx"] = -240
+          }
+        },
+        {
+          id = 185,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 168,
+          y = 736,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 730,
+          visible = true,
+          properties = {
+            ["velx"] = 120,
+            ["vely"] = -240
+          }
+        },
+        {
+          id = 186,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 168,
+          y = 752,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 762,
+          visible = true,
+          properties = {
+            ["velx"] = 120,
+            ["vely"] = -200
+          }
+        },
+        {
+          id = 187,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 184,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 762,
+          visible = true,
+          properties = {
+            ["velx"] = 180,
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 188,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 184,
+          y = 752,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 730,
+          visible = true,
+          properties = {
+            ["velx"] = 180,
+            ["vely"] = -200
+          }
+        },
+        {
+          id = 189,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 200,
+          y = 784,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 762,
+          visible = true,
+          properties = {
+            ["velx"] = 240
+          }
+        },
+        {
+          id = 190,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 200,
+          y = 768,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 730,
+          visible = true,
+          properties = {
+            ["velx"] = 240,
+            ["vely"] = -160
+          }
+        },
+        {
+          id = 191,
+          name = "roofdebris",
+          type = "Debris",
+          shape = "rectangle",
+          x = 136,
+          y = 736,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 745,
+          visible = true,
+          properties = {
+            ["vely"] = -240
+          }
+        }
+      }
+    },
+    {
       type = "tilelayer",
       name = "model houses",
       x = 0,
@@ -2879,7 +3493,7 @@ return {
           type = "Trigger",
           shape = "polyline",
           x = 0,
-          y = 720,
+          y = 704,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5841,7 +6455,7 @@ return {
           visible = true,
           polyline = {
             { x = 0, y = 320 },
-            { x = 0, y = -2560 }
+            { x = 0, y = -2576 }
           },
           properties = {}
         },
@@ -5857,7 +6471,7 @@ return {
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 320 },
+            { x = 0, y = 304 },
             { x = 0, y = -400 }
           },
           properties = {

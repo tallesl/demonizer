@@ -229,6 +229,19 @@ function Vehicle:defeat()
 			end
 		end
 	end
+
+	if self.properties.defeatactivateobjects then
+		local layer = self.properties.defeatactivateobjectslayer or "sparks"
+		layer = maplayers[layer]
+
+		if layer then
+			for _, object in ipairs(self.object.layer.objects) do
+				if object ~= self.object then
+					layer:addObject(object)
+				end
+			end
+		end
+	end
 end
 
 return Vehicle

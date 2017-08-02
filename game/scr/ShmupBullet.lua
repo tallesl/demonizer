@@ -68,7 +68,9 @@ function ShmupBullet:_init(object)
 		self.coroutine = coroutine.create(properties.coroutine)
 	end
 
-	if properties.accelx and properties.accely then
+	if properties.accelx or properties.accely then
+		properties.accelx = properties.accelx or 0
+		properties.accely = properties.accely or 0
 		levity.scripts:scriptAddEventFunc(self,
 				self.object.id,
 				"beginMove", beginMove)
