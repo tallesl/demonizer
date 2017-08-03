@@ -309,6 +309,11 @@ function Human:defeat()
 	self.properties.pathid = nil
 	self.properties.firebullet = nil
 
+	if self.properties.defeatunpausecamera then
+		local cameraid = levity.map.properties.cameraid
+		levity.scripts:send(cameraid, "pausePath", false)
+	end
+
 	self.mover = levity.scripts:destroyScript(self.mover, self.id)
 	self.shooter = levity.scripts:destroyScript(self.shooter, self.id)
 	self.health = levity.scripts:destroyScript(self.health, self.id)

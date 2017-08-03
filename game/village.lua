@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 192,
+  nextobjectid = 206,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -2429,6 +2429,7 @@ return {
       },
       properties = {
         ["colstype"] = "material",
+        ["commoncollision"] = 10,
         ["material_metal"] = 3,
         ["material_metalbars"] = 4,
         ["material_woodext"] = 1,
@@ -2440,7 +2441,39 @@ return {
       },
       terrains = {},
       tilecount = 15,
-      tiles = {}
+      tiles = {
+        {
+          id = 10,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 32,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["sensor"] = true
+                }
+              }
+            }
+          }
+        }
+      }
     },
     {
       name = "sparks_huge",
@@ -2587,6 +2620,336 @@ return {
               tileid = 19,
               duration = 83
             }
+          }
+        }
+      }
+    },
+    {
+      name = "townfolk-adult-f-002",
+      firstgid = 1334,
+      filename = "img/human/civilian/townfolk-adult-f-002.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/civilian/townfolk-adult-f-002.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 10,
+          properties = {
+            ["name"] = "wingman"
+          },
+          animation = {
+            {
+              tileid = 10,
+              duration = 125
+            },
+            {
+              tileid = 11,
+              duration = 125
+            },
+            {
+              tileid = 9,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 11,
+          properties = {
+            ["name"] = "convert"
+          },
+          animation = {
+            {
+              tileid = 11,
+              duration = 66
+            },
+            {
+              tileid = 9,
+              duration = 66
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
+    },
+    {
+      name = "townfolk-adult-f-005",
+      firstgid = 1349,
+      filename = "img/human/civilian/townfolk-adult-f-005.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/civilian/townfolk-adult-f-005.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 10,
+          properties = {
+            ["name"] = "wingman"
+          },
+          animation = {
+            {
+              tileid = 10,
+              duration = 125
+            },
+            {
+              tileid = 11,
+              duration = 125
+            },
+            {
+              tileid = 9,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 11,
+          properties = {
+            ["name"] = "convert"
+          },
+          animation = {
+            {
+              tileid = 11,
+              duration = 66
+            },
+            {
+              tileid = 9,
+              duration = 66
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
+    },
+    {
+      name = "militiacaptain-m",
+      firstgid = 1364,
+      filename = "img/human/enemy/militiacaptain-m.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/enemy/militiacaptain-m.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
           }
         }
       }
@@ -2909,7 +3272,190 @@ return {
       offsety = 0,
       draworder = "topdown",
       properties = {},
-      objects = {}
+      objects = {
+        {
+          id = 192,
+          name = "civilian",
+          type = "Civilian",
+          shape = "rectangle",
+          x = 112,
+          y = 768,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1337,
+          visible = true,
+          properties = {
+            ["convertible"] = true,
+            ["rideid"] = 136
+          }
+        },
+        {
+          id = 193,
+          name = "civilian",
+          type = "Civilian",
+          shape = "rectangle",
+          x = 176,
+          y = 768,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1352,
+          visible = true,
+          properties = {
+            ["convertible"] = true,
+            ["rideid"] = 136
+          }
+        },
+        {
+          id = 194,
+          name = "heavy",
+          type = "HeavyMilitia",
+          shape = "rectangle",
+          x = 96,
+          y = 776,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1272,
+          visible = true,
+          properties = {
+            ["pathfinder"] = "linear2way",
+            ["pathid"] = "storehouse2ndpaths",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 195,
+          name = "heavy",
+          type = "HeavyMilitia",
+          shape = "rectangle",
+          x = 192,
+          y = 776,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1272,
+          visible = true,
+          properties = {
+            ["pathfinder"] = "linear2way",
+            ["pathid"] = "storehouse2ndpaths",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 200,
+          name = "cover",
+          type = "EnemyCover",
+          shape = "rectangle",
+          x = 80,
+          y = 760,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 201,
+          name = "cover",
+          type = "EnemyCover",
+          shape = "rectangle",
+          x = 176,
+          y = 760,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "storehouse2ndpaths",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {
+        ["script"] = "PathGraph"
+      },
+      objects = {
+        {
+          id = 196,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 136,
+          y = 776,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -40, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 197,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = -24,
+          y = 776,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = false,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -24, y = 0 }
+          },
+          properties = {
+            ["cost"] = 3
+          }
+        },
+        {
+          id = 198,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 352,
+          y = 776,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = false,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -24, y = 0 }
+          },
+          properties = {
+            ["cost"] = 3
+          }
+        },
+        {
+          id = 199,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 176,
+          y = 776,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 16, y = 0 },
+            { x = -24, y = 0 }
+          },
+          properties = {}
+        }
+      }
     },
     {
       type = "tilelayer",
@@ -2962,7 +3508,7 @@ return {
     {
       type = "objectgroup",
       name = "storehouse2nddestruction",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -3479,38 +4025,6 @@ return {
     },
     {
       type = "objectgroup",
-      name = "midboss",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {
-        {
-          id = 131,
-          name = "",
-          type = "Trigger",
-          shape = "polyline",
-          x = 0,
-          y = 704,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 288, y = 0 }
-          },
-          properties = {
-            ["activateobjectslayer"] = "ground",
-            ["pausecamera"] = true
-          }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
       name = "storehouse_doors",
       visible = true,
       opacity = 1,
@@ -3617,6 +4131,108 @@ return {
           gid = 2147484958,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "midboss",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 131,
+          name = "",
+          type = "Trigger",
+          shape = "polyline",
+          x = 0,
+          y = 704,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 288, y = 0 }
+          },
+          properties = {
+            ["activateobjectslayer"] = "ground",
+            ["pausecamera"] = true
+          }
+        },
+        {
+          id = 202,
+          name = "midboss",
+          type = "MilitiaCaptainNormalAttack",
+          shape = "rectangle",
+          x = 144,
+          y = 864,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1367,
+          visible = true,
+          properties = {
+            ["pathid"] = "midboss_path"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "midboss_path",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {
+        ["script"] = "PathGraph"
+      },
+      objects = {
+        {
+          id = 205,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 240,
+          y = 864,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -48, y = 48 },
+            { x = -96, y = 0 }
+          },
+          properties = {
+            ["beziercurve"] = true
+          }
+        },
+        {
+          id = 204,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 144,
+          y = 864,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -48, y = 48 },
+            { x = -96, y = 0 }
+          },
+          properties = {
+            ["beziercurve"] = true
+          }
         }
       }
     },
