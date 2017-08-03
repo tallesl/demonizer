@@ -235,6 +235,7 @@ function Vehicle:defeat()
 		layer = maplayers[layer]
 
 		if layer then
+			layer.visible = true
 			for _, object in ipairs(self.object.layer.objects) do
 				if object ~= self.object then
 					layer:addObject(object)
