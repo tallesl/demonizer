@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 206,
+  nextobjectid = 229,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -2953,6 +2953,116 @@ return {
           }
         }
       }
+    },
+    {
+      name = "sandbags",
+      firstgid = 1379,
+      filename = "img/sandbags.tsx",
+      tilewidth = 32,
+      tileheight = 48,
+      spacing = 0,
+      margin = 0,
+      image = "img/sandbags.png",
+      imagewidth = 96,
+      imageheight = 48,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 48
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "EnemyCover",
+                shape = "rectangle",
+                x = 16,
+                y = 16,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 1,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "EnemyCover",
+                shape = "rectangle",
+                x = 0,
+                y = 16,
+                width = 32,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 2,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "EnemyCover",
+                shape = "rectangle",
+                x = 0,
+                y = 16,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -3232,6 +3342,35 @@ return {
       data = "eJztwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAAAAAAAAL4GROgAAQ=="
     },
     {
+      type = "objectgroup",
+      name = "ground",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {}
+    },
+    {
+      type = "tilelayer",
+      name = "fence",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 245,
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = -16,
+      properties = {
+        ["note"] = "Temp Y offset to compensate for tile rendering bug"
+      },
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJztyqEBACAMwLAJ/uMC4P8vMJsDDSIxNY0AAAAAAAAAAAAAAAAAAACA93o7d2Rndl2+KgB/2iiCAxk="
+    },
+    {
       type = "tilelayer",
       name = "rooftops",
       x = 0,
@@ -3312,7 +3451,7 @@ return {
           name = "heavy",
           type = "HeavyMilitia",
           shape = "rectangle",
-          x = 96,
+          x = 88,
           y = 776,
           width = 24,
           height = 32,
@@ -3321,8 +3460,7 @@ return {
           visible = true,
           properties = {
             ["pathfinder"] = "linear2way",
-            ["pathid"] = "storehouse2ndpaths",
-            ["pathmode"] = "relative"
+            ["pathid"] = "storehouse2ndpaths"
           }
         },
         {
@@ -3330,7 +3468,7 @@ return {
           name = "heavy",
           type = "HeavyMilitia",
           shape = "rectangle",
-          x = 192,
+          x = 160,
           y = 776,
           width = 24,
           height = 32,
@@ -3339,8 +3477,7 @@ return {
           visible = true,
           properties = {
             ["pathfinder"] = "linear2way",
-            ["pathid"] = "storehouse2ndpaths",
-            ["pathmode"] = "relative"
+            ["pathid"] = "storehouse2ndpaths"
           }
         },
         {
@@ -3364,6 +3501,19 @@ return {
           x = 176,
           y = 760,
           width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 206,
+          name = "storehouse2ndobjects",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 72,
+          y = 752,
+          width = 144,
           height = 32,
           rotation = 0,
           visible = true,
@@ -3396,7 +3546,7 @@ return {
           visible = true,
           polyline = {
             { x = 0, y = 0 },
-            { x = -40, y = 0 }
+            { x = -56, y = 0 }
           },
           properties = {}
         },
@@ -3406,7 +3556,7 @@ return {
           type = "",
           shape = "polyline",
           x = -24,
-          y = 776,
+          y = 768,
           width = 0,
           height = 0,
           rotation = 0,
@@ -3424,7 +3574,7 @@ return {
           name = "",
           type = "",
           shape = "polyline",
-          x = 352,
+          x = 336,
           y = 776,
           width = 0,
           height = 0,
@@ -3450,7 +3600,7 @@ return {
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 16, y = 0 },
+            { x = 32, y = 0 },
             { x = -24, y = 0 }
           },
           properties = {}
@@ -3471,7 +3621,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztyrENABAURdGfMIfYwP5TWUEUQkenOae5r3gRAAAA/FDy/VMfPj1FtLx77tm1AQAAAAAAAAAAAAAAAOCnASofBgA="
+      data = "eJztzcsJgDAMANBAO4e4geBijuDIXcHmIAq9iB68vAchIR8SAQAAwBtr/XY/9fu9RGxlnGU/Y37wo/W9pV75Xmc+awAAAAAAAAAAAAAAAAD40wG8Vwgu"
     },
     {
       type = "tilelayer",
@@ -3585,7 +3735,7 @@ return {
           properties = {
             ["defeathidelayers"] = "storehouse2ndfront\nstorehouseroof",
             ["defeatshowlayers"] = "storehouse2nddestroyed",
-            ["health"] = 16,
+            ["health"] = 4,
             ["score"] = 2000
           }
         },
@@ -4150,7 +4300,7 @@ return {
           type = "Trigger",
           shape = "polyline",
           x = 0,
-          y = 704,
+          y = 800,
           width = 0,
           height = 0,
           rotation = 0,
@@ -4170,7 +4320,7 @@ return {
           type = "MilitiaCaptainNormalAttack",
           shape = "rectangle",
           x = 144,
-          y = 864,
+          y = 872,
           width = 24,
           height = 32,
           rotation = 0,
@@ -4181,6 +4331,22 @@ return {
           }
         }
       }
+    },
+    {
+      type = "tilelayer",
+      name = "midboss_cover",
+      x = 0,
+      y = 0,
+      width = 18,
+      height = 245,
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      encoding = "base64",
+      compression = "zlib",
+      data = "eJztz7ENACAIBEAbJlX3X8HCShIT7Czumk+A4mkNAAAAyEbsnHHOe7ztf5P7Vf+43QEAAAAAAAAAAAAAAABULU0eBig="
     },
     {
       type = "objectgroup",
@@ -4200,19 +4366,16 @@ return {
           type = "",
           shape = "polyline",
           x = 240,
-          y = 864,
+          y = 872,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 0 },
-            { x = -48, y = 48 },
+            { x = -32, y = 0 },
             { x = -96, y = 0 }
           },
-          properties = {
-            ["beziercurve"] = true
-          }
+          properties = {}
         },
         {
           id = 204,
@@ -4220,19 +4383,152 @@ return {
           type = "",
           shape = "polyline",
           x = 144,
-          y = 864,
+          y = 872,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
             { x = 0, y = 0 },
-            { x = -48, y = 48 },
-            { x = -96, y = 0 }
+            { x = -64, y = 0 }
           },
-          properties = {
-            ["beziercurve"] = true
-          }
+          properties = {}
+        },
+        {
+          id = 221,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 72,
+          y = 920,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 8, y = 0 },
+            { x = -56, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 222,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 72,
+          y = 920,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 8, y = 0 },
+            { x = 72, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 223,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 216,
+          y = 920,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = -8, y = 0 },
+            { x = -72, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 224,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 216,
+          y = 920,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = -8, y = 0 },
+            { x = 56, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 225,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 72,
+          y = 872,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 8, y = 0 },
+            { x = -56, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 226,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 216,
+          y = 872,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = -8, y = 0 },
+            { x = 56, y = 0 }
+          },
+          properties = {}
+        },
+        {
+          id = 227,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 80,
+          y = 872,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 48 }
+          },
+          properties = {}
+        },
+        {
+          id = 228,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 208,
+          y = 872,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 0, y = 48 }
+          },
+          properties = {}
         }
       }
     },
@@ -6992,35 +7288,6 @@ return {
     },
     {
       type = "objectgroup",
-      name = "ground",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {}
-    },
-    {
-      type = "tilelayer",
-      name = "fence",
-      x = 0,
-      y = 0,
-      width = 18,
-      height = 245,
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = -16,
-      properties = {
-        ["note"] = "Temp Y offset to compensate for tile rendering bug"
-      },
-      encoding = "base64",
-      compression = "zlib",
-      data = "eJztyqEBACAMwLAJ/uMC4P8vMJsDDSIxNY0AAAAAAAAAAAAAAAAAAACA93o7d2Rndl2+KgB/2iiCAxk="
-    },
-    {
-      type = "objectgroup",
       name = "camera",
       visible = true,
       opacity = 1,
@@ -7035,7 +7302,7 @@ return {
           type = "Camera",
           shape = "rectangle",
           x = 24,
-          y = 3600,
+          y = 856,
           width = 240,
           height = 320,
           rotation = 0,
@@ -7071,7 +7338,7 @@ return {
           visible = true,
           polyline = {
             { x = 0, y = 320 },
-            { x = 0, y = -2576 }
+            { x = 0, y = -2480 }
           },
           properties = {}
         },
@@ -7087,7 +7354,7 @@ return {
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 304 },
+            { x = 0, y = 400 },
             { x = 0, y = -400 }
           },
           properties = {
@@ -7125,7 +7392,7 @@ return {
           type = "",
           shape = "rectangle",
           x = 144,
-          y = 3952,
+          y = 1208,
           width = 64,
           height = 64,
           rotation = 0,

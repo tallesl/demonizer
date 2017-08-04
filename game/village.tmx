@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="18" height="245" tilewidth="16" tileheight="16" nextobjectid="206">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="18" height="245" tilewidth="16" tileheight="16" nextobjectid="229">
  <properties>
   <property name="cameraid" type="int" value="2"/>
   <property name="music" type="file" value="mus/09 - Blue Sky Laundry.vgm"/>
@@ -28,6 +28,7 @@
  <tileset firstgid="1334" source="img/human/civilian/townfolk-adult-f-002.tsx"/>
  <tileset firstgid="1349" source="img/human/civilian/townfolk-adult-f-005.tsx"/>
  <tileset firstgid="1364" source="img/human/enemy/militiacaptain-m.tsx"/>
+ <tileset firstgid="1379" source="img/sandbags.tsx"/>
  <objectgroup name="unused">
   <object id="125" type="Trigger" x="0" y="-48" width="16" height="16"/>
   <object id="80" name="path" x="352" y="2520">
@@ -108,6 +109,15 @@
    eJztwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAAAAAAAAL4GROgAAQ==
   </data>
  </layer>
+ <objectgroup name="ground"/>
+ <layer name="fence" width="18" height="245" offsetx="0" offsety="-16">
+  <properties>
+   <property name="note" value="Temp Y offset to compensate for tile rendering bug"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztyqEBACAMwLAJ/uMC4P8vMJsDDSIxNY0AAAAAAAAAAAAAAAAAAACA93o7d2Rndl2+KgB/2iiCAxk=
+  </data>
+ </layer>
  <layer name="rooftops" width="18" height="245">
   <data encoding="base64" compression="zlib">
    eJzt1NtNAkEUxvHJClai1APRAjBYgAIF4GoJSiXCo5coPGu0AC4WIJcC/Eh2kslGsnKGBBP+v+TLvsycbM6cGecAYDe6iXMnymmy+d6q9tSUW6WvNJRzQ5269pwp90pTaSltQ50L7bnMaqTKtXJjqNPRnqusxq496R+eldKBc2XlLrGd2ZvWvitHqnGs9IxnNtLasTLJ0jSe2bfWzpR5ljTyzLYhnOdD9ehF39fIea6ozoe+n5HzvOr1VPmKnOdVrxfKMrLHljkM++v3W+Yw7K/fb5nDsL8+ljkM++vzH4RvR8w8h29HzDzn3w7rPOffjm3MM/bbg+bncYMZGmjt8Jf1/q781bq7lL8rRVl3l/J3pSjcJQAAAAAAAAAAAAAAAAAAAAAAAADYLz887nDX
@@ -131,49 +141,48 @@
     <property name="rideid" type="int" value="136"/>
    </properties>
   </object>
-  <object id="194" name="heavy" type="HeavyMilitia" gid="1272" x="96" y="776" width="24" height="32">
+  <object id="194" name="heavy" type="HeavyMilitia" gid="1272" x="88" y="776" width="24" height="32">
    <properties>
     <property name="pathfinder" value="linear2way"/>
     <property name="pathid" value="storehouse2ndpaths"/>
-    <property name="pathmode" value="relative"/>
    </properties>
   </object>
-  <object id="195" name="heavy" type="HeavyMilitia" gid="1272" x="192" y="776" width="24" height="32">
+  <object id="195" name="heavy" type="HeavyMilitia" gid="1272" x="160" y="776" width="24" height="32">
    <properties>
     <property name="pathfinder" value="linear2way"/>
     <property name="pathid" value="storehouse2ndpaths"/>
-    <property name="pathmode" value="relative"/>
    </properties>
   </object>
   <object id="200" name="cover" type="EnemyCover" x="80" y="760" width="32" height="32"/>
   <object id="201" name="cover" type="EnemyCover" x="176" y="760" width="32" height="32"/>
+  <object id="206" name="storehouse2ndobjects" type="Trigger" x="72" y="752" width="144" height="32"/>
  </objectgroup>
  <objectgroup name="storehouse2ndpaths">
   <properties>
    <property name="script" value="PathGraph"/>
   </properties>
   <object id="196" x="136" y="776">
-   <polyline points="0,0 -40,0"/>
+   <polyline points="0,0 -56,0"/>
   </object>
-  <object id="197" x="-24" y="776" visible="0">
+  <object id="197" x="-24" y="768" visible="0">
    <properties>
     <property name="cost" type="float" value="3"/>
    </properties>
    <polyline points="0,0 -24,0"/>
   </object>
-  <object id="198" x="352" y="776" visible="0">
+  <object id="198" x="336" y="776" visible="0">
    <properties>
     <property name="cost" type="float" value="3"/>
    </properties>
    <polyline points="0,0 -24,0"/>
   </object>
   <object id="199" x="176" y="776">
-   <polyline points="16,0 -24,0"/>
+   <polyline points="32,0 -24,0"/>
   </object>
  </objectgroup>
  <layer name="storehouse2nddestroyed" width="18" height="245">
   <data encoding="base64" compression="zlib">
-   eJztyrENABAURdGfMIfYwP5TWUEUQkenOae5r3gRAAAA/FDy/VMfPj1FtLx77tm1AQAAAAAAAAAAAAAAAOCnASofBgA=
+   eJztzcsJgDAMANBAO4e4geBijuDIXcHmIAq9iB68vAchIR8SAQAAwBtr/XY/9fu9RGxlnGU/Y37wo/W9pV75Xmc+awAAAAAAAAAAAAAAAAD40wG8Vwgu
   </data>
  </layer>
  <layer name="storehouse2ndfront" width="18" height="245">
@@ -196,7 +205,7 @@
     <property name="defeathidelayers">storehouse2ndfront
 storehouseroof</property>
     <property name="defeatshowlayers" value="storehouse2nddestroyed"/>
-    <property name="health" type="int" value="16"/>
+    <property name="health" type="int" value="4"/>
     <property name="score" type="int" value="2000"/>
    </properties>
   </object>
@@ -361,34 +370,57 @@ storehouseroof</property>
   <object id="135" name="door" gid="2147484958" x="144" y="864" width="16" height="32"/>
  </objectgroup>
  <objectgroup name="midboss">
-  <object id="131" type="Trigger" x="0" y="704">
+  <object id="131" type="Trigger" x="0" y="800">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
     <property name="pausecamera" type="bool" value="true"/>
    </properties>
    <polyline points="0,0 288,0"/>
   </object>
-  <object id="202" name="midboss" type="MilitiaCaptainNormalAttack" gid="1367" x="144" y="864" width="24" height="32">
+  <object id="202" name="midboss" type="MilitiaCaptainNormalAttack" gid="1367" x="144" y="872" width="24" height="32">
    <properties>
     <property name="pathid" value="midboss_path"/>
    </properties>
   </object>
  </objectgroup>
+ <layer name="midboss_cover" width="18" height="245">
+  <data encoding="base64" compression="zlib">
+   eJztz7ENACAIBEAbJlX3X8HCShIT7Czumk+A4mkNAAAAyEbsnHHOe7ztf5P7Vf+43QEAAAAAAAAAAAAAAABULU0eBig=
+  </data>
+ </layer>
  <objectgroup name="midboss_path">
   <properties>
    <property name="script" value="PathGraph"/>
   </properties>
-  <object id="205" x="240" y="864">
-   <properties>
-    <property name="beziercurve" type="bool" value="true"/>
-   </properties>
-   <polyline points="0,0 -48,48 -96,0"/>
+  <object id="205" x="240" y="872">
+   <polyline points="-32,0 -96,0"/>
   </object>
-  <object id="204" x="144" y="864">
-   <properties>
-    <property name="beziercurve" type="bool" value="true"/>
-   </properties>
-   <polyline points="0,0 -48,48 -96,0"/>
+  <object id="204" x="144" y="872">
+   <polyline points="0,0 -64,0"/>
+  </object>
+  <object id="221" x="72" y="920">
+   <polyline points="8,0 -56,0"/>
+  </object>
+  <object id="222" x="72" y="920">
+   <polyline points="8,0 72,0"/>
+  </object>
+  <object id="223" x="216" y="920">
+   <polyline points="-8,0 -72,0"/>
+  </object>
+  <object id="224" x="216" y="920">
+   <polyline points="-8,0 56,0"/>
+  </object>
+  <object id="225" x="72" y="872">
+   <polyline points="8,0 -56,0"/>
+  </object>
+  <object id="226" x="216" y="872">
+   <polyline points="-8,0 56,0"/>
+  </object>
+  <object id="227" x="80" y="872">
+   <polyline points="0,0 0,48"/>
+  </object>
+  <object id="228" x="208" y="872">
+   <polyline points="0,0 0,48"/>
   </object>
  </objectgroup>
  <objectgroup name="heavy4">
@@ -1191,17 +1223,8 @@ storehouseroof</property>
    <polyline points="0,-24 0,24"/>
   </object>
  </objectgroup>
- <objectgroup name="ground"/>
- <layer name="fence" width="18" height="245" offsetx="0" offsety="-16">
-  <properties>
-   <property name="note" value="Temp Y offset to compensate for tile rendering bug"/>
-  </properties>
-  <data encoding="base64" compression="zlib">
-   eJztyqEBACAMwLAJ/uMC4P8vMJsDDSIxNY0AAAAAAAAAAAAAAAAAAACA93o7d2Rndl2+KgB/2iiCAxk=
-  </data>
- </layer>
  <objectgroup name="camera">
-  <object id="2" name="camera" type="Camera" x="24" y="3600" width="240" height="320">
+  <object id="2" name="camera" type="Camera" x="24" y="856" width="240" height="320">
    <properties>
     <property name="pathid" value="camera_path"/>
    </properties>
@@ -1212,13 +1235,13 @@ storehouseroof</property>
    <property name="script" value="PathGraph"/>
   </properties>
   <object id="3" name="path" x="24" y="3280">
-   <polyline points="0,320 0,-2576"/>
+   <polyline points="0,320 0,-2480"/>
   </object>
   <object id="4" name="path" x="24" y="400">
    <properties>
     <property name="cost" type="int" value="2"/>
    </properties>
-   <polyline points="0,304 0,-400"/>
+   <polyline points="0,400 0,-400"/>
   </object>
  </objectgroup>
  <objectgroup name="sparks"/>
@@ -1226,7 +1249,7 @@ storehouseroof</property>
   <properties>
    <property name="script" value="PlayerTeam"/>
   </properties>
-  <object id="1" name="player" gid="1" x="144" y="3952" width="64" height="64">
+  <object id="1" name="player" gid="1" x="144" y="1208" width="64" height="64">
    <properties>
     <property name="script" value="ShmupPlayer"/>
    </properties>
