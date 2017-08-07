@@ -3301,7 +3301,7 @@ return {
       visible = true,
       opacity = 1,
       offsetx = 0,
-      offsety = -16,
+      offsety = 0,
       properties = {
         ["note"] = "Temp Y offset to compensate for tile rendering bug"
       },
@@ -4300,7 +4300,7 @@ return {
           type = "Trigger",
           shape = "polyline",
           x = 0,
-          y = 800,
+          y = 736,
           width = 0,
           height = 0,
           rotation = 0,
@@ -4346,7 +4346,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztz7ENACAIBEAbJlX3X8HCShIT7Czumk+A4mkNAAAAyEbsnHHOe7ztf5P7Vf+43QEAAAAAAAAAAAAAAABULU0eBig="
+      data = "eJztz7ENACAIBEAaJlX3X8HCShMT7Sjumk+A4okAAAAAquu5cuQ+b/m3r+bs9/rH7Q4AAAAAAAAAAAAAAACoawLW8gYo"
     },
     {
       type = "objectgroup",
@@ -7302,7 +7302,7 @@ return {
           type = "Camera",
           shape = "rectangle",
           x = 24,
-          y = 856,
+          y = 3600,
           width = 240,
           height = 320,
           rotation = 0,
@@ -7338,7 +7338,7 @@ return {
           visible = true,
           polyline = {
             { x = 0, y = 320 },
-            { x = 0, y = -2480 }
+            { x = 0, y = -2544 }
           },
           properties = {}
         },
@@ -7354,7 +7354,7 @@ return {
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 0, y = 400 },
+            { x = 0, y = 336 },
             { x = 0, y = -400 }
           },
           properties = {
@@ -7392,7 +7392,7 @@ return {
           type = "",
           shape = "rectangle",
           x = 144,
-          y = 1208,
+          y = 3952,
           width = 64,
           height = 64,
           rotation = 0,

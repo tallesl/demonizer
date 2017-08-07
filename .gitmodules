@@ -1,6 +1,6 @@
 [submodule "sti"]
 	path = game/sti
-	url = https://github.com/karai17/Simple-Tiled-Implementation.git
+	url = https://github.com/IoriBranford/Simple-Tiled-Implementation.git
 	branch = master
 [submodule "levity"]
 	path = game/levity

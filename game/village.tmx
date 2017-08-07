@@ -91,7 +91,7 @@
    eJzt2+1Nw0AMxvG0AyWkA9BvdDJgAgoTUDoBlAl4mQDoBoUdeCJx4ho1JbGNxMv/J1lKq557d44/uiiAWJPxZ+z77j84HhXFieJ05Fs/V5wrLgx5zrL1C8WVYmnIc5mtv1GsFLeGPNfZ+nvFg+LRkOcuW/+seFGsDXmetKbUe1kpNnp+VbwZ65XWe9VZnxwE9Ez1cT6L5m7SHsqg/vWcqQreSxTvfnbdibVmdXCdrPv4Tt49RZ3pp+XxavbhfX/yd9l7rnZfefusDDjfX8bdAAAAAAAAAAAAAAAAAAAAAAAAAL+Hd/60WX+omAbkOVLMAuaTvDNk3hmp/D48udr3YZm16/r/oTXb9Z7Uzpp1zS1Hzaj1yZN+054b7Hoeohpv90ef+u2rS7rrPj37VV2i7nhor7XPlz4P3U9+vneUjy56
   </data>
  </layer>
- <layer name="crops" width="18" height="245" offsetx="0" offsety="-16">
+ <layer name="crops" width="18" height="245">
   <properties>
    <property name="note" value="Temp Y offset to compensate for tile rendering bug"/>
   </properties>
@@ -370,7 +370,7 @@ storehouseroof</property>
   <object id="135" name="door" gid="2147484958" x="144" y="864" width="16" height="32"/>
  </objectgroup>
  <objectgroup name="midboss">
-  <object id="131" type="Trigger" x="0" y="800">
+  <object id="131" type="Trigger" x="0" y="736">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
     <property name="pausecamera" type="bool" value="true"/>
@@ -385,7 +385,7 @@ storehouseroof</property>
  </objectgroup>
  <layer name="midboss_cover" width="18" height="245">
   <data encoding="base64" compression="zlib">
-   eJztz7ENACAIBEAbJlX3X8HCShIT7Czumk+A4mkNAAAAyEbsnHHOe7ztf5P7Vf+43QEAAAAAAAAAAAAAAABULU0eBig=
+   eJztz7ENACAIBEAaJlX3X8HCShMT7Sjumk+A4okAAAAAquu5cuQ+b/m3r+bs9/rH7Q4AAAAAAAAAAAAAAACoawLW8gYo
   </data>
  </layer>
  <objectgroup name="midboss_path">
@@ -1224,7 +1224,7 @@ storehouseroof</property>
   </object>
  </objectgroup>
  <objectgroup name="camera">
-  <object id="2" name="camera" type="Camera" x="24" y="856" width="240" height="320">
+  <object id="2" name="camera" type="Camera" x="24" y="3600" width="240" height="320">
    <properties>
     <property name="pathid" value="camera_path"/>
    </properties>
@@ -1235,13 +1235,13 @@ storehouseroof</property>
    <property name="script" value="PathGraph"/>
   </properties>
   <object id="3" name="path" x="24" y="3280">
-   <polyline points="0,320 0,-2480"/>
+   <polyline points="0,320 0,-2544"/>
   </object>
   <object id="4" name="path" x="24" y="400">
    <properties>
     <property name="cost" type="int" value="2"/>
    </properties>
-   <polyline points="0,400 0,-400"/>
+   <polyline points="0,336 0,-400"/>
   </object>
  </objectgroup>
  <objectgroup name="sparks"/>
@@ -1249,7 +1249,7 @@ storehouseroof</property>
   <properties>
    <property name="script" value="PlayerTeam"/>
   </properties>
-  <object id="1" name="player" gid="1" x="144" y="1208" width="64" height="64">
+  <object id="1" name="player" gid="1" x="144" y="3952" width="64" height="64">
    <properties>
     <property name="script" value="ShmupPlayer"/>
    </properties>
