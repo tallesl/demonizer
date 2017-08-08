@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 244,
+  nextobjectid = 247,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -2437,11 +2437,29 @@ return {
         ["material_woodreinforced"] = 2,
         ["rowstype"] = "state",
         ["state_closed"] = 2,
-        ["state_open"] = 0
+        ["state_open"] = 0,
+        ["state_opening"] = 1
       },
       terrains = {},
       tilecount = 15,
       tiles = {
+        {
+          id = 6,
+          animation = {
+            {
+              tileid = 6,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            },
+            {
+              tileid = 6,
+              duration = 100
+            }
+          }
+        },
         {
           id = 10,
           objectGroup = {
@@ -3262,23 +3280,6 @@ return {
           properties = {}
         },
         {
-          id = 98,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 400,
-          y = 2520,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
           id = 85,
           name = "path",
           type = "",
@@ -3311,40 +3312,6 @@ return {
             { x = 48, y = 0 }
           },
           properties = {}
-        },
-        {
-          id = 108,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 32,
-          y = 2272,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 107,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 256,
-          y = 2272,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
         },
         {
           id = 101,
@@ -3449,40 +3416,6 @@ return {
           }
         },
         {
-          id = 114,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = 304,
-          y = 2144,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 116,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = -24,
-          y = 2160,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
           id = 115,
           name = "militia",
           type = "Militia",
@@ -3493,23 +3426,6 @@ return {
           height = 32,
           rotation = 0,
           gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 113,
-          name = "archer",
-          type = "Archer",
-          shape = "rectangle",
-          x = -16,
-          y = 2128,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1182,
           visible = true,
           properties = {
             ["pathid"] = "fields_paths",
@@ -4556,6 +4472,81 @@ return {
     },
     {
       type = "objectgroup",
+      name = "midboss_backup",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 246,
+          name = "midboss_backup",
+          type = "Trigger",
+          shape = "rectangle",
+          x = -24,
+          y = 800,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["activateobjectslayer"] = "ground"
+          }
+        },
+        {
+          id = 108,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 96,
+          y = 848,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathid"] = "midboss_path"
+          }
+        },
+        {
+          id = 107,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 192,
+          y = 848,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathid"] = "midboss_path"
+          }
+        },
+        {
+          id = 116,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 144,
+          y = 848,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathid"] = "midboss_path"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
       name = "midboss",
       visible = true,
       opacity = 1,
@@ -4589,15 +4580,15 @@ return {
           name = "heavy",
           type = "HeavyMilitia",
           shape = "rectangle",
-          x = 16,
-          y = 872,
+          x = 80,
+          y = 920,
           width = 24,
           height = 32,
           rotation = 0,
           gid = 1272,
           visible = true,
           properties = {
-            ["pathfinder"] = "random1way",
+            ["pathfinder"] = "random",
             ["pathid"] = "midboss_path"
           }
         },
@@ -4606,15 +4597,15 @@ return {
           name = "heavy",
           type = "HeavyMilitia",
           shape = "rectangle",
-          x = 272,
-          y = 872,
+          x = 208,
+          y = 920,
           width = 24,
           height = 32,
           rotation = 0,
           gid = 1272,
           visible = true,
           properties = {
-            ["pathfinder"] = "random1way",
+            ["pathfinder"] = "random",
             ["pathid"] = "midboss_path"
           }
         },
@@ -4631,7 +4622,60 @@ return {
           gid = 1352,
           visible = true,
           properties = {
+            ["backuptriggerid"] = 246,
             ["initiallayer"] = "storehouse2ndobjects",
+            ["kolaunch"] = true,
+            ["pathid"] = "midboss_path"
+          }
+        },
+        {
+          id = 98,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 272,
+          y = 872,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathfinder"] = "random",
+            ["pathid"] = "midboss_path"
+          }
+        },
+        {
+          id = 113,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 16,
+          y = 872,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathfinder"] = "random",
+            ["pathid"] = "midboss_path"
+          }
+        },
+        {
+          id = 114,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 144,
+          y = 872,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathfinder"] = "random",
             ["pathid"] = "midboss_path"
           }
         }
@@ -4712,7 +4756,7 @@ return {
           visible = true,
           polyline = {
             { x = 8, y = 0 },
-            { x = -56, y = 0 }
+            { x = -24, y = 0 }
           },
           properties = {}
         },
@@ -4763,7 +4807,7 @@ return {
           visible = true,
           polyline = {
             { x = -8, y = 0 },
-            { x = 56, y = 0 }
+            { x = 24, y = 0 }
           },
           properties = {}
         },
@@ -4806,7 +4850,7 @@ return {
           name = "",
           type = "",
           shape = "polyline",
-          x = 80,
+          x = -16,
           y = 872,
           width = 0,
           height = 0,
@@ -4823,7 +4867,7 @@ return {
           name = "",
           type = "",
           shape = "polyline",
-          x = 208,
+          x = 304,
           y = 872,
           width = 0,
           height = 0,
@@ -4840,14 +4884,14 @@ return {
           name = "",
           type = "",
           shape = "polyline",
-          x = 152,
+          x = 176,
           y = 776,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = -24, y = 0 },
+            { x = -48, y = -8 },
             { x = -56, y = 0 }
           },
           properties = {}
@@ -4864,8 +4908,8 @@ return {
           rotation = 0,
           visible = true,
           polyline = {
-            { x = 32, y = 0 },
-            { x = 0, y = 0 }
+            { x = 24, y = 0 },
+            { x = 8, y = 0 }
           },
           properties = {}
         },
@@ -4881,8 +4925,8 @@ return {
           rotation = 0,
           visible = true,
           polyline = {
-            { x = -24, y = 0 },
-            { x = -56, y = 0 }
+            { x = -32, y = 0 },
+            { x = -48, y = 0 }
           },
           properties = {}
         },
@@ -4898,8 +4942,8 @@ return {
           rotation = 0,
           visible = true,
           polyline = {
-            { x = -40, y = 0 },
-            { x = -56, y = 0 }
+            { x = -16, y = 0 },
+            { x = -64, y = 0 }
           },
           properties = {}
         },
@@ -4908,15 +4952,15 @@ return {
           name = "",
           type = "",
           shape = "polyline",
-          x = 200,
-          y = 776,
+          x = 192,
+          y = 768,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = -40, y = 0 },
-            { x = -56, y = 0 }
+            { x = -32, y = 0 },
+            { x = -64, y = 0 }
           },
           properties = {}
         },
@@ -4926,7 +4970,7 @@ return {
           type = "",
           shape = "polyline",
           x = 168,
-          y = 768,
+          y = 752,
           width = 0,
           height = 0,
           rotation = 0,
@@ -4942,14 +4986,14 @@ return {
           name = "",
           type = "",
           shape = "polyline",
-          x = 200,
+          x = 208,
           y = 768,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = -40, y = 0 },
+            { x = -48, y = 0 },
             { x = -40, y = 8 }
           },
           properties = {}
@@ -4960,7 +5004,7 @@ return {
           type = "",
           shape = "polyline",
           x = 184,
-          y = 768,
+          y = 752,
           width = 0,
           height = 0,
           rotation = 0,

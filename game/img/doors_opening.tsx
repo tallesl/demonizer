@@ -11,8 +11,16 @@
   <property name="rowstype" value="state"/>
   <property name="state_closed" type="int" value="2"/>
   <property name="state_open" type="int" value="0"/>
+  <property name="state_opening" type="int" value="1"/>
  </properties>
  <image source="doors_opening.png" width="80" height="96"/>
+ <tile id="6">
+  <animation>
+   <frame tileid="6" duration="100"/>
+   <frame tileid="1" duration="100"/>
+   <frame tileid="6" duration="100"/>
+  </animation>
+ </tile>
  <tile id="10">
   <objectgroup draworder="index">
    <object id="1" x="0" y="0" width="16" height="32">

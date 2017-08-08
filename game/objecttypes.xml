@@ -7,6 +7,7 @@
   <property name="musicfade" type="bool" default="false"/>
   <property name="musicfile" type="file" default=""/>
   <property name="pausecamera" type="bool" default="false"/>
+  <property name="script" type="string" default="Trigger"/>
   <property name="sensor" type="bool" default="true"/>
   <property name="soundfile" type="file" default=""/>
  </objecttype>
@@ -281,7 +282,7 @@
   <property name="ridedestroyedko" type="bool" default="false"/>
   <property name="rideid" type="int" default="0"/>
   <property name="score" type="int" default="5000"/>
-  <property name="script" type="string" default="Human"/>
+  <property name="script" type="string" default="HumanMilitiaCaptain"/>
  </objecttype>
  <objecttype name="MilitiaCaptainNormalAttack" color="#ff0000">
   <property name="_basetype" type="string" default="MilitiaCaptain"/>

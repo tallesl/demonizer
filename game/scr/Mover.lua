@@ -254,6 +254,10 @@ function Mover.pathfind_linear2way(self, paths, prevx, prevy)
 	return Mover.pathfind_linear1way(self, paths, prevx, prevy)
 end
 
+function Mover.pathfind_random(self, paths, prevx, prevy)
+	return paths[love.math.random(#paths)]
+end
+
 function Mover.pathfind_random1way(self, paths, prevx, prevy)
 	if #paths == 1 then
 		return paths[1]
