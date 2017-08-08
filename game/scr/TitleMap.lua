@@ -14,6 +14,11 @@ function TitleMap:_init(map)
 	love.mouse.setVisible(true)
 	love.mouse.setRelativeMode(false)
 end
+
+function TitleMap:keypressed_escape()
+	love.event.quit()
+end
+
 --[[
 function TitleMap:touchpressed(touch, x, y, dx, dy)
 	self:startGame()
@@ -27,10 +32,6 @@ end
 
 function TitleMap:keypressed_z()
 	self:startGame()
-end
-
-function TitleMap:keypressed_escape()
-	love.event.quit()
 end
 
 function TitleMap:joystickpressed(joystick, button)
