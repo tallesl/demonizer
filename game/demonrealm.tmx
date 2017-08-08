@@ -841,7 +841,7 @@
   <object id="182" gid="439" x="32" y="1552" width="48" height="80"/>
   <object id="183" gid="439" x="16" y="1600" width="48" height="80"/>
   <object id="184" gid="439" x="16" y="1312" width="48" height="80"/>
-  <object id="187" name="trigger" type="Trigger" x="0" y="1248" width="288" height="48">
+  <object id="187" name="trigger" type="Trigger" x="0" y="1248" width="288" height="32">
    <properties>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
