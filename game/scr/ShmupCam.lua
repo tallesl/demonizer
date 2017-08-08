@@ -48,6 +48,16 @@ end
 
 function ShmupCam:beginContact_Trigger(myfixture, otherfixture, contact)
 	local triggerobject = otherfixture:getUserData().object
+	local triggerleft, triggertop, triggerright, triggerbottom
+		= otherfixture:getBoundingBox()
+	local cameraleft, cameratop, cameraright, camerabottom
+		= myfixture:getBoundingBox()
+	if cameratop < triggertop
+	or triggerbottom - cameratop >= levity.map.tileheight
+	then
+		return
+	end
+
 	local triggerlayer = triggerobject.layer
 	local triggerproperties = triggerobject.properties
 	if triggerproperties.activateobjects then
@@ -75,11 +85,13 @@ end
 function ShmupCam:endContact_Trigger(myfixture, otherfixture, contact)
 	local triggerobject = otherfixture:getBody():getUserData().object
 	local activatedobjectids = triggerobject.properties.activatedobjectids
-	for _, id in ipairs(activatedobjectids) do
-		if levity.scripts:call(id, "staysAfterTriggerEnd") then
-			levity.scripts:call(id, "endTrigger")
-		else
-			levity:discardObject(id)
+	if activatedobjectids then
+		for _, id in ipairs(activatedobjectids) do
+			if levity.scripts:call(id, "staysAfterTriggerEnd") then
+				levity.scripts:call(id, "endTrigger")
+			else
+				levity:discardObject(id)
+			end
 		end
 	end
 	levity:discardObject(triggerobject.id)
@@ -144,23 +156,15 @@ function ShmupCam:endMove(dt)
 		end
 		trigger.properties.activatedobjectids = activatedobjectids
 
-		if levity.map.properties.delayinitobjects == true then
-			if not initiallayer then
-				initiallayer = trigger.layer
-			end
-			initiallayer.visible = true
-			for _, id in ipairs(activatedobjectids) do
-				local object = levity.map.objects[id]
-				initiallayer:addObject(object)
-			end
-		else
-			for _, id in ipairs(activatedobjectids) do
-				local object = levity.map.objects[id]
-				levity.scripts:call(id, "activate")
-				if initiallayer then
-					object:setLayer(initiallayer)
-				end
-			end
+		initiallayer = initiallayer or trigger.layer
+		initiallayer.visible = true
+		for _, id in ipairs(activatedobjectids) do
+			local object = levity.map.objects[id]
+			local layer = object.properties.initiallayer
+			layer = layer and levity.map.layers[layer]
+				or initiallayer
+
+			layer:addObject(object)
 		end
 
 		self.activatedgrouptriggerids[k] = nil
