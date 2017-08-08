@@ -42,59 +42,13 @@ function ShmupCam:_init(object)
 		self.mover = levity.scripts:newScript(self.object.id, "Mover",
 							self.object)
 	end
-
-	self.activatedgrouptriggerids = {}
 end
 
 function ShmupCam:beginContact_Trigger(myfixture, otherfixture, contact)
 	local triggerobject = otherfixture:getUserData().object
-	local triggerleft, triggertop, triggerright, triggerbottom
-		= otherfixture:getBoundingBox()
-	local cameraleft, cameratop, cameraright, camerabottom
-		= myfixture:getBoundingBox()
-	if cameratop < triggertop
-	or triggerbottom - cameratop >= levity.map.tileheight
-	then
-		return
-	end
-
 	local triggerlayer = triggerobject.layer
 	local triggerproperties = triggerobject.properties
-	if triggerproperties.activateobjects then
-		self.activatedgrouptriggerids[triggerobject.id] = triggerobject.id
-	end
-
-	local music = triggerproperties.musicfile or ""
-	if music ~= "" then
-		levity.bank:changeMusic(music, "emu")
-	elseif triggerproperties.musicfade then
-		if levity.bank.currentmusic then
-			levity.bank.currentmusic:fade()
-		end
-	end
-
-	local sound = triggerproperties.soundfile or ""
-	if sound ~= "" then
-		levity.bank:load(sound, "static")
-		levity.bank:play(sound)
-	end
-
 	self:pausePath(triggerproperties.pausecamera)
-end
-
-function ShmupCam:endContact_Trigger(myfixture, otherfixture, contact)
-	local triggerobject = otherfixture:getBody():getUserData().object
-	local activatedobjectids = triggerobject.properties.activatedobjectids
-	if activatedobjectids then
-		for _, id in ipairs(activatedobjectids) do
-			if levity.scripts:call(id, "staysAfterTriggerEnd") then
-				levity.scripts:call(id, "endTrigger")
-			else
-				levity:discardObject(id)
-			end
-		end
-	end
-	levity:discardObject(triggerobject.id)
 end
 
 function ShmupCam:beginContact(myfixture, otherfixture, contact)
@@ -107,7 +61,7 @@ function ShmupCam:beginContact(myfixture, otherfixture, contact)
 		end
 	end
 end
-
+--[[
 function ShmupCam:endContact(myfixture, otherfixture, contact)
 	local otherdata = otherfixture:getUserData()
 	local othertype = otherdata.object.type
@@ -118,8 +72,7 @@ function ShmupCam:endContact(myfixture, otherfixture, contact)
 		end
 	end
 end
-
-ShmupCam.pathfind = Mover.pathfind_linear1way
+]]
 
 function ShmupCam:beginMove(dt)
 	local body = self.object.body
@@ -139,36 +92,6 @@ end
 function ShmupCam:endMove(dt)
 	local cx, cy = self.object.body:getWorldCenter()
 	self.camera:set(cx, cy)
-
-	for k, triggerid in pairs(self.activatedgrouptriggerids) do
-		local trigger = levity.map.objects[triggerid]
-
-		local initiallayer = trigger.properties.activateobjectslayer
-		if initiallayer then
-			initiallayer = levity.map.layers[initiallayer]
-		end
-
-		local activatedobjectids = {}
-		for _, object in ipairs(trigger.layer.objects) do
-			if object.id ~= triggerid then
-				activatedobjectids[#activatedobjectids + 1] = object.id
-			end
-		end
-		trigger.properties.activatedobjectids = activatedobjectids
-
-		initiallayer = initiallayer or trigger.layer
-		initiallayer.visible = true
-		for _, id in ipairs(activatedobjectids) do
-			local object = levity.map.objects[id]
-			local layer = object.properties.initiallayer
-			layer = layer and levity.map.layers[layer]
-				or initiallayer
-
-			layer:addObject(object)
-		end
-
-		self.activatedgrouptriggerids[k] = nil
-	end
 end
 
 function ShmupCam:swayWithPlayer(playerx)
