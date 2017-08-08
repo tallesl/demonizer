@@ -259,10 +259,13 @@ function Mover.pathfind_random1way(self, paths, prevx, prevy)
 		return paths[1]
 	end
 
-	local path
-	repeat
-		path = paths[love.math.random(1, #paths)]
-	until path.destx ~= prevx or path.desty ~= prevy
+	local n = love.math.random(0, #paths-1)
+	local path = paths[n+1]
+	local i = 1
+	while i < #paths and path.destx == prevx and path.desty == prevy do
+		path = paths[1 + ((n+i) % #paths)]
+		i = i + 1
+	end
 
 	return path
 end

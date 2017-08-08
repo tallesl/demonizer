@@ -110,7 +110,7 @@
   <property name="rideid" type="int" default="0"/>
   <property name="score" type="int" default="250"/>
   <property name="script" type="string" default="Human"/>
-  <property name="strafearc" type="float" default="135"/>
+  <property name="strafearc" type="float" default="180"/>
  </objecttype>
  <objecttype name="Boat" color="#ff0000">
   <property name="health" type="int" default="64"/>
@@ -290,8 +290,8 @@
   <property name="firefan" type="int" default="5"/>
   <property name="firefanslice" type="float" default="12"/>
   <property name="firetargetid" type="string" default="player"/>
-  <property name="firetime" type="float" default="0.25"/>
-  <property name="pathspeed" type="string" default="120"/>
+  <property name="firetime" type="float" default="1"/>
+  <property name="pathspeed" type="string" default="60"/>
   <property name="strafearc" type="float" default="180"/>
  </objecttype>
 </objecttypes>
