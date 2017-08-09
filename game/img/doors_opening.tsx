@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="doors_opening" tilewidth="16" tileheight="32" tilecount="15" columns="5">
+ <tileoffset x="-8" y="16"/>
  <properties>
   <property name="colstype" value="material"/>
   <property name="commoncollision" type="int" value="10"/>
@@ -31,7 +32,7 @@
  </tile>
  <tile id="10">
   <objectgroup draworder="index">
-   <object id="1" x="0" y="8" width="16" height="16">
+   <object id="1" x="-8" y="24" width="16" height="16">
     <properties>
      <property name="collidable" type="bool" value="true"/>
      <property name="sensor" type="bool" value="true"/>
