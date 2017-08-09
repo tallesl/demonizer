@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 250,
+  nextobjectid = 259,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -1665,7 +1665,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -1751,7 +1752,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -1837,7 +1839,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -1858,214 +1861,6 @@ return {
             {
               tileid = 1,
               duration = 125
-            }
-          }
-        },
-        {
-          id = 12,
-          properties = {
-            ["name"] = "ko"
-          }
-        }
-      }
-    },
-    {
-      name = "pikeman-m",
-      firstgid = 1224,
-      filename = "img/human/enemy/pikeman-m.tsx",
-      tilewidth = 24,
-      tileheight = 32,
-      spacing = 0,
-      margin = 0,
-      image = "img/human/enemy/pikeman-m.png",
-      imagewidth = 72,
-      imageheight = 160,
-      tileoffset = {
-        x = -12,
-        y = 16
-      },
-      grid = {
-        orientation = "orthogonal",
-        width = 24,
-        height = 32
-      },
-      properties = {
-        ["commonanimation"] = 0,
-        ["commoncollision"] = 0,
-        ["direction_east"] = 0,
-        ["numdirections"] = 4,
-        ["rowstype"] = "direction"
-      },
-      terrains = {},
-      tilecount = 15,
-      tiles = {
-        {
-          id = 0,
-          objectGroup = {
-            type = "objectgroup",
-            name = "",
-            visible = true,
-            opacity = 1,
-            offsetx = 0,
-            offsety = 0,
-            draworder = "index",
-            properties = {},
-            objects = {
-              {
-                id = 1,
-                name = "",
-                type = "",
-                shape = "ellipse",
-                x = -10,
-                y = 24,
-                width = 20,
-                height = 20,
-                rotation = 0,
-                visible = true,
-                properties = {
-                  ["collidable"] = true
-                }
-              }
-            }
-          },
-          animation = {
-            {
-              tileid = 0,
-              duration = 125
-            },
-            {
-              tileid = 1,
-              duration = 125
-            },
-            {
-              tileid = 2,
-              duration = 125
-            },
-            {
-              tileid = 1,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 12,
-          properties = {
-            ["name"] = "ko"
-          }
-        }
-      }
-    },
-    {
-      name = "pikeman-f",
-      firstgid = 1239,
-      filename = "img/human/enemy/pikeman-f.tsx",
-      tilewidth = 24,
-      tileheight = 32,
-      spacing = 0,
-      margin = 0,
-      image = "img/human/enemy/pikeman-f.png",
-      imagewidth = 72,
-      imageheight = 160,
-      tileoffset = {
-        x = -12,
-        y = 16
-      },
-      grid = {
-        orientation = "orthogonal",
-        width = 24,
-        height = 32
-      },
-      properties = {
-        ["commonanimation"] = 0,
-        ["commoncollision"] = 0,
-        ["direction_east"] = 0,
-        ["numdirections"] = 4,
-        ["rowstype"] = "direction"
-      },
-      terrains = {},
-      tilecount = 15,
-      tiles = {
-        {
-          id = 0,
-          objectGroup = {
-            type = "objectgroup",
-            name = "",
-            visible = true,
-            opacity = 1,
-            offsetx = 0,
-            offsety = 0,
-            draworder = "index",
-            properties = {},
-            objects = {
-              {
-                id = 1,
-                name = "",
-                type = "",
-                shape = "ellipse",
-                x = -10,
-                y = 24,
-                width = 20,
-                height = 20,
-                rotation = 0,
-                visible = true,
-                properties = {
-                  ["collidable"] = true
-                }
-              }
-            }
-          },
-          animation = {
-            {
-              tileid = 0,
-              duration = 125
-            },
-            {
-              tileid = 1,
-              duration = 125
-            },
-            {
-              tileid = 2,
-              duration = 125
-            },
-            {
-              tileid = 1,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 10,
-          properties = {
-            ["name"] = "wingman"
-          },
-          animation = {
-            {
-              tileid = 10,
-              duration = 125
-            },
-            {
-              tileid = 11,
-              duration = 125
-            },
-            {
-              tileid = 9,
-              duration = 125
-            }
-          }
-        },
-        {
-          id = 11,
-          properties = {
-            ["name"] = "convert"
-          },
-          animation = {
-            {
-              tileid = 11,
-              duration = 66
-            },
-            {
-              tileid = 9,
-              duration = 66
             }
           }
         },
@@ -2079,7 +1874,7 @@ return {
     },
     {
       name = "catapultoperator-f",
-      firstgid = 1254,
+      firstgid = 1224,
       filename = "img/human/enemy/catapultoperator-f.tsx",
       tilewidth = 24,
       tileheight = 32,
@@ -2131,7 +1926,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -2201,7 +1997,7 @@ return {
     },
     {
       name = "heavymilitia-m",
-      firstgid = 1269,
+      firstgid = 1239,
       filename = "img/human/enemy/heavymilitia-m.tsx",
       tilewidth = 24,
       tileheight = 32,
@@ -2253,7 +2049,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = false
                 }
               }
             }
@@ -2287,7 +2084,7 @@ return {
     },
     {
       name = "archer-f",
-      firstgid = 1284,
+      firstgid = 1254,
       filename = "img/human/enemy/archer-f.tsx",
       tilewidth = 24,
       tileheight = 32,
@@ -2339,7 +2136,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -2409,7 +2207,7 @@ return {
     },
     {
       name = "doors_opening",
-      firstgid = 1299,
+      firstgid = 1269,
       filename = "img/doors_opening.tsx",
       tilewidth = 16,
       tileheight = 32,
@@ -2510,7 +2308,7 @@ return {
     },
     {
       name = "sparks_huge",
-      firstgid = 1314,
+      firstgid = 1284,
       filename = "img/sparks_huge.tsx",
       tilewidth = 96,
       tileheight = 96,
@@ -2659,7 +2457,7 @@ return {
     },
     {
       name = "townfolk-adult-f-002",
-      firstgid = 1334,
+      firstgid = 1304,
       filename = "img/human/civilian/townfolk-adult-f-002.tsx",
       tilewidth = 24,
       tileheight = 32,
@@ -2711,7 +2509,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -2781,7 +2580,7 @@ return {
     },
     {
       name = "militiacaptain-m",
-      firstgid = 1349,
+      firstgid = 1319,
       filename = "img/human/enemy/militiacaptain-m.tsx",
       tilewidth = 24,
       tileheight = 32,
@@ -2833,7 +2632,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -2867,7 +2667,7 @@ return {
     },
     {
       name = "sandbags",
-      firstgid = 1364,
+      firstgid = 1334,
       filename = "img/sandbags.tsx",
       tilewidth = 32,
       tileheight = 48,
@@ -2977,7 +2777,7 @@ return {
     },
     {
       name = "townfolk-child-m-001",
-      firstgid = 1367,
+      firstgid = 1337,
       filename = "img/human/civilian/townfolk-child-m-001.tsx",
       tilewidth = 24,
       tileheight = 32,
@@ -3029,7 +2829,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -3063,7 +2864,7 @@ return {
     },
     {
       name = "townfolk-child-m-002",
-      firstgid = 1382,
+      firstgid = 1352,
       filename = "img/human/civilian/townfolk-child-m-002.tsx",
       tilewidth = 24,
       tileheight = 32,
@@ -3115,7 +2916,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -3149,7 +2951,7 @@ return {
     },
     {
       name = "townfolk-adult-f-001",
-      firstgid = 1397,
+      firstgid = 1367,
       filename = "img/human/civilian/townfolk-adult-f-001.tsx",
       tilewidth = 24,
       tileheight = 32,
@@ -3201,7 +3003,218 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 10,
+          properties = {
+            ["name"] = "wingman"
+          },
+          animation = {
+            {
+              tileid = 10,
+              duration = 125
+            },
+            {
+              tileid = 11,
+              duration = 125
+            },
+            {
+              tileid = 9,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 11,
+          properties = {
+            ["name"] = "convert"
+          },
+          animation = {
+            {
+              tileid = 11,
+              duration = 66
+            },
+            {
+              tileid = 9,
+              duration = 66
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
+    },
+    {
+      name = "swordsman-m",
+      firstgid = 1382,
+      filename = "img/human/enemy/swordsman-m.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/enemy/swordsman-m.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["sensor"] = false
+                }
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            },
+            {
+              tileid = 2,
+              duration = 125
+            },
+            {
+              tileid = 1,
+              duration = 125
+            }
+          }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "ko"
+          }
+        }
+      }
+    },
+    {
+      name = "swordsman-f",
+      firstgid = 1397,
+      filename = "img/human/enemy/swordsman-f.tsx",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      image = "img/human/enemy/swordsman-f.png",
+      imagewidth = 72,
+      imageheight = 160,
+      tileoffset = {
+        x = -12,
+        y = 16
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {
+        ["commonanimation"] = 0,
+        ["commoncollision"] = 0,
+        ["direction_east"] = 0,
+        ["numdirections"] = 4,
+        ["rowstype"] = "direction"
+      },
+      terrains = {},
+      tilecount = 15,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            draworder = "index",
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "",
+                shape = "ellipse",
+                x = -10,
+                y = 24,
+                width = 20,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["sensor"] = false
                 }
               }
             }
@@ -3274,7 +3287,7 @@ return {
     {
       type = "objectgroup",
       name = "unused",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -3346,23 +3359,6 @@ return {
           }
         },
         {
-          id = 104,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 320,
-          y = 2400,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
           id = 102,
           name = "militia",
           type = "Militia",
@@ -3380,87 +3376,21 @@ return {
           }
         },
         {
-          id = 105,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 288,
-          y = 2400,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 118,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 312,
-          y = 2160,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 117,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 288,
-          y = 2160,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 115,
-          name = "militia",
-          type = "Militia",
-          shape = "rectangle",
-          x = 0,
-          y = 2160,
-          width = 24,
-          height = 32,
-          rotation = 0,
-          gid = 1212,
-          visible = true,
-          properties = {
-            ["pathid"] = "fields_paths",
-            ["pathmode"] = "relative"
-          }
-        },
-        {
-          id = 143,
-          name = "militia7",
-          type = "Trigger",
-          shape = "rectangle",
-          x = -80,
-          y = 1928,
-          width = 64,
-          height = 56,
+          id = 4,
+          name = "path",
+          type = "",
+          shape = "polyline",
+          x = -56,
+          y = 392,
+          width = 0,
+          height = 0,
           rotation = 0,
           visible = true,
-          properties = {
-            ["activateobjectslayer"] = "ground"
-          }
+          polyline = {
+            { x = 0, y = 336 },
+            { x = 0, y = -400 }
+          },
+          properties = {}
         }
       }
     },
@@ -3659,7 +3589,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1337,
+          gid = 1307,
           visible = true,
           properties = {
             ["convertible"] = true,
@@ -3676,7 +3606,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1400,
+          gid = 1370,
           visible = true,
           properties = {
             ["convertible"] = true,
@@ -3732,7 +3662,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1370,
+          gid = 1340,
           visible = true,
           properties = {
             ["rideid"] = 136
@@ -3748,10 +3678,303 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1385,
+          gid = 1355,
           visible = true,
           properties = {
             ["rideid"] = 136
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "swordsmen4",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 256,
+          name = "swordsman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 216,
+          y = 240,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1385,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 118,
+          name = "swordsman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 72,
+          y = 240,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1385,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 257,
+          name = "swordsmen4",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 112,
+          y = 208,
+          width = 64,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["activateobjectslayer"] = "ground"
+          }
+        },
+        {
+          id = 258,
+          name = "swordswoman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 144,
+          y = 208,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1400,
+          visible = true,
+          properties = {
+            ["convertible"] = true
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "swordsmen3",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 251,
+          name = "swordsman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 200,
+          y = 336,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1385,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 252,
+          name = "swordsman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 232,
+          y = 336,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1385,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 253,
+          name = "swordsmen3",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 160,
+          y = 304,
+          width = 72,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["activateobjectslayer"] = "ground"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "swordsmen2",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 104,
+          name = "swordsman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 88,
+          y = 400,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1385,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 250,
+          name = "swordsmen2",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 56,
+          y = 368,
+          width = 72,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["activateobjectslayer"] = "ground"
+          }
+        },
+        {
+          id = 255,
+          name = "swordsman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 56,
+          y = 400,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1385,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      name = "swordsmenheavy1",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 105,
+          name = "heavy",
+          type = "HeavyMilitia",
+          shape = "rectangle",
+          x = 120,
+          y = 504,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1242,
+          visible = true,
+          properties = {
+            ["pathid"] = "127",
+            ["pathmode"] = "relative"
+          }
+        },
+        {
+          id = 115,
+          name = "swordsman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 152,
+          y = 504,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1385,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 117,
+          name = "swordsman",
+          type = "Swordsman",
+          shape = "rectangle",
+          x = 136,
+          y = 504,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1385,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 143,
+          name = "swordsmenheavy1",
+          type = "Trigger",
+          shape = "rectangle",
+          x = 128,
+          y = 152,
+          width = 32,
+          height = 368,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["activateobjectslayer"] = "ground"
+          }
+        },
+        {
+          id = 127,
+          name = "heavypath",
+          type = "",
+          shape = "polyline",
+          x = 136,
+          y = 504,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 8, y = 0 },
+            { x = 8, y = 64 },
+            { x = 8, y = -56 },
+            { x = 72, y = -88 },
+            { x = -56, y = -152 },
+            { x = 8, y = -336 }
+          },
+          properties = {
+            ["script"] = "PathGraph"
+          }
+        },
+        {
+          id = 254,
+          name = "heavy",
+          type = "HeavyMilitia",
+          shape = "rectangle",
+          x = 168,
+          y = 504,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1242,
+          visible = true,
+          properties = {
+            ["pathid"] = "127",
+            ["pathmode"] = "relative"
           }
         }
       }
@@ -3876,7 +4099,7 @@ return {
           width = 96,
           height = 96,
           rotation = 0,
-          gid = 1314,
+          gid = 1284,
           visible = true,
           properties = {}
         },
@@ -3890,7 +4113,7 @@ return {
           width = 96,
           height = 96,
           rotation = 0,
-          gid = 1314,
+          gid = 1284,
           visible = true,
           properties = {}
         },
@@ -3904,7 +4127,7 @@ return {
           width = 96,
           height = 96,
           rotation = 0,
-          gid = 1314,
+          gid = 1284,
           visible = true,
           properties = {}
         },
@@ -3918,7 +4141,7 @@ return {
           width = 96,
           height = 96,
           rotation = 0,
-          gid = 1314,
+          gid = 1284,
           visible = true,
           properties = {}
         },
@@ -4394,7 +4617,7 @@ return {
           width = 16,
           height = 32,
           rotation = 0,
-          gid = 1310,
+          gid = 1280,
           visible = true,
           properties = {
             ["script"] = "Door"
@@ -4410,7 +4633,7 @@ return {
           width = 16,
           height = 32,
           rotation = 0,
-          gid = 2147484958,
+          gid = 2147484928,
           visible = true,
           properties = {
             ["script"] = "Door"
@@ -4441,7 +4664,7 @@ return {
           width = 16,
           height = 32,
           rotation = 0,
-          gid = 2147484958,
+          gid = 2147484928,
           visible = true,
           properties = {
             ["script"] = "Door"
@@ -4457,7 +4680,7 @@ return {
           width = 16,
           height = 32,
           rotation = 0,
-          gid = 1310,
+          gid = 1280,
           visible = true,
           properties = {
             ["script"] = "Door"
@@ -4473,7 +4696,7 @@ return {
           width = 16,
           height = 32,
           rotation = 0,
-          gid = 1310,
+          gid = 1280,
           visible = true,
           properties = {
             ["script"] = "Door"
@@ -4489,7 +4712,7 @@ return {
           width = 16,
           height = 32,
           rotation = 0,
-          gid = 2147484958,
+          gid = 2147484928,
           visible = true,
           properties = {
             ["script"] = "Door"
@@ -4660,7 +4883,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1272,
+          gid = 1242,
           visible = true,
           properties = {
             ["pathfinder"] = "random",
@@ -4677,7 +4900,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1272,
+          gid = 1242,
           visible = true,
           properties = {
             ["pathfinder"] = "random",
@@ -4694,7 +4917,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1352,
+          gid = 1322,
           visible = true,
           properties = {
             ["backuptriggerid"] = 246,
@@ -4770,7 +4993,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztz7ENACAIBEAaNlT3H8XCShMT7Sjumk+A4okAAAAAquu5cuQ+b/m3r+bs9/rH7Q4AAAAAAAAAAAAAAACoawKdeAVH"
+      data = "eJztz7ENACAIBEAaVlL3n8zCShMT7Sjumk+A4okAAAAAquu5cuQ+b/m3r+bs9/rH7Q4AAAAAAAAAAAAAAACoawIqhAOF"
     },
     {
       type = "objectgroup",
@@ -4831,7 +5054,7 @@ return {
           visible = true,
           polyline = {
             { x = 8, y = 0 },
-            { x = -24, y = 0 }
+            { x = 8, y = -24 }
           },
           properties = {}
         },
@@ -4848,7 +5071,7 @@ return {
           visible = true,
           polyline = {
             { x = 8, y = 0 },
-            { x = 72, y = 0 }
+            { x = 56, y = 0 }
           },
           properties = {}
         },
@@ -4865,7 +5088,7 @@ return {
           visible = true,
           polyline = {
             { x = -8, y = 0 },
-            { x = -72, y = 0 }
+            { x = -56, y = 0 }
           },
           properties = {}
         },
@@ -4882,7 +5105,7 @@ return {
           visible = true,
           polyline = {
             { x = -8, y = 0 },
-            { x = 24, y = 0 }
+            { x = -8, y = -24 }
           },
           properties = {}
         },
@@ -5268,7 +5491,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1272,
+          gid = 1242,
           visible = true,
           properties = {
             ["pathid"] = "31"
@@ -5284,7 +5507,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1272,
+          gid = 1242,
           visible = true,
           properties = {
             ["pathid"] = "30"
@@ -5544,7 +5767,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1287,
+          gid = 1257,
           visible = true,
           properties = {
             ["convertible"] = true,
@@ -5777,7 +6000,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1272,
+          gid = 1242,
           visible = true,
           properties = {
             ["pathid"] = "19"
@@ -5793,7 +6016,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1272,
+          gid = 1242,
           visible = true,
           properties = {
             ["pathid"] = "20"
@@ -5931,7 +6154,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1287,
+          gid = 1257,
           visible = true,
           properties = {
             ["convertible"] = true,
@@ -6022,7 +6245,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1272,
+          gid = 1242,
           visible = true,
           properties = {
             ["pathid"] = "14"
@@ -6247,7 +6470,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1272,
+          gid = 1242,
           visible = true,
           properties = {
             ["pathid"] = "9"
@@ -6365,7 +6588,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1257,
+          gid = 1227,
           visible = true,
           properties = {
             ["convertible"] = true,
@@ -7222,27 +7445,6 @@ return {
           properties = {}
         },
         {
-          id = 127,
-          name = "path",
-          type = "",
-          shape = "polyline",
-          x = -312,
-          y = 2136,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 8, y = 0 },
-            { x = 72, y = 0 },
-            { x = 112, y = 40 },
-            { x = 176, y = 40 },
-            { x = 216, y = 0 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
           id = 137,
           name = "path",
           type = "",
@@ -7561,7 +7763,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 1257,
+          gid = 1227,
           visible = true,
           properties = {
             ["convertible"] = true,
@@ -7877,28 +8079,9 @@ return {
           visible = true,
           polyline = {
             { x = 0, y = 320 },
-            { x = 0, y = -2544 }
+            { x = 0, y = -3280 }
           },
           properties = {}
-        },
-        {
-          id = 4,
-          name = "path",
-          type = "",
-          shape = "polyline",
-          x = 24,
-          y = 400,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 336 },
-            { x = 0, y = -400 }
-          },
-          properties = {
-            ["cost"] = 2
-          }
         }
       }
     },

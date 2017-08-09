@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="18" height="245" tilewidth="16" tileheight="16" nextobjectid="250">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="18" height="245" tilewidth="16" tileheight="16" nextobjectid="259">
  <properties>
   <property name="cameraid" type="int" value="2"/>
   <property name="music" type="file" value="mus/09 - Blue Sky Laundry.vgm"/>
@@ -18,20 +18,20 @@
  <tileset firstgid="1179" source="img/human/enemy/archer-m.tsx"/>
  <tileset firstgid="1194" source="img/human/enemy/catapultoperator-m.tsx"/>
  <tileset firstgid="1209" source="img/human/enemy/militia-m.tsx"/>
- <tileset firstgid="1224" source="img/human/enemy/pikeman-m.tsx"/>
- <tileset firstgid="1239" source="img/human/enemy/pikeman-f.tsx"/>
- <tileset firstgid="1254" source="img/human/enemy/catapultoperator-f.tsx"/>
- <tileset firstgid="1269" source="img/human/enemy/heavymilitia-m.tsx"/>
- <tileset firstgid="1284" source="img/human/enemy/archer-f.tsx"/>
- <tileset firstgid="1299" source="img/doors_opening.tsx"/>
- <tileset firstgid="1314" source="img/sparks_huge.tsx"/>
- <tileset firstgid="1334" source="img/human/civilian/townfolk-adult-f-002.tsx"/>
- <tileset firstgid="1349" source="img/human/enemy/militiacaptain-m.tsx"/>
- <tileset firstgid="1364" source="img/sandbags.tsx"/>
- <tileset firstgid="1367" source="img/human/civilian/townfolk-child-m-001.tsx"/>
- <tileset firstgid="1382" source="img/human/civilian/townfolk-child-m-002.tsx"/>
- <tileset firstgid="1397" source="img/human/civilian/townfolk-adult-f-001.tsx"/>
- <objectgroup name="unused">
+ <tileset firstgid="1224" source="img/human/enemy/catapultoperator-f.tsx"/>
+ <tileset firstgid="1239" source="img/human/enemy/heavymilitia-m.tsx"/>
+ <tileset firstgid="1254" source="img/human/enemy/archer-f.tsx"/>
+ <tileset firstgid="1269" source="img/doors_opening.tsx"/>
+ <tileset firstgid="1284" source="img/sparks_huge.tsx"/>
+ <tileset firstgid="1304" source="img/human/civilian/townfolk-adult-f-002.tsx"/>
+ <tileset firstgid="1319" source="img/human/enemy/militiacaptain-m.tsx"/>
+ <tileset firstgid="1334" source="img/sandbags.tsx"/>
+ <tileset firstgid="1337" source="img/human/civilian/townfolk-child-m-001.tsx"/>
+ <tileset firstgid="1352" source="img/human/civilian/townfolk-child-m-002.tsx"/>
+ <tileset firstgid="1367" source="img/human/civilian/townfolk-adult-f-001.tsx"/>
+ <tileset firstgid="1382" source="img/human/enemy/swordsman-m.tsx"/>
+ <tileset firstgid="1397" source="img/human/enemy/swordsman-f.tsx"/>
+ <objectgroup name="unused" visible="0">
   <object id="125" type="Trigger" x="0" y="-48" width="16" height="16"/>
   <object id="85" name="path" x="0" y="2272">
    <polyline points="-8,0 48,0"/>
@@ -45,46 +45,14 @@
     <property name="pathmode" value="relative"/>
    </properties>
   </object>
-  <object id="104" name="militia" type="Militia" gid="1212" x="320" y="2400" width="24" height="32">
-   <properties>
-    <property name="pathid" value="fields_paths"/>
-    <property name="pathmode" value="relative"/>
-   </properties>
-  </object>
   <object id="102" name="militia" type="Militia" gid="1212" x="-32" y="2400" width="24" height="32">
    <properties>
     <property name="pathid" value="fields_paths"/>
     <property name="pathmode" value="relative"/>
    </properties>
   </object>
-  <object id="105" name="militia" type="Militia" gid="1212" x="288" y="2400" width="24" height="32">
-   <properties>
-    <property name="pathid" value="fields_paths"/>
-    <property name="pathmode" value="relative"/>
-   </properties>
-  </object>
-  <object id="118" name="militia" type="Militia" gid="1212" x="312" y="2160" width="24" height="32">
-   <properties>
-    <property name="pathid" value="fields_paths"/>
-    <property name="pathmode" value="relative"/>
-   </properties>
-  </object>
-  <object id="117" name="militia" type="Militia" gid="1212" x="288" y="2160" width="24" height="32">
-   <properties>
-    <property name="pathid" value="fields_paths"/>
-    <property name="pathmode" value="relative"/>
-   </properties>
-  </object>
-  <object id="115" name="militia" type="Militia" gid="1212" x="0" y="2160" width="24" height="32">
-   <properties>
-    <property name="pathid" value="fields_paths"/>
-    <property name="pathmode" value="relative"/>
-   </properties>
-  </object>
-  <object id="143" name="militia7" type="Trigger" x="-80" y="1928" width="64" height="56">
-   <properties>
-    <property name="activateobjectslayer" value="ground"/>
-   </properties>
+  <object id="4" name="path" x="-56" y="392">
+   <polyline points="0,336 0,-400"/>
   </object>
  </objectgroup>
  <layer name="dirt" width="18" height="245">
@@ -145,13 +113,13 @@
   </data>
  </layer>
  <objectgroup name="storehouse2ndobjects">
-  <object id="192" name="civilian" type="Civilian" gid="1337" x="112" y="768" width="24" height="32">
+  <object id="192" name="civilian" type="Civilian" gid="1307" x="112" y="768" width="24" height="32">
    <properties>
     <property name="convertible" type="bool" value="true"/>
     <property name="rideid" type="int" value="136"/>
    </properties>
   </object>
-  <object id="193" name="civilian" type="Civilian" gid="1400" x="176" y="768" width="24" height="32">
+  <object id="193" name="civilian" type="Civilian" gid="1370" x="176" y="768" width="24" height="32">
    <properties>
     <property name="convertible" type="bool" value="true"/>
     <property name="rideid" type="int" value="136"/>
@@ -160,14 +128,73 @@
   <object id="200" name="cover" type="EnemyCover" x="80" y="760" width="32" height="32"/>
   <object id="201" name="cover" type="EnemyCover" x="176" y="760" width="32" height="32"/>
   <object id="206" name="storehouse2ndobjects" type="Trigger" x="72" y="752" width="144" height="32"/>
-  <object id="236" name="civilian" type="Civilian" gid="1370" x="96" y="768" width="24" height="32">
+  <object id="236" name="civilian" type="Civilian" gid="1340" x="96" y="768" width="24" height="32">
    <properties>
     <property name="rideid" type="int" value="136"/>
    </properties>
   </object>
-  <object id="237" name="civilian" type="Civilian" gid="1385" x="192" y="768" width="24" height="32">
+  <object id="237" name="civilian" type="Civilian" gid="1355" x="192" y="768" width="24" height="32">
    <properties>
     <property name="rideid" type="int" value="136"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="swordsmen4">
+  <object id="256" name="swordsman" type="Swordsman" gid="1385" x="216" y="240" width="24" height="32"/>
+  <object id="118" name="swordsman" type="Swordsman" gid="1385" x="72" y="240" width="24" height="32"/>
+  <object id="257" name="swordsmen4" type="Trigger" x="112" y="208" width="64" height="48">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+  <object id="258" name="swordswoman" type="Swordsman" gid="1400" x="144" y="208" width="24" height="32">
+   <properties>
+    <property name="convertible" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="swordsmen3">
+  <object id="251" name="swordsman" type="Swordsman" gid="1385" x="200" y="336" width="24" height="32"/>
+  <object id="252" name="swordsman" type="Swordsman" gid="1385" x="232" y="336" width="24" height="32"/>
+  <object id="253" name="swordsmen3" type="Trigger" x="160" y="304" width="72" height="48">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="swordsmen2">
+  <object id="104" name="swordsman" type="Swordsman" gid="1385" x="88" y="400" width="24" height="32"/>
+  <object id="250" name="swordsmen2" type="Trigger" x="56" y="368" width="72" height="48">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+  <object id="255" name="swordsman" type="Swordsman" gid="1385" x="56" y="400" width="24" height="32"/>
+ </objectgroup>
+ <objectgroup name="swordsmenheavy1">
+  <object id="105" name="heavy" type="HeavyMilitia" gid="1242" x="120" y="504" width="24" height="32">
+   <properties>
+    <property name="pathid" value="127"/>
+    <property name="pathmode" value="relative"/>
+   </properties>
+  </object>
+  <object id="115" name="swordsman" type="Swordsman" gid="1385" x="152" y="504" width="24" height="32"/>
+  <object id="117" name="swordsman" type="Swordsman" gid="1385" x="136" y="504" width="24" height="32"/>
+  <object id="143" name="swordsmenheavy1" type="Trigger" x="128" y="152" width="32" height="368">
+   <properties>
+    <property name="activateobjectslayer" value="ground"/>
+   </properties>
+  </object>
+  <object id="127" name="heavypath" x="136" y="504">
+   <properties>
+    <property name="script" value="PathGraph"/>
+   </properties>
+   <polyline points="8,0 8,64 8,-56 72,-88 -56,-152 8,-336"/>
+  </object>
+  <object id="254" name="heavy" type="HeavyMilitia" gid="1242" x="168" y="504" width="24" height="32">
+   <properties>
+    <property name="pathid" value="127"/>
+    <property name="pathmode" value="relative"/>
    </properties>
   </object>
  </objectgroup>
@@ -204,10 +231,10 @@
   </data>
  </layer>
  <objectgroup name="storehouse2nddestruction" visible="0">
-  <object id="167" name="explosion" type="Spark" gid="1314" x="144" y="792" width="96" height="96"/>
-  <object id="166" name="explosion" type="Spark" gid="1314" x="144" y="736" width="96" height="96"/>
-  <object id="165" name="explosion" type="Spark" gid="1314" x="192" y="776" width="96" height="96"/>
-  <object id="164" name="explosion" type="Spark" gid="1314" x="96" y="776" width="96" height="96"/>
+  <object id="167" name="explosion" type="Spark" gid="1284" x="144" y="792" width="96" height="96"/>
+  <object id="166" name="explosion" type="Spark" gid="1284" x="144" y="736" width="96" height="96"/>
+  <object id="165" name="explosion" type="Spark" gid="1284" x="192" y="776" width="96" height="96"/>
+  <object id="164" name="explosion" type="Spark" gid="1284" x="96" y="776" width="96" height="96"/>
   <object id="136" name="bombtrigger" type="BombTrigger" x="80" y="744" width="128" height="40">
    <properties>
     <property name="defeathidelayers">storehouse2ndfront
@@ -365,12 +392,12 @@ storehouseroof</property>
   </data>
  </layer>
  <objectgroup name="storehouse_doors">
-  <object id="128" name="door" gid="1310" x="88" y="848" width="16" height="32">
+  <object id="128" name="door" gid="1280" x="88" y="848" width="16" height="32">
    <properties>
     <property name="script" value="Door"/>
    </properties>
   </object>
-  <object id="129" name="door" gid="2147484958" x="104" y="848" width="16" height="32">
+  <object id="129" name="door" gid="2147484928" x="104" y="848" width="16" height="32">
    <properties>
     <property name="script" value="Door"/>
    </properties>
@@ -380,22 +407,22 @@ storehouseroof</property>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
   </object>
-  <object id="132" name="door" gid="2147484958" x="200" y="848" width="16" height="32">
+  <object id="132" name="door" gid="2147484928" x="200" y="848" width="16" height="32">
    <properties>
     <property name="script" value="Door"/>
    </properties>
   </object>
-  <object id="133" name="door" gid="1310" x="184" y="848" width="16" height="32">
+  <object id="133" name="door" gid="1280" x="184" y="848" width="16" height="32">
    <properties>
     <property name="script" value="Door"/>
    </properties>
   </object>
-  <object id="134" name="door" gid="1310" x="136" y="848" width="16" height="32">
+  <object id="134" name="door" gid="1280" x="136" y="848" width="16" height="32">
    <properties>
     <property name="script" value="Door"/>
    </properties>
   </object>
-  <object id="135" name="door" gid="2147484958" x="152" y="848" width="16" height="32">
+  <object id="135" name="door" gid="2147484928" x="152" y="848" width="16" height="32">
    <properties>
     <property name="script" value="Door"/>
    </properties>
@@ -446,19 +473,19 @@ storehouseroof</property>
    </properties>
    <polyline points="0,0 288,0"/>
   </object>
-  <object id="194" name="heavy" type="HeavyMilitia" gid="1272" x="80" y="920" width="24" height="32">
+  <object id="194" name="heavy" type="HeavyMilitia" gid="1242" x="80" y="920" width="24" height="32">
    <properties>
     <property name="pathfinder" value="random"/>
     <property name="pathid" value="midboss_path"/>
    </properties>
   </object>
-  <object id="195" name="heavy" type="HeavyMilitia" gid="1272" x="208" y="920" width="24" height="32">
+  <object id="195" name="heavy" type="HeavyMilitia" gid="1242" x="208" y="920" width="24" height="32">
    <properties>
     <property name="pathfinder" value="random"/>
     <property name="pathid" value="midboss_path"/>
    </properties>
   </object>
-  <object id="202" name="midboss" type="MilitiaCaptainNormalAttack" gid="1352" x="96" y="776" width="24" height="32">
+  <object id="202" name="midboss" type="MilitiaCaptainNormalAttack" gid="1322" x="96" y="776" width="24" height="32">
    <properties>
     <property name="backuptriggerid" type="int" value="246"/>
     <property name="initiallayer" value="storehouse2ndobjects"/>
@@ -487,7 +514,7 @@ storehouseroof</property>
  </objectgroup>
  <layer name="midboss_cover" width="18" height="245">
   <data encoding="base64" compression="zlib">
-   eJztz7ENACAIBEAaNlT3H8XCShMT7Sjumk+A4okAAAAAquu5cuQ+b/m3r+bs9/rH7Q4AAAAAAAAAAAAAAACoawKdeAVH
+   eJztz7ENACAIBEAaVlL3n8zCShMT7Sjumk+A4okAAAAAquu5cuQ+b/m3r+bs9/rH7Q4AAAAAAAAAAAAAAACoawIqhAOF
   </data>
  </layer>
  <objectgroup name="midboss_path">
@@ -501,16 +528,16 @@ storehouseroof</property>
    <polyline points="0,0 -64,0"/>
   </object>
   <object id="221" x="72" y="920">
-   <polyline points="8,0 -24,0"/>
+   <polyline points="8,0 8,-24"/>
   </object>
   <object id="222" x="72" y="920">
-   <polyline points="8,0 72,0"/>
+   <polyline points="8,0 56,0"/>
   </object>
   <object id="223" x="216" y="920">
-   <polyline points="-8,0 -72,0"/>
+   <polyline points="-8,0 -56,0"/>
   </object>
   <object id="224" x="216" y="920">
-   <polyline points="-8,0 24,0"/>
+   <polyline points="-8,0 -8,-24"/>
   </object>
   <object id="225" x="72" y="872">
    <polyline points="8,0 -56,0"/>
@@ -600,12 +627,12 @@ storehouseroof</property>
   </object>
  </objectgroup>
  <objectgroup name="heavy4">
-  <object id="28" name="heavy" type="HeavyMilitia" gid="1272" x="256" y="1504" width="24" height="32">
+  <object id="28" name="heavy" type="HeavyMilitia" gid="1242" x="256" y="1504" width="24" height="32">
    <properties>
     <property name="pathid" value="31"/>
    </properties>
   </object>
-  <object id="29" name="heavy" type="HeavyMilitia" gid="1272" x="32" y="1504" width="24" height="32">
+  <object id="29" name="heavy" type="HeavyMilitia" gid="1242" x="32" y="1504" width="24" height="32">
    <properties>
     <property name="pathid" value="30"/>
    </properties>
@@ -676,7 +703,7 @@ storehouseroof</property>
  </objectgroup>
  <objectgroup name="heavycatapult1_path"/>
  <objectgroup name="jumpingarcher">
-  <object id="155" name="archer" type="Archer" gid="1287" x="144" y="1704" width="24" height="32">
+  <object id="155" name="archer" type="Archer" gid="1257" x="144" y="1704" width="24" height="32">
    <properties>
     <property name="convertible" type="bool" value="true"/>
     <property name="health" type="int" value="40"/>
@@ -752,12 +779,12 @@ storehouseroof</property>
   </object>
  </objectgroup>
  <objectgroup name="heavy3">
-  <object id="17" name="heavy" type="HeavyMilitia" gid="1272" x="-8" y="2024" width="24" height="32">
+  <object id="17" name="heavy" type="HeavyMilitia" gid="1242" x="-8" y="2024" width="24" height="32">
    <properties>
     <property name="pathid" value="19"/>
    </properties>
   </object>
-  <object id="18" name="heavy" type="HeavyMilitia" gid="1272" x="296" y="2024" width="24" height="32">
+  <object id="18" name="heavy" type="HeavyMilitia" gid="1242" x="296" y="2024" width="24" height="32">
    <properties>
     <property name="pathid" value="20"/>
    </properties>
@@ -798,7 +825,7 @@ storehouseroof</property>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
   </object>
-  <object id="97" name="archer" type="Archer" gid="1287" x="176" y="2168" width="24" height="32">
+  <object id="97" name="archer" type="Archer" gid="1257" x="176" y="2168" width="24" height="32">
    <properties>
     <property name="convertible" type="bool" value="true"/>
     <property name="pathid" value="fields_paths"/>
@@ -826,7 +853,7 @@ storehouseroof</property>
   </object>
  </objectgroup>
  <objectgroup name="heavy2">
-  <object id="15" name="heavy" type="HeavyMilitia" gid="1272" x="96" y="2416" width="24" height="32">
+  <object id="15" name="heavy" type="HeavyMilitia" gid="1242" x="96" y="2416" width="24" height="32">
    <properties>
     <property name="pathid" value="14"/>
    </properties>
@@ -894,7 +921,7 @@ storehouseroof</property>
   </object>
  </objectgroup>
  <objectgroup name="heavy1">
-  <object id="8" name="heavy" type="HeavyMilitia" gid="1272" x="96" y="2744" width="24" height="32">
+  <object id="8" name="heavy" type="HeavyMilitia" gid="1242" x="96" y="2744" width="24" height="32">
    <properties>
     <property name="pathid" value="9"/>
    </properties>
@@ -928,7 +955,7 @@ storehouseroof</property>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
   </object>
-  <object id="33" name="operator" type="CatapultOperator" gid="1257" x="144" y="3000" width="24" height="32">
+  <object id="33" name="operator" type="CatapultOperator" gid="1227" x="144" y="3000" width="24" height="32">
    <properties>
     <property name="convertible" type="bool" value="true"/>
     <property name="rideid" type="int" value="11"/>
@@ -1153,9 +1180,6 @@ storehouseroof</property>
   <object id="126" name="path" x="272" y="2272">
    <polyline points="-16,0 -64,0 -64,-72"/>
   </object>
-  <object id="127" name="path" x="-312" y="2136">
-   <polyline points="8,0 72,0 112,40 176,40 216,0 280,0"/>
-  </object>
   <object id="137" name="path" x="-16" y="2016">
    <polyline points="8,0 72,0"/>
   </object>
@@ -1237,7 +1261,7 @@ storehouseroof</property>
     <property name="activateobjectslayer" value="ground"/>
    </properties>
   </object>
-  <object id="34" name="operator" type="CatapultOperator" gid="1257" x="144" y="3320" width="24" height="32">
+  <object id="34" name="operator" type="CatapultOperator" gid="1227" x="144" y="3320" width="24" height="32">
    <properties>
     <property name="convertible" type="bool" value="true"/>
     <property name="rideid" type="int" value="5"/>
@@ -1338,13 +1362,7 @@ storehouseroof</property>
    <property name="script" value="PathGraph"/>
   </properties>
   <object id="3" name="path" x="24" y="3280">
-   <polyline points="0,320 0,-2544"/>
-  </object>
-  <object id="4" name="path" x="24" y="400">
-   <properties>
-    <property name="cost" type="int" value="2"/>
-   </properties>
-   <polyline points="0,336 0,-400"/>
+   <polyline points="0,320 0,-3280"/>
   </object>
  </objectgroup>
  <objectgroup name="sparks"/>
