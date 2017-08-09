@@ -15,6 +15,7 @@
   <property name="collidable" type="bool" default="true"/>
   <property name="pathfinder" type="string" default="linearUp"/>
   <property name="pathmode" type="string" default="absolute"/>
+  <property name="pathspeed" type="float" default="60"/>
   <property name="pathspeedweighted" type="bool" default="true"/>
   <property name="script" type="string" default="ShmupCam"/>
   <property name="sensor" type="bool" default="true"/>
@@ -54,7 +55,7 @@
   <property name="firearc" type="float" default="45"/>
   <property name="firebullet" type="string" default="BulletPike"/>
   <property name="firetargetid" type="string" default="player"/>
-  <property name="firetime" type="float" default="1"/>
+  <property name="firetime" type="float" default="0.75"/>
   <property name="health" type="int" default="8"/>
   <property name="kolaunch" type="bool" default="false"/>
   <property name="pathfinder" type="string" default="linear1way"/>
@@ -74,7 +75,7 @@
   <property name="firefan" type="int" default="3"/>
   <property name="firefanslice" type="float" default="3.25"/>
   <property name="firetargetid" type="string" default="player"/>
-  <property name="firetime" type="float" default="1"/>
+  <property name="firetime" type="float" default="0.75"/>
   <property name="health" type="int" default="80"/>
   <property name="kolaunch" type="bool" default="false"/>
   <property name="pathfinder" type="string" default="linear1way"/>
@@ -281,7 +282,7 @@
   <property name="pathmode" type="string" default="absolute"/>
   <property name="ridedestroyedko" type="bool" default="false"/>
   <property name="rideid" type="int" default="0"/>
-  <property name="score" type="int" default="5000"/>
+  <property name="score" type="int" default="10000"/>
   <property name="script" type="string" default="HumanMilitiaCaptain"/>
  </objecttype>
  <objecttype name="MilitiaCaptainNormalAttack" color="#ff0000">
