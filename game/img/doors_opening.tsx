@@ -14,7 +14,15 @@
   <property name="state_opening" type="int" value="1"/>
  </properties>
  <image source="doors_opening.png" width="80" height="96"/>
+ <tile id="1">
+  <properties>
+   <property name="name" value="wood_ext_open"/>
+  </properties>
+ </tile>
  <tile id="6">
+  <properties>
+   <property name="name" value="wood_ext_opening"/>
+  </properties>
   <animation>
    <frame tileid="6" duration="100"/>
    <frame tileid="1" duration="100"/>
@@ -23,12 +31,17 @@
  </tile>
  <tile id="10">
   <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="32">
+   <object id="1" x="0" y="8" width="16" height="16">
     <properties>
      <property name="collidable" type="bool" value="true"/>
      <property name="sensor" type="bool" value="true"/>
     </properties>
    </object>
   </objectgroup>
+ </tile>
+ <tile id="11">
+  <properties>
+   <property name="name" value="wood_ext_closed"/>
+  </properties>
  </tile>
 </tileset>

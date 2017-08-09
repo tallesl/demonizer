@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 247,
+  nextobjectid = 250,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -2419,8 +2419,8 @@ return {
       imagewidth = 80,
       imageheight = 96,
       tileoffset = {
-        x = 0,
-        y = 0
+        x = -8,
+        y = 16
       },
       grid = {
         orientation = "orthogonal",
@@ -2444,7 +2444,16 @@ return {
       tilecount = 15,
       tiles = {
         {
+          id = 1,
+          properties = {
+            ["name"] = "wood_ext_open"
+          }
+        },
+        {
           id = 6,
+          properties = {
+            ["name"] = "wood_ext_opening"
+          },
           animation = {
             {
               tileid = 6,
@@ -2477,10 +2486,10 @@ return {
                 name = "",
                 type = "",
                 shape = "rectangle",
-                x = 0,
-                y = 0,
+                x = -8,
+                y = 24,
                 width = 16,
-                height = 32,
+                height = 16,
                 rotation = 0,
                 visible = true,
                 properties = {
@@ -2489,6 +2498,12 @@ return {
                 }
               }
             }
+          }
+        },
+        {
+          id = 11,
+          properties = {
+            ["name"] = "wood_ext_closed"
           }
         }
       }
@@ -4374,28 +4389,32 @@ return {
           name = "door",
           type = "",
           shape = "rectangle",
-          x = 80,
-          y = 864,
+          x = 88,
+          y = 848,
           width = 16,
           height = 32,
           rotation = 0,
           gid = 1310,
           visible = true,
-          properties = {}
+          properties = {
+            ["script"] = "Door"
+          }
         },
         {
           id = 129,
           name = "door",
           type = "",
           shape = "rectangle",
-          x = 96,
-          y = 864,
+          x = 104,
+          y = 848,
           width = 16,
           height = 32,
           rotation = 0,
           gid = 2147484958,
           visible = true,
-          properties = {}
+          properties = {
+            ["script"] = "Door"
+          }
         },
         {
           id = 130,
@@ -4417,56 +4436,64 @@ return {
           name = "door",
           type = "",
           shape = "rectangle",
-          x = 192,
-          y = 864,
+          x = 200,
+          y = 848,
           width = 16,
           height = 32,
           rotation = 0,
           gid = 2147484958,
           visible = true,
-          properties = {}
+          properties = {
+            ["script"] = "Door"
+          }
         },
         {
           id = 133,
           name = "door",
           type = "",
           shape = "rectangle",
-          x = 176,
-          y = 864,
+          x = 184,
+          y = 848,
           width = 16,
           height = 32,
           rotation = 0,
           gid = 1310,
           visible = true,
-          properties = {}
+          properties = {
+            ["script"] = "Door"
+          }
         },
         {
           id = 134,
           name = "door",
           type = "",
           shape = "rectangle",
-          x = 128,
-          y = 864,
+          x = 136,
+          y = 848,
           width = 16,
           height = 32,
           rotation = 0,
           gid = 1310,
           visible = true,
-          properties = {}
+          properties = {
+            ["script"] = "Door"
+          }
         },
         {
           id = 135,
           name = "door",
           type = "",
           shape = "rectangle",
-          x = 144,
-          y = 864,
+          x = 152,
+          y = 848,
           width = 16,
           height = 32,
           rotation = 0,
           gid = 2147484958,
           visible = true,
-          properties = {}
+          properties = {
+            ["script"] = "Door"
+          }
         }
       }
     },
@@ -4477,7 +4504,7 @@ return {
       opacity = 1,
       offsetx = 0,
       offsety = 0,
-      draworder = "topdown",
+      draworder = "index",
       properties = {},
       objects = {
         {
@@ -4533,6 +4560,54 @@ return {
           type = "Archer",
           shape = "rectangle",
           x = 144,
+          y = 848,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathid"] = "midboss_path"
+          }
+        },
+        {
+          id = 247,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 144,
+          y = 848,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathid"] = "midboss_path"
+          }
+        },
+        {
+          id = 248,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 192,
+          y = 848,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 1182,
+          visible = true,
+          properties = {
+            ["pathid"] = "midboss_path"
+          }
+        },
+        {
+          id = 249,
+          name = "archer",
+          type = "Archer",
+          shape = "rectangle",
+          x = 96,
           y = 848,
           width = 24,
           height = 32,
