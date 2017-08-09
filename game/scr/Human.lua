@@ -38,7 +38,6 @@ function Human:_init(object)
 	end
 
 	for _, fixture in ipairs(self.body:getFixtureList()) do
-		fixture:setSensor(true)
 		fixture:setCategory(ShmupCollision.Category_EnemyTeam)
 		fixture:setMask(unpack(mask))
 	end
@@ -252,7 +251,10 @@ function Human:beginContact(myfixture, otherfixture, contact)
 end
 
 function Human:preSolve(myfixture, otherfixture, contact)
-	contact:setEnabled(false)
+	local category = otherfixture:getCategory()
+	if category == ShmupCollision.Category_CameraEdge then
+		contact:setEnabled(false)
+	end
 end
 
 function Human:endContact_PlayerBomb(myfixture, otherfixture, contact)

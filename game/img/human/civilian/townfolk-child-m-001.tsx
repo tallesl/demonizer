@@ -14,6 +14,7 @@
    <object id="1" x="-10" y="24" width="20" height="20">
     <properties>
      <property name="collidable" type="bool" value="true"/>
+     <property name="sensor" type="bool" value="true"/>
     </properties>
     <ellipse/>
    </object>
