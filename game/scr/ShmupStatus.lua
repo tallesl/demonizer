@@ -151,7 +151,7 @@ function ShmupStatus:beginMove(dt)
 	local playerid = levity.map.properties.playerid
 
 	if self:hasReserves()
-	and levity.scripts:call(playerid, "roomForWingmen") then
+	and levity.scripts:call("playerteam", "roomForWingmen") then
 		local wingmangid = self.reservegids[#self.reservegids]
 
 		local camera = levity.map.objects[levity.map.properties.cameraid]
