@@ -51,32 +51,54 @@ function Trigger:beginContact_Camera(myfixture, otherfixture, contact)
 		= myfixture:getBoundingBox()
 	local cameraleft, cameratop, cameraright, camerabottom
 		= otherfixture:getBoundingBox()
-	if cameratop < triggertop
-	or triggerbottom - cameratop > levity.map.tileheight
+	if cameratop >= triggertop
+	and triggerbottom - cameratop <= levity.map.tileheight
 	then
-		return
+		self:activate()
 	end
+end
 
-	local triggerlayer = self.object.layer
-	local triggerproperties = self.object.properties
-	local activateobjects = triggerproperties.activateobjects
+function Trigger:activate()
+	local activateobjects = self.properties.activateobjects
 	if activateobjects then
 		self:activateObjects(activateobjects)
 	end
 
-	local music = triggerproperties.musicfile or ""
+	local music = self.properties.musicfile or ""
 	if music ~= "" then
 		levity.bank:changeMusic(music, "emu")
-	elseif triggerproperties.musicfade then
+	elseif self.properties.musicfade then
 		if levity.bank.currentmusic then
 			levity.bank.currentmusic:fade()
 		end
 	end
 
-	local sound = triggerproperties.soundfile or ""
+	local sound = self.properties.soundfile or ""
 	if sound ~= "" then
 		levity.bank:load(sound, "static")
 		levity.bank:play(sound)
+	end
+
+	local LayerPattern = "([^\n]+)\n"
+	local maplayers = levity.map.layers
+	local showlayers = self.properties.showlayers
+		and self.properties.showlayers..'\n'
+	local hidelayers = self.properties.hidelayers
+		and self.properties.hidelayers..'\n'
+
+	if showlayers then
+		for layer in showlayers:gmatch(LayerPattern) do
+			if maplayers[layer] then
+				maplayers[layer].visible = true
+			end
+		end
+	end
+	if hidelayers then
+		for layer in hidelayers:gmatch(LayerPattern) do
+			if maplayers[layer] then
+				maplayers[layer].visible = false
+			end
+		end
 	end
 end
 

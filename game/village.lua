@@ -8,7 +8,7 @@ return {
   height = 245,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 259,
+  nextobjectid = 260,
   properties = {
     ["cameraid"] = 2,
     ["music"] = "mus/09 - Blue Sky Laundry.vgm",
@@ -3618,8 +3618,8 @@ return {
           name = "cover",
           type = "EnemyCover",
           shape = "rectangle",
-          x = 80,
-          y = 760,
+          x = 296,
+          y = 752,
           width = 32,
           height = 32,
           rotation = 0,
@@ -3631,8 +3631,8 @@ return {
           name = "cover",
           type = "EnemyCover",
           shape = "rectangle",
-          x = 176,
-          y = 760,
+          x = 392,
+          y = 752,
           width = 32,
           height = 32,
           rotation = 0,
@@ -3682,6 +3682,24 @@ return {
           visible = true,
           properties = {
             ["rideid"] = 136
+          }
+        },
+        {
+          id = 136,
+          name = "bombtrigger",
+          type = "BombTrigger",
+          shape = "rectangle",
+          x = 80,
+          y = 784,
+          width = 128,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cover"] = true,
+            ["defeattriggerid"] = 259,
+            ["health"] = 4,
+            ["score"] = 2000
           }
         }
       }
@@ -4045,7 +4063,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJztzcsJgDAMANBAO4e4geBijuDIXcHmIAq9iB68vAchIR8SAQAAwBtr/XY/9fu9RGxlnGU/Y37wo/W9pV75Xmc+awAAAAAAAAAAAAAAAAD40wG8Vwgu"
+      data = "eJztyrEJACAMRcGAziFu4P5TuYII2thoZ3MHIXx4EQAAAPxQ8r2pD01PEW118+/bzg0AAAAAAAAAAAAAAAAAPwwv6AJr"
     },
     {
       type = "tilelayer",
@@ -4144,24 +4162,6 @@ return {
           gid = 1284,
           visible = true,
           properties = {}
-        },
-        {
-          id = 136,
-          name = "bombtrigger",
-          type = "BombTrigger",
-          shape = "rectangle",
-          x = 80,
-          y = 744,
-          width = 128,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["defeathidelayers"] = "storehouse2ndfront\nstorehouseroof",
-            ["defeatshowlayers"] = "storehouse2nddestroyed",
-            ["health"] = 4,
-            ["score"] = 2000
-          }
         },
         {
           id = 168,
@@ -4562,6 +4562,23 @@ return {
           properties = {
             ["vely"] = -240
           }
+        },
+        {
+          id = 259,
+          name = "storehouse2nddestruction",
+          type = "Trigger",
+          shape = "rectangle",
+          x = -24,
+          y = 752,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["activateobjectslayer"] = "sparks",
+            ["hidelayers"] = "storehouse2ndfront\nstorehouseroof",
+            ["showlayers"] = "storehouse2nddestroyed"
+          }
         }
       }
     },
@@ -4913,7 +4930,7 @@ return {
           type = "MilitiaCaptainNormalAttack",
           shape = "rectangle",
           x = 96,
-          y = 776,
+          y = 784,
           width = 24,
           height = 32,
           rotation = 0,
@@ -5013,7 +5030,7 @@ return {
           type = "",
           shape = "polyline",
           x = 240,
-          y = 872,
+          y = 880,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5030,7 +5047,7 @@ return {
           type = "",
           shape = "polyline",
           x = 144,
-          y = 872,
+          y = 880,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5047,14 +5064,14 @@ return {
           type = "",
           shape = "polyline",
           x = 72,
-          y = 920,
+          y = 928,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
             { x = 8, y = 0 },
-            { x = 8, y = -24 }
+            { x = 8, y = -32 }
           },
           properties = {}
         },
@@ -5064,7 +5081,7 @@ return {
           type = "",
           shape = "polyline",
           x = 72,
-          y = 920,
+          y = 928,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5081,7 +5098,7 @@ return {
           type = "",
           shape = "polyline",
           x = 216,
-          y = 920,
+          y = 928,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5098,14 +5115,14 @@ return {
           type = "",
           shape = "polyline",
           x = 216,
-          y = 920,
+          y = 928,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
             { x = -8, y = 0 },
-            { x = -8, y = -24 }
+            { x = -8, y = -32 }
           },
           properties = {}
         },
@@ -5115,7 +5132,7 @@ return {
           type = "",
           shape = "polyline",
           x = 72,
-          y = 872,
+          y = 880,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5132,7 +5149,7 @@ return {
           type = "",
           shape = "polyline",
           x = 216,
-          y = 872,
+          y = 880,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5149,7 +5166,7 @@ return {
           type = "",
           shape = "polyline",
           x = -16,
-          y = 872,
+          y = 880,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5166,7 +5183,7 @@ return {
           type = "",
           shape = "polyline",
           x = 304,
-          y = 872,
+          y = 880,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5183,13 +5200,13 @@ return {
           type = "",
           shape = "polyline",
           x = 176,
-          y = 776,
+          y = 784,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = -48, y = -8 },
+            { x = -48, y = -16 },
             { x = -56, y = 0 }
           },
           properties = {}
@@ -5200,7 +5217,7 @@ return {
           type = "",
           shape = "polyline",
           x = 160,
-          y = 776,
+          y = 784,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5217,7 +5234,7 @@ return {
           type = "",
           shape = "polyline",
           x = 152,
-          y = 776,
+          y = 784,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5234,7 +5251,7 @@ return {
           type = "",
           shape = "polyline",
           x = 184,
-          y = 776,
+          y = 792,
           width = 0,
           height = 0,
           rotation = 0,
@@ -5285,13 +5302,13 @@ return {
           type = "",
           shape = "polyline",
           x = 208,
-          y = 768,
+          y = 776,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polyline = {
-            { x = -48, y = 0 },
+            { x = -48, y = -8 },
             { x = -40, y = 8 }
           },
           properties = {}

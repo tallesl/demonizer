@@ -4,11 +4,13 @@
   <property name="activateobjects" type="bool" default="true"/>
   <property name="activateobjectslayer" type="string"/>
   <property name="collidable" type="bool" default="true"/>
+  <property name="hidelayers" type="string"/>
   <property name="musicfade" type="bool" default="false"/>
   <property name="musicfile" type="file" default=""/>
   <property name="pausecamera" type="bool" default="false"/>
   <property name="script" type="string" default="Trigger"/>
   <property name="sensor" type="bool" default="true"/>
+  <property name="showlayers" type="string"/>
   <property name="soundfile" type="file" default=""/>
  </objecttype>
  <objecttype name="Camera" color="#0000ff">
@@ -243,10 +245,7 @@
   <property name="collidable" type="bool" default="true"/>
   <property name="combatant" type="bool" default="false"/>
   <property name="cover" type="bool" default="false"/>
-  <property name="defeatactivateobjects" type="bool" default="true"/>
-  <property name="defeatactivateobjectslayer" type="string" default="sparks"/>
-  <property name="defeathidelayers" type="string"/>
-  <property name="defeatshowlayers" type="string"/>
+  <property name="defeattriggerid" type="int" default="0"/>
   <property name="health" type="int" default="1"/>
   <property name="score" type="int" default="1000"/>
   <property name="script" type="string" default="Vehicle"/>

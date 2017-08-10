@@ -84,26 +84,23 @@ function ShmupMap:_init(map)
 	self.resulttimer = nil
 	self.resulttime = nil
 
-	if self.map.properties.delayinitobjects == true then
-		for _, layer in ipairs(self.map.layers) do
-			if layer.type == "dynamiclayer" then
-				local istrigger = nil
-				for _, object in ipairs(layer.objects) do
-					if object.type == "Trigger"
-					or object.type == "BombTrigger" then
-						Object.init(object, layer, map)
-						istrigger = true
-						layer.visible = false
-					end
+	for _, layer in ipairs(self.map.layers) do
+		if layer.type == "dynamiclayer" then
+			local istrigger = nil
+			for _, object in ipairs(layer.objects) do
+				if object.type == "Trigger" then
+					Object.init(object, layer, map)
+					istrigger = true
+					layer.visible = false
 				end
+			end
 
-				if not istrigger then
-					for _, object in ipairs(layer.objects) do
-						Object.init(object, layer, map)
-					end
-					for _, object in ipairs(layer.objects) do
-						levity.scripts:send(object.id, "start")
-					end
+			if not istrigger then
+				for _, object in ipairs(layer.objects) do
+					Object.init(object, layer, map)
+				end
+				for _, object in ipairs(layer.objects) do
+					levity.scripts:send(object.id, "start")
 				end
 			end
 		end

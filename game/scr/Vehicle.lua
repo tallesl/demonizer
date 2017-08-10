@@ -208,40 +208,9 @@ function Vehicle:defeat()
 	self.shooter = levity.scripts:destroyScript(self.shooter, self.id)
 	self.health = levity.scripts:destroyScript(self.health, self.id)
 
-	local LayerPattern = "([^\n]+)\n"
-	local maplayers = levity.map.layers
-	local defeatshowlayers = self.properties.defeatshowlayers
-		and self.properties.defeatshowlayers..'\n'
-	local defeathidelayers = self.properties.defeathidelayers
-		and self.properties.defeathidelayers..'\n'
-
-	if defeatshowlayers then
-		for layer in defeatshowlayers:gmatch(LayerPattern) do
-			if maplayers[layer] then
-				maplayers[layer].visible = true
-			end
-		end
-	end
-	if defeathidelayers then
-		for layer in defeathidelayers:gmatch(LayerPattern) do
-			if maplayers[layer] then
-				maplayers[layer].visible = false
-			end
-		end
-	end
-
-	if self.properties.defeatactivateobjects then
-		local layer = self.properties.defeatactivateobjectslayer or "sparks"
-		layer = maplayers[layer]
-
-		if layer then
-			layer.visible = true
-			for _, object in ipairs(self.object.layer.objects) do
-				if object ~= self.object then
-					layer:addObject(object)
-				end
-			end
-		end
+	local defeattriggerid = self.properties.defeattriggerid
+	if defeattriggerid then
+		levity.scripts:send(defeattriggerid, "activate")
 	end
 end
 

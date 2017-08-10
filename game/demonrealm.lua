@@ -2633,7 +2633,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -2719,7 +2720,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -2805,7 +2807,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -2927,7 +2930,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -3013,7 +3017,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -3135,7 +3140,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = false
                 }
               }
             }
@@ -3257,7 +3263,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = false
                 }
               }
             }
@@ -3343,7 +3350,8 @@ return {
                 rotation = 0,
                 visible = true,
                 properties = {
-                  ["collidable"] = true
+                  ["collidable"] = true,
+                  ["sensor"] = true
                 }
               }
             }
@@ -5425,7 +5433,7 @@ return {
         {
           id = 335,
           name = "",
-          type = "Destructible",
+          type = "BombTrigger",
           shape = "rectangle",
           x = 120,
           y = 536,
@@ -5441,7 +5449,7 @@ return {
         {
           id = 336,
           name = "",
-          type = "Destructible",
+          type = "BombTrigger",
           shape = "rectangle",
           x = 168,
           y = 536,
@@ -6766,7 +6774,7 @@ return {
         {
           id = 334,
           name = "rock",
-          type = "Destructible",
+          type = "BombTrigger",
           shape = "rectangle",
           x = 152,
           y = 1096,
