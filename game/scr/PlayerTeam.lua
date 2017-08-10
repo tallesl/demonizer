@@ -172,6 +172,11 @@ end
 function PlayerTeam:forgetWingman(wingmanid)
 	local i = self:getMemberIndex(wingmanid)
 	if i then
+		local scoreid = levity.scripts:call("status", "getScoreId")
+		if scoreid then
+			levity.scripts:send(scoreid, "multiplierLost", i)
+		end
+
 		table.remove(self.wingmanids, i)
 		if isActiveWingmanIndex(i) then
 			levity:discardObject(self.powergaugeids[i])

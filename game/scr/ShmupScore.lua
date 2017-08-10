@@ -117,12 +117,12 @@ end
 function ShmupScore:playerRespawned()
 	self:multiplierLost(PlayerTeam.PlayerIndex)
 end
-
+--[[
 function ShmupScore:wingmanKilled(id)
 	self:multiplierLost(
 		levity.scripts:call("playerteam", "getMemberIndex", id))
 end
-
+]]
 function ShmupScore:friendKilled(id)
 	for idx, mult in pairs(self.multipliers) do
 		self.multipliers[idx] = 0
